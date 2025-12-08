@@ -461,3 +461,148 @@
   padding: 16px;
   /* height: 60px; */
 }
+.radar .footer {
+  width: 100%;
+}
+.radar .footer .part1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 6px;
+}
+.radar .footer .medias {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+.radar .footer .medias svg {
+  display: flex;
+  width: 24px;
+  background-color: rgb(232, 231, 231);
+  padding: 10px;
+  border-radius: 50%;
+}
+.radar .social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.radar .company {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 26px;
+  gap: 22px;
+}
+
+/* .radar .cwu {
+  color: rgb(43, 43, 43);
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 27px;
+} */
+
+.radar .footer .part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 24px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.radar .footer .part2 .p1 {
+  color: rgb(43, 43, 43);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 21px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.radar .footer .part2 .p2 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.radar .footer .part2 .p3 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.radar .footer .part2 .p4 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  padding: 12px 28px;
+}
+.radar .footer .part2 .p5 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+}
+
+.radar .footer .part2 .p6 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  padding: 4px 28px;
+}
+
+.radar .footer .part2 .p7 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+
+.radar .footer .part2 .p8 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
