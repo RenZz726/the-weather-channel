@@ -385,6 +385,209 @@
                 </div>
                 <span>Expect cold conditions for next 6 hours</span>
               </div>
+              <div class="weather-timeline">
+                <span style="text-align: center" class="radar-time"></span>
+                <div class="range">
+                  <img src="assests/radar/play.svg" alt="play" class="play" />
+                  <img
+                    src="assests/radar/pause.svg"
+                    alt="pause"
+                    class="pause"
+                  />
+                  <div class="range-wrapper">
+                    <div class="range-label" style="text-align: center">
+                      Now
+                    </div>
+                    <input
+                      type="range"
+                      min="9"
+                      max="16"
+                      step="1"
+                      value="12"
+                      class="range-field"
+                      style="width: 100%"
+                    />
+                    <div class="ticks"></div>
+                  </div>
+                </div>
+                <div class="features">
+                  <div class="feature-item">
+                    <img
+                      src="assests/radar/radar.jpg"
+                      alt="radar"
+                      class="item featureHighlighted"
+                    />
+                    <span>Radar</span>
+                  </div>
+                  <div class="feature-item">
+                    <img
+                      src="assests/radar/clouds.jpg"
+                      alt="clouds"
+                      class="item"
+                    />
+                    <span>Clouds</span>
+                  </div>
+                  <div class="feature-item">
+                    <img src="assests/radar/temp.jpg" alt="temp" class="item" />
+                    <span>Temperatures</span>
+                  </div>
+                  <div class="feature-item">
+                    <svg
+                      class="item"
+                      name="map_layers"
+                      style="width: undefined"
+                      class="LayerDetail--layersIcon--62ySo Layers--allLayersIcon--CgSwj Icon--icon--ySD-o Icon--lightTheme--Mqfrs"
+                      viewBox="0 0 24 24"
+                    >
+                      <title>Map Layers</title>
+                      <path
+                        d="M20.25 14.488L12 19.356l-8.25-4.868-.381.226a.747.747 0 000 1.29l8.25 4.892a.746.746 0 00.763 0l8.25-4.893a.75.75 0 000-1.29l-.382-.225zm.382-3.145l-.382-.225L12 15.986l-8.25-4.868-.381.225a.747.747 0 000 1.29l8.25 4.868a.746.746 0 00.763 0l8.25-4.869a.748.748 0 000-1.289M3.369 9.263l8.25 4.868a.746.746 0 00.763 0l8.25-4.869a.749.749 0 000-1.29l-8.25-4.868a.75.75 0 00-.763 0l-8.25 4.869a.748.748 0 000 1.29"
+                      ></path>
+                    </svg>
+                    <span>All Layers</span>
+                  </div>
+                </div>
+
+                <div class="map-options">
+                  <button class="close-map-options">
+                    <img
+                      src="assests/radar/closeMapOption.svg"
+                      alt="close"
+                      width="12"
+                      height="12"
+                    />
+                  </button>
+                  <span class="head">Map Options</span>
+                  <ul>
+                    <li class="map-options-layers">Layers and Styles</li>
+                    <li class="map-options-speciality">Speciality Maps</li>
+                  </ul>
+                  <div class="layers-and-styles">
+                    <p>
+                      Make your map your own. Choose your main map layer, then
+                      add on any additional weather conditions you want. You can
+                      even change the map style and radar speed.
+                    </p>
+                    <div class="autoplay-toogle">
+                      <span>Radar Timeline Autoplay</span>
+                      <div class="toogle-button">
+                        <div class="btn"></div>
+                      </div>
+                    </div>
+                    <div class="map-style map-option-stylings">
+                      <div class="map-style-text map-option-text">
+                        <span class="title">Map Style</span>
+                        <span class="sub">Light</span>
+                      </div>
+                      <img src="assests/radar/add.svg" alt="add" width="18px" />
+                    </div>
+                    <div class="main-map-layer map-option-stylings">
+                      <div class="main-map-layer-text map-option-text">
+                        <span class="title">Main map layer</span>
+                        <span class="sub">Radar</span>
+                      </div>
+                      <img src="assests/radar/add.svg" alt="add" width="18px" />
+                    </div>
+                    <div class="add-on-layers map-option-stylings">
+                      <div class="add-on-layers-text map-option-text">
+                        <span class="title">Add-on layers</span>
+                        <span class="sub">Location Marker</span>
+                      </div>
+                      <img src="assests/radar/add.svg" alt="add" width="18px" />
+                    </div>
+                  </div>
+                  <div class="speciality-maps">
+                    <p>
+                      Want the full picture of a weather event? Our Speciality
+                      Maps bring together a variety of conditions in one
+                      easy-to-view map.
+                    </p>
+                    <div class="speciality-item">
+                      <svg
+                        name="thunderstorm"
+                        style="width: undefined"
+                        class="LayerDetail--layersIcon--62ySo Icon--icon--ySD-o Icon--lightTheme--Mqfrs"
+                        viewBox="0 0 24 24"
+                        width="62"
+                      >
+                        <title>Thunderstorm</title>
+                        <path
+                          d="M13.05 10.65H8.954c-.12 0-.22.062-.25.146L6.82 16.162a.155.155 0 0 0-.021.078c0 .111.116.2.26.2h1.774L7.15 21.244a.333.333 0 0 0-.018.102c0 .211.223.382.499.382a.54.54 0 0 0 .43-.191s5.49-7.22 5.49-7.249c0-.11-.047-.239-.191-.239l-1.669-.048s1.43-2.889 1.527-3.078c.089-.152-.023-.273-.167-.273z"
+                        ></path>
+                        <path
+                          d="M17.745 6.54l-.355.096a4.911 4.911 0 0 0-9.599.546l-.129-.034a2.804 2.804 0 0 0-3.486 3.032l-1.203.323a1.312 1.312 0 0 0 .42 2.576H6.45c.106 0 1.05-3.079 1.212-3.375.13-.204.178-.204.277-.204h6.92c.345 0 .349.12.3.25-.8 1.75-.8 1.803-1.349 2.923-.109.221-.234.406.05.406h4.636s.626-.029.94-.113a3.322 3.322 0 0 0-1.69-6.426z"
+                        ></path>
+                      </svg>
+                      <div class="speciality-contents">
+                        <span class="title">Local Severe Weather</span>
+                        <span class="head">Nearby Storm(s)</span>
+                        <span class="contents"
+                          >View the current conditions caused by storm(s) in
+                          your area</span
+                        >
+                        <span class="ex"
+                          ><b style="color: #000">Includes:</b> Flood, Local
+                          Storm Reports, Marine, Tornado/Severe Storms,
+                          Wildfires</span
+                        >
+                      </div>
+                      <input
+                        id="SpecialtyMaps-nearbyStorms-radioGroup"
+                        type="radio"
+                        name="SpecialtyMaps"
+                        class="Radio--inputClass---e6Ir"
+                        autocomplete="off"
+                        value="nearbyStorms"
+                      />
+                    </div>
+                    <div class="speciality-item">
+                      <svg
+                        name="thunderstorm"
+                        style="width: undefined"
+                        class="LayerDetail--layersIcon--62ySo Icon--icon--ySD-o Icon--lightTheme--Mqfrs"
+                        viewBox="0 0 24 24"
+                        width="62"
+                      >
+                        <title>Thunderstorm</title>
+                        <path
+                          d="M13.05 10.65H8.954c-.12 0-.22.062-.25.146L6.82 16.162a.155.155 0 0 0-.021.078c0 .111.116.2.26.2h1.774L7.15 21.244a.333.333 0 0 0-.018.102c0 .211.223.382.499.382a.54.54 0 0 0 .43-.191s5.49-7.22 5.49-7.249c0-.11-.047-.239-.191-.239l-1.669-.048s1.43-2.889 1.527-3.078c.089-.152-.023-.273-.167-.273z"
+                        ></path>
+                        <path
+                          d="M17.745 6.54l-.355.096a4.911 4.911 0 0 0-9.599.546l-.129-.034a2.804 2.804 0 0 0-3.486 3.032l-1.203.323a1.312 1.312 0 0 0 .42 2.576H6.45c.106 0 1.05-3.079 1.212-3.375.13-.204.178-.204.277-.204h6.92c.345 0 .349.12.3.25-.8 1.75-.8 1.803-1.349 2.923-.109.221-.234.406.05.406h4.636s.626-.029.94-.113a3.322 3.322 0 0 0-1.69-6.426z"
+                        ></path>
+                      </svg>
+                      <div class="speciality-contents">
+                        <span class="title">Hurricanes & Tropical Storms</span>
+                        <span class="head">Six</span>
+                        <span class="contents"
+                          >See the storm's projected path</span
+                        >
+                        <span class="ex"
+                          ><b style="color: #000">Includes:</b> Flood, Hurricane
+                          Tracker, Marine, Tornado/Severe Storms, Tropical</span
+                        >
+                      </div>
+                      <input
+                        id="SpecialtyMaps-nearbyStorms-radioGroup"
+                        type="radio"
+                        name="SpecialtyMaps"
+                        class="Radio--inputClass---e6Ir"
+                        autocomplete="off"
+                        value="nearbyStorms"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="hide-menu">
+                  <img
+                    src="assests/radar/dropDown.svg"
+                    alt="drop"
+                    width="20px"
+                    height="20px"
+                  />
+                  <button class="hide-menubutton">Hide menu</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
