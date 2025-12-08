@@ -1,0 +1,46 @@
+body{
+    margin:0px;
+    padding:0px;
+    min-width:100%;
+}
+.part-body{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+}
+.main-body{
+    width:100%;
+    padding-right:10px;
+    margin-left:35px;
+    position:relative;
+}
+/* side-bar */
+.side-bar{
+    height:975px;
+    border-right:1px solid rgba(37, 36, 34, 0.1);
+    background-color:rgb(255, 255, 255);
+    position:fixed;
+    padding:0px 4.5px;
+    z-index:500;
+}
+.today-icon , .hourly-icon, .day-icon, .monthly-icon , .radar-icon{
+    padding:4px;
+    padding-bottom:0px;
+}
+.side-bar span{
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    color:rgb(37, 36, 34);
+    font-size:4px;
+    line-height:13px;
+}
+.today-with-content,.hourly-with-content,.day-with-content,.monthly-with-content,.radar-with-content{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    padding:6px;
+    padding-bottom:5px;
+}
+/* sidebar end */
