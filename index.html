@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- sradha -->
@@ -19,7 +20,139 @@
     <section class="ten-day"></section>
 
     <!-- pratyush -->
-    <section class="monthly"></section>
+    <section class="monthly">
+      <div class="monthly-con">
+        <div class="monthly-content">
+          <div class="monthly-content-head">
+            Monthly Weather
+            <span>- Rajpath Area, Central Secretariat, Delhi</span>
+          </div>
+          <div style="font-size: 18px; padding: 5px 0 0 50px; color: gray">
+            As of 11:51 IST
+          </div>
+
+          <div class="calender">
+            <div class="part1">
+              <div class="section1">
+                <button
+                  style="
+                    display: flex;
+                    width: 50px;
+                    border: none;
+                    font-size: 18px;
+                  "
+                >
+                  <svg
+                    style="
+                      transform: rotate(85deg);
+                      position: relative;
+                      bottom: 1px;
+                    "
+                    name="chevron"
+                    class="CalendarMonthPicker--arrowIcon--3JT0h DirectionalIcon--leftDirection--QDF3k Icon--icon--ySD-o"
+                    aria-label="chevron left"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 14.25 3.75 8l.875-.875L10 12.5l5.375-5.375.875.875L10 14.25Z"
+                      fill="currentColor"
+                    ></path></svg
+                  ><span class="calendar-previous">Dec</span>
+                </button>
+              </div>
+              <div class="section2">
+                <select
+                  class="month-name"
+                  name="month"
+                  id=""
+                  style="border: none; font-size: 18px"
+                >
+                  <option value="Jan">Jan</option>
+                  <option value="Feb">Feb</option>
+                  <option value="Mar">Mar</option>
+                  <option value="Apr">Apr</option>
+                  <option value="May">May</option>
+                  <option value="Jun">Jun</option>
+                  <option value="Jul">Jul</option>
+                  <option value="Aug">Aug</option>
+                  <option value="Sep">Sep</option>
+                  <option value="Oct">Oct</option>
+                  <option value="Nov">Nov</option>
+                  <option value="Dec">Dec</option>
+                </select>
+
+                <select
+                  class="year-name"
+                  name="year"
+                  id=""
+                  style="border: none; font-size: 18px"
+                >
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2024">2027</option>
+                  <option value="2025">2028</option>
+                  <option value="2026">2029</option>
+                </select>
+                <button
+                  style="
+                    background-color: rgb(70, 69, 69);
+                    color: rgb(209, 208, 208);
+                    padding: 14px 18px 14px 18px;
+                    border-radius: 10px;
+                    border: none;
+                    font-size: 16px;
+                  "
+                >
+                  View
+                </button>
+              </div>
+              <div class="section3">
+                <button style="display: flex; width: 50px; font-size: 18px">
+                  <span class="calendar-next">Feb</span
+                  ><svg
+                    name="chevron"
+                    style="
+                      transform: rotate(-85deg);
+                      position: relative;
+                      bottom: 1px;
+                    "
+                    class="CalendarMonthPicker--arrowIcon--3JT0h DirectionalIcon--rightDirection--u2opE Icon--icon--ySD-o"
+                    aria-label="chevron right"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M10 14.25 3.75 8l.875-.875L10 12.5l5.375-5.375.875.875L10 14.25Z"
+                      fill="currentColor"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="part2">
+              <div class="days">
+                <div class="day">SUN</div>
+                <div class="day">MON</div>
+                <div class="day">TUE</div>
+                <div class="day">WED</div>
+                <div class="day">THU</div>
+                <div class="day">FRI</div>
+                <div class="day">SAT</div>
+              </div>
+
+              <!-- //pr2 -->
+            </div>
+          </div>
+        </div>
+
+        <!-- pr3 -->
+      </div>
+    </section>
 
     <!-- renson -->
     <section class="radar"></section>
@@ -30,4 +163,5 @@
     <!-- athulya -->
     <section class="air-quality-index"></section>
   </body>
+  <script src="script.js"></script>
 </html>
