@@ -3,11 +3,8 @@ let calendar_next = document.querySelector(".calendar-next");
 let month_name = document.querySelector(".month-name");
 let year_name = document.querySelector(".year-name");
 let con1 = document.querySelector(".container1");
-let con2 = document.querySelector(".container2");
 let mcard1 = document.querySelector(".monthly-card1");
-let mcard2 = document.querySelector(".monthly-card2");
 let c1 = document.querySelector(".c1");
-let c2 = document.querySelector(".c2");
 let monthArray = [
   "Jan",
   "Feb",
@@ -106,30 +103,15 @@ let boxes = document.querySelectorAll(".card");
 
 con1.addEventListener("click", (e) => {
   mcard1.classList.remove("hide");
-  mcard2.classList.add("hide");
-  let tar = e.target.className;
-
-  for (let i = 0; i < boxes.length; i++) {
-    boxes[i].classList.remove("active");
-  }
-  if (tar === "card") e.target.classList.add("active");
-});
-con2.addEventListener("click", (e) => {
-  mcard2.classList.remove("hide");
-  mcard1.classList.add("hide");
 
   let tar = e.target.className;
 
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].classList.remove("active");
   }
-
   if (tar === "card") e.target.classList.add("active");
 });
 
 c1.addEventListener("click", () => {
   mcard1.classList.add("hide");
-});
-c2.addEventListener("click", () => {
-  mcard2.classList.add("hide");
 });
