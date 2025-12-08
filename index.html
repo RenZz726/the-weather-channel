@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Weather App</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- sradha -->
@@ -22,12 +37,50 @@
     <section class="monthly"></section>
 
     <!-- renson -->
-    <section class="radar"></section>
+    <section class="radar">
+      <div class="main">
+        <div class="main-container">
+          <div class="map">
+            <div class="loader">
+              <div class="loading"></div>
+            </div>
+            <div id="map"></div>
+            <svg
+              fill="red"
+              height="20"
+              width="20"
+              name="gps"
+              class="Radar--actionIcon--5VUdL Icon--icon--ySD-o Icon--darkTheme--RWEd0 loc"
+              viewBox="0 0 24 24"
+            >
+              <title>GPS</title>
+              <path
+                d="M3.508 10.99c-.833 0-.902-.265-.134-.6L20.63 2.855c.506-.221.738.008.516.516L13.61 20.626c-.331.759-.6.702-.6-.134v-9a.505.505 0 00-.502-.502h-9z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            <svg
+              name="expand"
+              class="Radar--actionIcon--5VUdL Icon--icon--ySD-o Icon--darkTheme--RWEd0 expand"
+              viewBox="0 0 24 24"
+            >
+              <title>Expand</title>
+              <path
+                d="M4.125 14.506c.621 0 1.125.491 1.125 1.097v1.828h1.875c.621 0 1.125.491 1.125 1.097s-.504 1.097-1.125 1.097h-3c-.621 0-1.125-.491-1.125-1.097v-2.925c0-.606.504-1.097 1.125-1.097zm15.75 0c.621 0 1.125.491 1.125 1.097v2.925c0 .606-.504 1.097-1.125 1.097h-3c-.621 0-1.125-.491-1.125-1.097s.504-1.097 1.125-1.097h1.875v-1.828c0-.606.504-1.097 1.125-1.097zM7.125 5c.621 0 1.125.491 1.125 1.097s-.504 1.097-1.125 1.097H5.25v1.828c0 .606-.504 1.097-1.125 1.097S3 9.628 3 9.022V6.097C3 5.49 3.504 5 4.125 5h3zm12.75 0C20.496 5 21 5.491 21 6.097v2.925c0 .606-.504 1.097-1.125 1.097s-1.125-.491-1.125-1.097V7.194h-1.875c-.621 0-1.125-.491-1.125-1.097S16.254 5 16.875 5h3z"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- vidhya -->
     <section class="allergy-tracker"></section>
 
     <!-- athulya -->
     <section class="air-quality-index"></section>
+
+    <script src="script.js"></script>
   </body>
 </html>
