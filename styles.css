@@ -201,6 +201,90 @@
         width: 400px;
     }
 }
+.allergydiscWrite{
+  padding: 0 16px;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row-reverse;
+}
+
+.allergybtnDis{
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  min-width: 100px;
+}
+
+.allergyimgSpan{
+  display: contents;
+}
+
+.allergyspanWrite{
+  margin-left: 5px;
+  text-align: left;
+  color: #2b2b2b;
+}
+
+.allergybeforeHead{
+  padding: 16px 0 0 16px;
+  align-items: center;
+  display: inline-flex;
+}
+
+.allergyHeaad2{
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+  color: #252422;
+}
+
+.allergysecCont{
+  margin-top: 28px;
+  margin-left: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.allergyeachOne{
+  padding: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  align-items: flex-start;
+  display: flex;
+  font-size: .875rem;
+  line-height: 1.4;
+}
+
+.allergysmImg{
+  margin-right: 25px;
+  height: 56px;
+  width: 56px;
+}
+
+.allergyWriting{
+  font-size: .875rem;
+  line-height: 1.4;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+
+.allergyspan1{
+  font-weight: 700;
+  font-size: .875rem;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+  color: #252422;
+}
+
+.allergyspan2{
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+  font-size: .875rem;
+  color: #252422;
+}
+
 
 @media screen and (max-width: 990px){
     .allergygridMake{
