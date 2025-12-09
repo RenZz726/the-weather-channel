@@ -1,16 +1,14 @@
-const city = "thrissur";
+const city = "kozhikode";
 const token = "bd01206366680e2361b32e378d5408128ab4be90";
 fetch(`https://api.waqi.info/feed/${city}/?token=${token}`)
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data);
     const result = data.data;
-    document.getElementById("city_name").textContent = `- ${result.city.name}`
+    document.getElementById("city_name").textContent = `- ${result.city.name}`;
     document.getElementById("no2").textContent = result.iaqi.no2?.v ?? "--";
     document.getElementById("co").textContent = result.iaqi.co?.v ?? "--";
     document.getElementById("pm25").textContent = result.iaqi.pm25?.v ?? "--";
     document.getElementById("pm10").textContent = result.iaqi.pm10?.v ?? "--";
-    document.getElementById("aqi").textContent = result.aqi ?? "--";
     document.getElementById("so2").textContent = result.iaqi.so2?.v ?? "--";
     document.getElementById("o3").textContent = result.iaqi.o3?.v ?? "--";
 
@@ -38,14 +36,6 @@ fetch(`https://api.waqi.info/feed/${city}/?token=${token}`)
       "pm10",
       result.iaqi.pm10?.v ?? "--"
     );
-    document.getElementById("aqi_air").textContent = getstatus(
-      "aqi",
-      result.aqi ?? "--"
-    );
-    document.getElementById("air_para").textContent = getstatus(
-      "para",
-      result.aqi ?? "--"
-    );
 
     document.getElementById("pm25_mg").textContent =
       pm25Convert(result.iaqi.pm25?.v ?? "--") + " µg/m3";
@@ -60,14 +50,51 @@ fetch(`https://api.waqi.info/feed/${city}/?token=${token}`)
     document.getElementById("co_mg").textContent =
       coConvert(result.iaqi.co?.v ?? "--") + " mg/m³";
 
+    strockFill(
+      "pm25_don",
+      result.iaqi.pm25?.v ?? 0,
+      getstatus("pm25", result.iaqi.pm25?.v)
+    );
+    strockFill(
+      "pm10_don",
+      result.iaqi.pm10?.v ?? 0,
+      getstatus("pm10", result.iaqi.pm10?.v)
+    );
+    strockFill(
+      "co_don",
+      result.iaqi.co?.v ?? 0,
+      getstatus("co", result.iaqi.co?.v)
+    );
+    strockFill(
+      "o3_don",
+      result.iaqi.o3?.v ?? 0,
+      getstatus("o3", result.iaqi.o3?.v)
+    );
+    strockFill(
+      "so2_don",
+      result.iaqi.so2?.v ?? 0,
+      getstatus("so2", result.iaqi.so2?.v)
+    );
+    strockFill(
+      "no_don",
+      result.iaqi.no2?.v ?? 0,
+      getstatus("no2", result.iaqi.no2?.v)
+    );
 
-      strockFill("aqi_don",result.aqi??0,getstatus("aqi",result.aqi))
-      strockFill("pm25_don",result.iaqi.pm25?.v??0,getstatus("pm25",result.iaqi.pm25?.v))
-      strockFill("pm10_don",result.iaqi.pm10?.v??0,getstatus("pm10",result.iaqi.pm10?.v))
-      strockFill("co_don",result.iaqi.co?.v??0,getstatus("co",result.iaqi.co?.v))
-      strockFill("o3_don",result.iaqi.o3?.v??0,getstatus("o3",result.iaqi.o3?.v))
-      strockFill("so2_don",result.iaqi.so2?.v??0,getstatus("so2",result.iaqi.so2?.v))
-      strockFill("no_don",result.iaqi.no2?.v??0,getstatus("no2",result.iaqi.no2?.v))
+    const primaryKey = toPrimaryPollutant(result.iaqi);
+    const primaryValue = primaryName(primaryKey);
+    document.getElementById("Primary_name").textContent = primaryValue;
+    document.getElementById("primary_desc").textContent = primaryKey;
+
+    const maxaqi = result.iaqi[primaryKey]?.v || 0;
+    const maxStatus = getstatus(primaryKey, maxaqi);
+    document.getElementById("aqi").textContent = maxaqi;
+    document.getElementById("aqi_air").textContent = getstatus(
+      primaryKey,
+      maxaqi
+    );
+    document.getElementById("air_para").textContent = getstatus("para", maxaqi);
+    strockFill("aqi_don", maxaqi, maxStatus);
   });
 function getstatus(type, value) {
   if (value === "--" || value === 0) return "--";
@@ -141,32 +168,74 @@ function getstatus(type, value) {
 
 function pm25Convert(aqi) {
   if (aqi === "--") return "--";
-  const r = [[0, 50, 0, 12],[51, 100, 12.1, 35.4],[101, 150, 35.5, 55.4],[151, 200, 55.5, 150.4],[201, 300, 150.5, 250.4],[301, 400, 250.5, 350.4],[401, 500, 350.5, 500.4],];
+  const r = [
+    [0, 50, 0, 12],
+    [51, 100, 12.1, 35.4],
+    [101, 150, 35.5, 55.4],
+    [151, 200, 55.5, 150.4],
+    [201, 300, 150.5, 250.4],
+    [301, 400, 250.5, 350.4],
+    [401, 500, 350.5, 500.4],
+  ];
   return convert(aqi, r);
 }
 function pm10Convert(aqi) {
   if (aqi === "--") return "--";
-  const r = [[0, 50, 0, 54],[51, 100, 55, 154],[101, 150, 155, 254],[151, 200, 255, 354],[201, 300, 355, 424],[301, 400, 425, 504],[401, 500, 505, 604],];
+  const r = [
+    [0, 50, 0, 54],
+    [51, 100, 55, 154],
+    [101, 150, 155, 254],
+    [151, 200, 255, 354],
+    [201, 300, 355, 424],
+    [301, 400, 425, 504],
+    [401, 500, 505, 604],
+  ];
   return convert(aqi, r);
 }
 function no2Convert(aqi) {
   if (aqi === "--") return "--";
-  const r = [[0, 50, 0, 40],[51, 100, 41, 80],[101, 150, 81, 180],[151, 200, 181, 280],[201, 300, 281, 400],[301, 400, 401, 600],[401, 500, 601, 1000], ];
+  const r = [
+    [0, 50, 0, 40],
+    [51, 100, 41, 80],
+    [101, 150, 81, 180],
+    [151, 200, 181, 280],
+    [201, 300, 281, 400],
+    [301, 400, 401, 600],
+    [401, 500, 601, 1000],
+  ];
   return convert(aqi, r);
 }
 function so2Convert(aqi) {
   if (aqi === "--") return "--";
-  const r = [[0, 50, 0, 40],[51, 100, 41, 80],[101, 150, 81, 380],[151, 200, 381, 800],[201, 300, 801, 1600],];
+  const r = [
+    [0, 50, 0, 40],
+    [51, 100, 41, 80],
+    [101, 150, 81, 380],
+    [151, 200, 381, 800],
+    [201, 300, 801, 1600],
+  ];
   return convert(aqi, r);
 }
 function o3Convert(aqi) {
   if (aqi === "--") return "--";
-  const r = [[0, 50, 0, 50],[51, 100, 51, 100],[101, 150, 101, 168],[151, 200, 169, 208],[201, 300, 209, 748], ];
+  const r = [
+    [0, 50, 0, 50],
+    [51, 100, 51, 100],
+    [101, 150, 101, 168],
+    [151, 200, 169, 208],
+    [201, 300, 209, 748],
+  ];
   return convert(aqi, r);
 }
 function coConvert(aqi) {
   if (aqi === "--") return "--";
-  const r = [[0, 50, 0, 1.0],[51, 100, 1.1, 2.0],[101, 150, 2.1, 10],[151, 200, 10.1, 17],[201, 300, 17.1, 34],];
+  const r = [
+    [0, 50, 0, 1.0],
+    [51, 100, 1.1, 2.0],
+    [101, 150, 2.1, 10],
+    [151, 200, 10.1, 17],
+    [201, 300, 17.1, 34],
+  ];
   return convert(aqi, r);
 }
 function convert(aqi, range) {
@@ -178,20 +247,45 @@ function convert(aqi, range) {
   }
   return "--";
 }
-// Donut
 
-function strockFill(cirId,aqi,status,max=500){
-    const circle=document.getElementById(cirId)
-    if(!circle||aqi==="--") return
-    const total=305
-    const percent=Math.min(aqi/max,1)
-    const offset=total*(1-percent)
-    circle.style.strokeDashoffset=offset
+function strockFill(cirId, aqi, status, max = 500) {
+  const circle = document.getElementById(cirId);
+  if (!circle || aqi === "--") return;
+  const total = 305;
+  const percent = Math.min(aqi / max, 1);
+  const offset = total * (1 - percent);
+  circle.style.strokeDashoffset = offset;
 
-    if(status==="Good") circle.style.stroke="green"
-    else if(status==="Satisfactory") circle.style.stroke="yellow"
-    else if(status==="Moderate") circle.style.stroke="orange"
-    else if(status==="Poor") circle.style.stroke="#cc5500"
-    else circle.style.stroke="red"
+  if (status === "Good") circle.style.stroke = "green";
+  else if (status === "Satisfactory") circle.style.stroke = "yellow";
+  else if (status === "Moderate") circle.style.stroke = "orange";
+  else if (status === "Poor") circle.style.stroke = "#cc5500";
+  else circle.style.stroke = "red";
 }
-// primary poluttant
+
+// primary pollutant
+function toPrimaryPollutant(iaqi) {
+  const pollutant = ["pm25", "pm10", "no2", "so2", "co", "o3"];
+  let primary = "";
+  let maxVal = -1;
+  for (let key of pollutant) {
+    const val = iaqi[key]?.v;
+    if (val !== undefined && val > maxVal) {
+      maxVal = val;
+      primary = key;
+    }
+  }
+  return primary;
+}
+
+function primaryName(name) {
+  const names = {
+    pm25: "PM2.5 (Fine Particulate Matter)",
+    pm10: "PM10 (Coarse Particulate Matter)",
+    no2: "NO₂ (Nitrogen Dioxide)",
+    so2: "SO₂ (Sulphur Dioxide)",
+    co: "CO (Carbon Monoxide)",
+    o3: "O₃ (Ozone)",
+  };
+  return names[name] || "Unknown";
+}
