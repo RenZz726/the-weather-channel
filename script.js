@@ -167,7 +167,7 @@ fetch(url)
                       <div class="hourfield">
                         <span class="hourfeelsLike">Rain Amount</span>
                         <p class="hourtempValue">${hrs.chance_of_rain} mm</p>
-                      </div>object
+                      </div>
                     </li>
        `
       ul.classList.add(`hourdata`);     
@@ -180,6 +180,12 @@ fetch(url)
           let add = el.querySelector('.houradd')
           let sub = el.querySelector('.hoursubtract')
           el.addEventListener('click',(e)=>{
+
+          document.querySelectorAll('[id^="class-"]').forEach(item =>{
+            if(item !== el){
+              item.classList.remove('active')
+            }
+          })
           let dateId = e.currentTarget.id.split('-')[1]
           add.style.display = add.style.display === 'none'?'block':'none'
           sub.style.display = sub.style.display === 'block'?'none':'block'
