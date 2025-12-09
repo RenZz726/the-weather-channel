@@ -61,9 +61,7 @@
                         y="55%"
                         text-anchor="middle"
                         id="aqi"
-                      >
-                        
-                      </text>
+                      ></text>
                     </svg>
                   </div>
                   <div class="airleft-contents">
@@ -78,8 +76,115 @@
                   </div>
                 </div>
               </div>
-              <div class="airinfo">
-                <img src="assests/Info.svg" /><span>Air Quality Index</span>
+              <div class="airinfo air_pop_wrap">
+                <div class="air_info_pop">
+                  <img src="assests/Info.svg" /><span>Air Quality Index</span>
+                </div>
+                <div class="air_popup">
+                  <img
+                    src="assests/cross_icon.svg"
+                    class="air_close_btn"
+                    width="15px"
+                    height="15px"
+                  />
+                  <div class="air_popup_layout">
+                    <div class="air_pop1">
+                      <h4>Levels</h4>
+                      <ul class="air_unorder">
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#01c966"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Good</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#6AE261"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Satisfactory</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#FBFF26"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Moderately Polluted</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#FF9F00"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Poor</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#FF0000"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Very Poor</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#F70004"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Severe</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="air_pop2">
+                      <h4 class="air_pop2_tit">Source</h4>
+                      <p class="air_pop2_para">
+                        Contains Copernicus Atmosphere Monitoring Service
+                        information 2025 and/or modified Copernicus Atmosphere
+                        Monitoring Service information 2025
+                      </p>
+                      <p class="air_pop2_para" style="margin-top: 16px">
+                        Neither the European Commission nor ECMWF is responsible
+                        for any use of this information
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="airsection-2">
@@ -290,18 +395,126 @@
                     </div>
                   </div>
                 </div>
-                <div class="airinfo">
-                  <img src="assests/Info.svg" /><span>Air Quality Index</span>
+                <div class="airinfo air_pop_wrap">
+                  <div class="air_info_pop">
+                    <img src="assests/Info.svg" /><span>Air Quality Index</span>
+                  </div>
+                  <div class="air_popup air_down_pop">
+                    <img
+                      src="assests/cross_icon.svg"
+                      class="air_close_btn"
+                      width="15px"
+                      height="15px"
+                    />
+                    <div class="air_popup_layout">
+                      <div class="air_pop1">
+                        <h4>Levels</h4>
+                        <ul class="air_unorder">
+                          <li>
+                            <div class="air_dot">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#01c966"
+                                ></circle>
+                              </svg>
+                            </div>
+                            <span class="air_poptext">Good</span>
+                          </li>
+                          <li>
+                            <div class="air_dot">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#6AE261"
+                                ></circle>
+                              </svg>
+                            </div>
+                            <span class="air_poptext">Satisfactory</span>
+                          </li>
+                          <li>
+                            <div class="air_dot">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#FBFF26"
+                                ></circle>
+                              </svg>
+                            </div>
+                            <span class="air_poptext">Moderately Polluted</span>
+                          </li>
+                          <li>
+                            <div class="air_dot">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#FF9F00"
+                                ></circle>
+                              </svg>
+                            </div>
+                            <span class="air_poptext">Poor</span>
+                          </li>
+                          <li>
+                            <div class="air_dot">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#FF0000"
+                                ></circle>
+                              </svg>
+                            </div>
+                            <span class="air_poptext">Very Poor</span>
+                          </li>
+                          <li>
+                            <div class="air_dot">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#F70004"
+                                ></circle>
+                              </svg>
+                            </div>
+                            <span class="air_poptext">Severe</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="air_pop2">
+                        <h4 class="air_pop2_tit">Source</h4>
+                        <p class="air_pop2_para">
+                          Contains Copernicus Atmosphere Monitoring Service
+                          information 2025 and/or modified Copernicus Atmosphere
+                          Monitoring Service information 2025
+                        </p>
+                        <p class="air_pop2_para" style="margin-top: 16px">
+                          Neither the European Commission nor ECMWF is
+                          responsible for any use of this information
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
         <div class="airside-ad">
-          <img
-            src="https://tpc.googlesyndication.com/simgad/13262849628625774337?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qklV5eNK18tnIQ7p3K_IBx-NE7pXg"
-          />
-        </div>
+            <img
+              src="https://tpc.googlesyndication.com/simgad/13262849628625774337?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qklV5eNK18tnIQ7p3K_IBx-NE7pXg"
+            />
+          </div>
       </div>
     </section>
     <script src="script.js"></script>

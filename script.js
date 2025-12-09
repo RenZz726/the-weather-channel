@@ -1,4 +1,4 @@
-const city = "kozhikode";
+const city = "kollam";
 const token = "bd01206366680e2361b32e378d5408128ab4be90";
 fetch(`https://api.waqi.info/feed/${city}/?token=${token}`)
   .then((response) => response.json())
@@ -256,11 +256,11 @@ function strockFill(cirId, aqi, status, max = 500) {
   const offset = total * (1 - percent);
   circle.style.strokeDashoffset = offset;
 
-  if (status === "Good") circle.style.stroke = "green";
-  else if (status === "Satisfactory") circle.style.stroke = "yellow";
-  else if (status === "Moderate") circle.style.stroke = "orange";
-  else if (status === "Poor") circle.style.stroke = "#cc5500";
-  else circle.style.stroke = "red";
+  if (status === "Good") circle.style.stroke = "#01c966";
+  else if (status === "Satisfactory") circle.style.stroke = "#6ae261";
+  else if (status === "Moderate") circle.style.stroke = "#fbff26";
+  else if (status === "Poor") circle.style.stroke = "#ff0000";
+  else circle.style.stroke = "#f70004";
 }
 
 // primary pollutant
@@ -289,3 +289,25 @@ function primaryName(name) {
   };
   return names[name] || "Unknown";
 }
+let infoBtn = document.querySelectorAll(".air_info_pop");
+let popupContainer = document.querySelectorAll(".air_popup");
+let air_info = document.querySelectorAll(".air_info_pop");
+let closeBtn = document.querySelectorAll(".air_close_btn");
+infoBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    popupContainer[index].style.display = "block";
+    infoBtn[index].style.border = "2px solid #1b4de4";
+  });
+});
+closeBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    popupContainer[index].style.display = "none";
+    infoBtn[index].style.border = "none";
+  });
+});
+window.addEventListener("scroll", () => {
+  popupContainer.forEach((cont, index) => {
+    cont.style.display = "none";
+    infoBtn[index].style.border = "none";
+  });
+});
