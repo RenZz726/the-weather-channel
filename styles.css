@@ -413,3 +413,64 @@ font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Rob
     padding-left:10px;
     padding-bottom:5px;
 }
+.daily-table{
+    border-spacing:10px;
+    font-size:6px;
+    width:100%;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.date0-icon-with-text,.rainfall0-with-value,.date1-icon-with-text,.rainfall1-with-value,.date2-icon-with-text,.rainfall2-with-value,.date3-icon-with-text,.rainfall3-with-value,.date4-icon-with-text,.rainfall4-with-value{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:0px;
+}
+.date1-cast,.date2-cast,.date3-cast,.date4-cast{
+    border-top: 1px solid rgb(236, 233, 233);
+}
+.daily-forecast h1{
+    font-size:9px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.daily-forecast{
+    padding:10px;
+    padding-right:0px;
+    padding-bottom:5px;
+}
+table {
+    border-collapse: collapse;
+}
+tr{
+    height:35px;
+}
+.radar-section img{
+    width:100%;
+    height:280px;
+}
+.radar-section{
+    padding:5px;
+    max-height:335px;
+}
+.radar-section h1{
+    font-size:20px;
+    color:rgb(37, 36, 34);
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.pin{
+    width:15px;
+    height:15px;
+    background-color: rgb(23, 98, 160);
+    border-radius:10px;
+    display:flex;
+    justify-self:center;
+}
+.pin-round{
+    background-color:lightgrey;
+    width:40px;
+    height:29px;
+    padding-top:12px;
+    border-radius:75px;
+    position:relative;
+    left:140px;
+    bottom:160px;
+}
