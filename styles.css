@@ -474,3 +474,95 @@ tr{
     left:140px;
     bottom:160px;
 }
+.details{
+    padding:10px;
+    border-radius:5px;
+    display:flex;
+    justify-self: right;
+    border:1px solid #252422;
+    background-color:#252422;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    width:fit-content;
+    color:white;
+}
+.air-value{
+    color:rgb(37, 36, 34);
+    font-size:20px;
+    font-weight:400;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.air-index-text p{
+    max-width:220px;
+    color:rgb(111, 117, 133);
+    font-size:15px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.air-with-button h1{
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:20px;
+    padding:10px;
+}
+.air-icon{
+    font-size:27px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.progress{
+    width:100px;
+}
+.tooltip{
+    position:relative;
+    display:inline-block;
+    width: 100%;
+    z-index:2;
+}
+.tooltiptext{
+      visibility: hidden;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        color: rgb(43, 43, 43);
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: 35px;
+        left: -26px;
+        /* margin-left: -60px; */
+        opacity: 0;
+        /* transform:rotate(180deg); */
+        transition: opacity 0.3s;
+        padding-right:32px;
+        padding-bottom:25px;
+        border:2px solid rgb(207, 202, 202);
+}
+.tooltip .tooltiptext::after{
+          content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+}
+.ttvisible{
+    visibility:visible;
+    opacity:1;
+}
+.levels,.sources{
+    display:flex;
+    flex-direction:column;
+    text-align:left;
+}
+#p1{
+    margin-bottom:15px;
+}
+.levels-with-source{
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+    padding:0px 10px;
+}
+.l1,.l2{
+    white-space: nowrap;
+}

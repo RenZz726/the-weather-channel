@@ -172,3 +172,15 @@ eur.addEventListener("click", () => {
   ap.style.borderBottom="1px solid rgb(218, 218, 218)";
   ttip.classList.toggle("hide");
 });
+ttip.addEventListener("click",()=>{
+    airbtn.style.border="2px solid blue";
+    tttext.classList.toggle("ttvisible");
+})
+const closedbtn=document.querySelector(".closedbtn");
+const main=document.querySelector(".main-body");
+main.addEventListener("click",(event)=>{
+        console.log(event.target)
+        if(event.target !== airbtn ){
+            airbtn.style.border="none";
+        }
+}, true);
