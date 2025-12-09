@@ -1,0 +1,124 @@
+@font-face{
+    font-family: 'bold';
+    src: url(fonts/inter-v19-latin-700.woff2);
+}
+@font-face{
+    font-family: 'light';
+    src: url(fonts/inter-v19-latin-500.woff2);
+}
+@font-face{
+    font-family: 'medium';
+    src: url(fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2);
+}
+body, html{
+    /* width: 100%; */
+    height: 100%;
+    overflow-x: hidden;
+}
+.houradsContainer{
+position: relative;
+text-align: center;
+width: 100%;
+height: 108px;
+background-color: #f2f2f2;
+padding-bottom: 12px;
+color: #6f7585;
+font-size: 10px;
+}
+.hourheadAds{
+    position: relative;
+    background-color: rgba(205, 205, 205, 0.345)
+}
+.hourHeaderAddress{
+    /* padding-left: 16px;
+    padding-right: 16px; */
+    width: 100%;
+}
+.houraddress{
+    display: flex;
+    text-align: left;
+    border-radius: 8px;    
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    margin: 12px 0;
+    padding:12px;
+}
+.hourLoca{
+    color:#252422 ;
+    font-family: light;
+    font-weight: 500;
+    font-size: 18px;
+}
+.locationImg{
+    width: 16px;
+    margin-right: 8px;
+}
+.hourmainContent{
+    display: block;
+    position:relative ;
+    margin-left: 4px;
+}
+.hourlargeScreen{
+    display: block;
+    margin: 12px auto;
+    /* display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    grid-column-gap: 12px; */
+    max-width: 1162px;
+}
+.hourcontent{
+    border-bottom: 1px solid #676767;
+}
+.hourlocationTitle{
+    font-size: 1.5rem;
+    line-height: 1.08em;
+    font-family: bold;
+    margin: 0px;
+    padding: 0px;
+}
+.hourbar{
+    font-family: medium;
+    font-size: 1rem;
+    padding-left: 4px;
+    line-height: 1.08rem;
+    font-weight: 400;
+}
+.hourplace{
+    margin-left: 4px;
+    font-family:medium ;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.08rem;
+}
+.hourtimes{
+    padding: 0 0 16px;
+    padding-right: 6px;
+    font-family: light;
+    font-weight: 400;
+    /* flex: 0 0 80px; */
+    opacity: 0.65;
+    font-size: 14px;
+}
+.hourTenDay{
+  display: flex;
+  justify-content: flex-end;
+}
+.hourTenDayBtn{
+    margin: 0 16px 16px;
+    background-color: #252422;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 16px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.active{
+    border: 2px solid;
+    font-weight: 700;
+}
+.hidden{
+    display: none;
+}

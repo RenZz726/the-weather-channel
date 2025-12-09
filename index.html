@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Weather App</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="styles2.css">
   </head>
   <body>
     <!-- sradha -->
@@ -13,21 +15,48 @@
     <section class="sign-in"></section>
 
     <!-- akshara -->
-    <section class="hourly"></section>
-
+    <section class="hourhourly">
+      <div class="houradsContainer">
+        Advertisment
+      <div class="hourheadAds"></div>
+      </div>
+      <div class="hourHeaderAddress">
+      <button class="houraddress">
+        <svg class ='locationImg' name="pin" class="CurrentLocationBar--pinIcon--EA3g0 Icon--icon--ySD-o" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          <path d="M8 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm0-4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" fill="currentColor"></path>
+          <path d="m8 15-4.218-4.974a17.852 17.852 0 0 1-.174-.226A5.444 5.444 0 0 1 2.5 6.5a5.5 5.5 0 1 1 11 0 5.442 5.442 0 0 1-1.107 3.299h-.001s-.15.198-.172.225L8 15ZM4.406 9.197s.117.155.144.188L8 13.454l3.455-4.075.14-.183A4.45 4.45 0 0 0 12.5 6.5a4.5 4.5 0 1 0-9 0 4.453 4.453 0 0 0 .906 2.697Z" fill="currentColor"></path>
+        </svg>
+        <span class="hourLoca">Palakkad</span>
+      </button>
+      </div>
+      <div class="hourmainContent">
+        <div class="hourlargeScreen">
+          <div class="hourcontent">
+                 <h1 class="hourlocationTitle">Hourly Weather
+                  <span class="hourbar">-<span class="hourplace"></span></span>
+                  </h1>
+                  <div class="hourtimes">As of <span class="ist"></span> IST</div>
+                    <div class="hourTenDay">
+                      <button class="hourTenDayBtn">10-Day Weather</button>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </section> 
     <!-- milan -->
-    <section class="ten-day"></section>
+    <section class="hourten-day"></section>
 
     <!-- pratyush -->
-    <section class="monthly"></section>
+    <section class="hourmonthly"></section>
 
     <!-- renson -->
-    <section class="radar"></section>
+    <section class="hourradar"></section>
 
     <!-- vidhya -->
-    <section class="allergy-tracker"></section>
+    <section class="hourallergy-tracker"></section>
 
     <!-- athulya -->
-    <section class="air-quality-index"></section>
+    <section class="hourair-quality-index"></section>
   </body>
+  <script src="script.js"></script>
 </html>
