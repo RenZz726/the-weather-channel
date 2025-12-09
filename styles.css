@@ -191,3 +191,150 @@ input {
   border: none;
   font-family: "regular-500";
 }
+
+/* signup */
+.signup {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.signup-adds {
+  flex: 0 0 40%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  width: 40%;
+}
+.signup-adds img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.signup-form {
+  flex: 1;
+  width: 100%;
+  max-width: 693px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 16px;
+  position: relative;
+  color: #252422;
+}
+.signup-form h2 {
+  font-family: "regular-500";
+  margin: 12px 0 20px;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.17;
+}
+.signup-text {
+  background: #2524220d;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  padding: 16px;
+  min-width: 0;
+  width: 100%;
+  max-width: 661px;
+}
+.signup-text div {
+  font-size: 0.875rem;
+  line-height: 1.15;
+}
+.signup-text ul {
+  padding-left: 27px;
+  margin: 8px 0 0;
+}
+.signup-text li {
+  font-size: 0.875rem;
+  line-height: 1.15;
+  font-family: "regular-700";
+}
+.signinup-form .signin-inputbox {
+  max-width: 661px;
+}
+.signup-google {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22.5px;
+}
+.signup-account {
+  margin-bottom: 0;
+}
+.signinup-form {
+  max-width: none;
+}
+.signinup-form input {
+  max-width: 637px;
+  border-radius: 5px;
+}
+.signup-privacypolicy {
+  margin: 14px 0 18px;
+  display: flex;
+  gap: 4px;
+}
+.signup-privacypolicy div {
+  display: flex;
+  font-size: 0.875rem;
+  margin-top: 2px;
+}
+.signup-privacypolicy .signin-p {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.1428571429;
+  color: #252422;
+}
+.signup-link {
+  color: #1b4de4;
+}
+.signup-link:hover {
+  color: #1b4de4;
+  text-decoration: none;
+}
+.signin-form .signup-btn {
+  margin: 0 23px 24px !important;
+  text-align: end;
+}
+.signin-password {
+  position: relative;
+  box-sizing: border-box;
+}
+.signin-passwordinfo p {
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+.signin-passwordinfo ul {
+  margin-top: 0.3125rem;
+  list-style-type: disc;
+  margin-top: 7px;
+}
+.signin-passwordinfo li {
+ position: relative;
+  color: #686c74;
+  font-size: 0.875rem;
+  line-height: 1.14;
+  padding: 8px 0 0 4px;
+  margin-left: -0.8rem;
+}
+
+.signin-up a:hover {
+  color: #252422cc;
+}
+.signin-backbtn a:hover {
+  color: #252422cc;
+  text-decoration: underline;
+}
+.signin-validicon {
+  height: 18px;
+  position: absolute;
+  top: 20px;
+  width: 18px;
+  right: 0;
+}
+.error-msg {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}

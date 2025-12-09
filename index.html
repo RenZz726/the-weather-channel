@@ -68,6 +68,107 @@
         </div>
       </section>
 
+      <section id="signupPage">
+        <div class="signup">
+          <div class="signup-adds">
+            <img src="https://s.w-x.co/signup-1.jpg" alt="" />
+          </div>
+          <div class="signup-form">
+            <h2>Unlock More For Free</h2>
+            <div class="signup-text">
+              <div>
+                Create a free account with Google or your email and password.
+              </div>
+              <ul>
+                <li>Save your favourite locations and access them anywhere</li>
+                <li>Build your custom dashboard just the way you want it</li>
+                <li>Set your forecast preferences across devices</li>
+              </ul>
+            </div>
+            <span class="signup-google">
+              <button class="google-btn">
+                <img src="assests/google.png" /><span>Sign up with Google</span>
+              </button>
+              <div class="signin-up signup-account">
+                Already have an account?<a
+                  href="#"
+                  onclick="showPage('signinPage')"
+                  >Sign in</a
+                >
+              </div>
+            </span>
+            <div class="signin-horizontalline"><span>or</span></div>
+            <div class="signin-form signinup-form">
+              <form>
+                <div class="signin-inputbox">
+                  <input type="text" required id="firstName" />
+                  <label>First Name</label>
+                  <span class="signin-validicon"
+                    ><img src="assests/tick.svg" alt=""
+                  /></span>
+                  <div class="error-msg"></div>
+                </div>
+                <div class="signin-inputbox">
+                  <input type="text" required id="email" />
+                  <label>E-mail</label>
+                  <span class="signin-validicon"
+                    ><img src="assests/tick.svg" alt=""
+                  /></span>
+                </div>
+                <div class="signin-inputbox">
+                  <div class="signin-password">
+                    <input type="password" required id="password" />
+                    <label>Password</label>
+                    <span class="signin-validicon"
+                      ><img src="assests/tick.svg" alt=""
+                    /></span>
+                    <button type="button" class="eye-btn">
+                      <img src="assests/password.svg" />
+                    </button>
+                  </div>
+                  <div class="error-msg" id="password-error"></div>
+                  <div id="signin-password" class="signin-passwordinfo">
+                    <p>Password requirements:</p>
+                    <ul>
+                      <li id="rule-length">
+                        <img class="rule-icon" src="" /> Your password must be
+                        at least 8 characters long.
+                      </li>
+                      <li id="rule-number">
+                        <img class="rule-icon" src="" /> Have at least 1 number.
+                      </li>
+                      <li id="rule-special">
+                        <img class="rule-icon" src="" /> Contain at least 1
+                        special character ((!@#$%&))
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="signin-inputbox">
+                  <input type="password" required id="confirmPassword" />
+                  <label>Confirm Password</label>
+                  <span class="signin-validicon"
+                    ><img src="assests/tick.svg" alt=""
+                  /></span>
+                  <div class="error-msg" id="confirm-error"></div>
+                </div>
+                <div class="signup-privacypolicy">
+                  <div>*</div>
+                  <p class="signin-p">
+                    By continuing, you confirm that you have read and agree to
+                    our
+                    <a class="signup-link" href="">Terms of Use</a> and
+                    <a class="signup-link" href="">Privacy Policy</a>.
+                  </p>
+                </div>
+                <div class="signin-btn signup-btn">
+                  <button>Sign up</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
 
     <!-- akshara -->
@@ -87,5 +188,6 @@
 
     <!-- athulya -->
     <section class="air-quality-index"></section>
+    <script src="script.js"></script>
   </body>
 </html>
