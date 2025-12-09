@@ -216,3 +216,96 @@ font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Rob
     background-color:rgb(236, 233, 233);
     margin-bottom:5px;
 }
+.screen1{
+    background-image:url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Sunny-day_4.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70");
+    width:100%;
+    border-radius:8px;
+}
+.s1-sub1{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    background-color:rgba(0, 0, 0, 0.55);
+}
+.location span{
+    white-space: nowrap;
+    font-size:8px;
+    color:rgb(255, 255, 255);
+    font-weight:600;
+    text-shadow: rgba(23, 36, 50, 0.5) 0px 0px 5px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    padding:0px 8px;
+}
+.time span{
+    white-space: nowrap;
+    font-size:8px;
+    color:rgb(255, 255, 255);
+    font-weight:600;
+    text-shadow: rgba(23, 36, 50, 0.5) 0px 0px 5px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    padding:0px 8px;
+}
+.s1-sub1 span{
+    text-shadow:rgba(23, 36, 50, 0.5) 0px 0px 5px;
+}
+.s1-sub2{
+    background-image:url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Su…p=16:9&width=800&format=pjpg&auto=webp&quality=70");
+    background-repeat: no-repeat;
+    height:53px;
+}
+.temp span{
+    font-size:22px;
+    font-weight:500;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    color:rgb(255, 255, 255);
+}
+.temp{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    padding:0px;
+}
+.climate{
+    display:flex;
+    flex-direction:column;
+    padding-left:10px;
+}
+.weather,.day-night-temp{
+    font-size:8px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    color:rgb(255, 255, 255);
+    font-weight:600;
+    margin-top:-5px;
+    padding-top:3px;
+}
+.weather-descp{
+    font-size:9px;
+    font-weight:600;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    color:rgb(37, 36, 34);
+}
+.temp-feel{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.t1{
+    font-size:10px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    color:rgb(37, 36, 34);
+}
+.t2{
+    font-size:20px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    color:rgb(37, 36, 34);
+}
+.temp-view{
+    display:flex;
+    flex-direction:row;
+}
+.display{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-between;
+}
