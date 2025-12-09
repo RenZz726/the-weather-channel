@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- sradha -->
@@ -25,9 +26,439 @@
     <section class="radar"></section>
 
     <!-- vidhya -->
-    <section class="allergy-tracker"></section>
+    <section class="allergy-tracker">
+      <div class="allergyheaderImg">
+        <img src="assests/gameImg.png" alt="gameImg" class="allergyadImg" />
+      </div>
+      <main class="allergygridMake">
+        <div class="allergymain">
+          <div class="allergycontent">
+            <header class="allergyheadClass">
+              <h2 class="allergyheading">Pollen Breakdown</h2>
+              <div class="allergyexceptHead">
+                <p class="allergyparaClass">
+                  Do you know which kinds of pollen aggravate your symptoms?
+                  Here is the 3 day outlook for the worst offenders.
+                </p>
+                <div class="allergyflexThree">
+                  <div class="allergyslipped">
+                    <div class="allergysingleItem">
+                      <h3 class="allergyfirstHead">Tree Pollen</h3>
+                      <div class="allergyimgClass">
+                        <img
+                          class="allergytreeImg"
+                          src="tree_particles.58f09c.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="allergythreeText">
+                        <ul class="allergyulCls">
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Today: <strong id="tree-today">None</strong>
+                            </div>
+                          </li>
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Tomorrow: <strong id="tree-tomorrow">None</strong>
+                            </div>
+                          </li>
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Saturday: <strong id="tree-saturday">None</strong>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
 
+                  <div class="allergyslipped">
+                    <div class="allergysingleItem">
+                      <h3 class="allergyfirstHead">Grass Pollen</h3>
+                      <div class="allergyimgClass">
+                        <img
+                          class="allergytreeImg"
+                          src="grass_particles.732135.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="allergythreeText">
+                        <ul class="allergyulCls">
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Today: <strong id="grass-today">None</strong>
+                            </div>
+                          </li>
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Tomorrow:
+                              <strong id="grass-tomorrow">None</strong>
+                            </div>
+                          </li>
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Saturday:
+                              <strong id="grass-saturday">None</strong>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="allergyslipped">
+                    <div class="allergysingleItem2">
+                      <h3 class="allergyfirstHead">Ragweed Pollen</h3>
+                      <div class="allergyimgClass">
+                        <img
+                          class="allergytreeImg"
+                          src="ragweed_particles.783a76.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="allergythreeText">
+                        <ul class="allergyulCls">
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Today: <strong id="ragweed-today">None</strong>
+                            </div>
+                          </li>
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Tomorrrow:
+                              <strong id="ragweed-tomorrow">None</strong>
+                            </div>
+                          </li>
+                          <li class="allergyliCls">
+                            <div class="allergydotImg">
+                              <svg viewBox="0 0 10 10">
+                                <circle
+                                  cx="50%"
+                                  cy="50%"
+                                  r="50%"
+                                  fill="#cecece"
+                                ></circle>
+                              </svg>
+                              Saturday:
+                              <strong id="ragweed-saturday">None</strong>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <footer class="allergydiscWrite">
+              <button class="allergybtnDis" id="allergybtnDis">
+                <span class="allergyimgSpan">
+                  <svg
+                    name="info"
+                    style="width: 15px"
+                    class="allergyIcon--icon--ySD-o"
+                    viewBox="0 0 16 16"
+                  >
+                    <title>Info</title>
+                    <g fill="none" fill-rule="evenodd">
+                      <path
+                        d="M7.881 1.201a6.8 6.8 0 10.238 13.598A6.8 6.8 0 007.88 1.201zm.259 14.798A8 8 0 117.86 0a8 8 0 01.28 16zM7.915 5.42a1.05 1.05 0 10-.037-2.1 1.05 1.05 0 00.037 2.1z"
+                        fill="currentColor"
+                      ></path>
+                      <path
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        d="M8 7v6"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+                <span class="allergyspanWrite">About the Pollen Breakdown</span>
+              </button>
+              <div class="allergyPop" id="allergyPop">
+                <div class="allergyPopArrow"></div>
+
+                <div class="allergyFlexcard">
+                  <button class="allergyCloseBtn" id="allergyCloseBtn">
+                    <svg
+                      name="close"
+                      viewBox="0 0 24 24"
+                      width="16px"
+                      height="16px"
+                      display="block"
+                      fill="#2b2b2b"
+                      color="#2b2b2b"
+                    >
+                      <title>Close</title>
+                      <path
+                        d="M19.707 19.293l-1.414 1.414L12 14.414l-6.293 6.293-1.414-1.414L10.586 13 4.293 6.707l1.414-1.414L12 11.586l6.293-6.293 1.414 1.414L13.414 13z"
+                      ></path>
+                    </svg>
+                  </button>
+
+                  <div class="allergycontPop">
+                    <div class="allergySidepadd">
+                      <h4 class="allergypopHead">Levels</h4>
+                      <ul class="allergyUl">
+                        <li class="allergyli">
+                          <div class="allergylevel">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#cecece"
+                              ></circle>
+                            </svg>
+                            <span class="allergyColor">None</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="allergyUl">
+                        <li class="allergyli">
+                          <div class="allergylevel">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#00e838"
+                              ></circle>
+                            </svg>
+                            <span class="allergyColor">Very Low</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="allergyUl">
+                        <li class="allergyli">
+                          <div class="allergylevel">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#a5eb02"
+                              ></circle>
+                            </svg>
+                            <span class="allergyColor">Low</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="allergyUl">
+                        <li class="allergyli">
+                          <div class="allergylevel">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#ebbb02"
+                              ></circle>
+                            </svg>
+                            <span class="allergyColor">Moderate</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="allergyUl">
+                        <li class="allergyli">
+                          <div class="allergylevel">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#f27200"
+                              ></circle>
+                            </svg>
+                            <span class="allergyColor">High</span>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="allergyUl">
+                        <li class="allergyli">
+                          <div class="allergylevel">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#ff0000"
+                              ></circle>
+                            </svg>
+                            <span class="allergyColor">Very High</span>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="allergyText">
+                      <h4 class="allergypopHead">Which report is for you?</h4>
+                      <p class="allergyPara">
+                        Pollen Breakdown covers specific pollens like ragweed,
+                        while Today’s Pollen Count tracks ALL pollen. The 15 Day
+                        forecast covers more than pollen – so even if pollen is
+                        low, the overall allergy risk could still be high.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <div class="allergycontent"></div>
+            <div class="allergybeforeHead">
+              <h2 class="allergyHeaad2">Tips to Help Manage Your Allergies</h2>
+            </div>
+
+            <div class="allergysecCont">
+              <div class="allergyeachOne">
+                <img
+                  class="allergysmImg"
+                  src="assests/tip1.87f8af.png"
+                  alt=""
+                />
+                <div class="allergyWriting">
+                  <span class="allergyspan1"
+                    >Shower after being outdoors —
+                  </span>
+                  <span class="allergyspan2">
+                    To remove pollen you pick up outside, take a shower and
+                    change your clothes.
+                  </span>
+                </div>
+              </div>
+
+              <div class="allergyeachOne">
+                <img
+                  class="allergysmImg"
+                  src="assests/tip2.b7f0b3.png"
+                  alt=""
+                />
+                <div class="allergyWriting">
+                  <span class="allergyspan1">Minimise indoor pollen — </span>
+                  <span class="allergyspan2">
+                    Keep your windows shut and use your AC or a HEPA purifier to
+                    filter allergens.
+                  </span>
+                </div>
+              </div>
+
+              <div class="allergyeachOne">
+                <img
+                  class="allergysmImg"
+                  src="assests/tip3.bed52a.png"
+                  alt=""
+                />
+                <div class="allergyWriting">
+                  <span class="allergyspan1">Check the Weather — </span>
+                  <span class="allergyspan2">
+                    Learn when conditions such as the wind increase pollen
+                    levels, so you can prepare.
+                  </span>
+                </div>
+              </div>
+
+              <div class="allergyeachOne">
+                <img
+                  class="allergysmImg"
+                  src="assests/tip4.159080.png"
+                  alt=""
+                />
+                <div class="allergyWriting">
+                  <span class="allergyspan1"
+                    >Know your allergy relief options —
+                  </span>
+                  <span class="allergyspan2">
+                    From medications to nasal sprays, talk to your doctor about
+                    your options.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <aside class="allergysideAd">
+          <img class="allergysidead" src="assests/ad.jpeg" alt="" />
+        </aside>
+        <aside class="todayPollenCard">
+          <h2 class="todayPollenHeading">Today's Pollen Count</h2>
+          <p class="todayPollenText">
+            The pollen count is a measure of the pollen density in the air.
+          </p>
+          <div class="todayPollenValue">
+            <span id="today-pollen-number">--</span>
+            <span class="todayPollenUnit">grains</span>
+          </div>
+          <p class="todayPollenFooter">per cubic metre of air</p>
+        </aside>
+      </main>
+    </section>
     <!-- athulya -->
     <section class="air-quality-index"></section>
+    <script src="script.js"></script>
   </body>
 </html>

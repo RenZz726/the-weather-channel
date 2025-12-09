@@ -1,0 +1,558 @@
+.allergyheaderImg{
+    padding: 12px 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+.allergyadImg{
+    display: block;
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.allergygridMake{
+    margin: 12px auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    grid-column-gap: 12px;
+    max-width: 1162px;
+}
+.allergymain{
+    margin-left: 12px;
+    display: grid;
+    grid-column-end: 2;
+    grid-column-start: 1;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 12px;
+    grid-auto-rows: max-content;
+}
+.allergycontent{
+    grid-column: span 12;
+    width: 100%;
+    border-bottom: 1px solid #676767;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+}
+.allergyheadClass{
+    padding-bottom: 0px;
+}
+.allergyheading{
+    margin: 0;
+    line-height: 1.2;
+    align-items: center;
+    color: #252422;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.allergyparaClass{
+    margin: 0;
+    padding: 10px 16px 0;
+    color: #2b2b2b;
+    font-size: .875rem;
+    line-height: 1.25;
+    font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.allergyflexThree{
+    display: flex;
+}
+.allergyslipped{
+    padding: 36px 0 36px 36px;
+    width: 100%;
+}
+.allergysingleItem{
+    border-right: 1px solid #dedede;
+    padding-right: 36px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.allergysingleItem2{
+    padding-right: 36px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.allergyfirstHead{
+    padding-top: 20px;
+    order: 1;
+    margin: 0;
+    font-size: 1.125rem;
+    width: 100%;
+    line-height: 1.5;
+    font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.allergyimgClass{
+    order: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.allergytreeImg{
+    border-style: none;
+    max-height: 80px;
+    max-width: 80px;
+}
+.allergythreeText{
+    padding-top: 17px;
+    order: 2;
+    width: 100%;
+}
+.allergyulCls{
+    margin: 0;
+    padding: 0;
+}
+.allergyliCls{
+    list-style: none;
+    line-height: 1.5;
+    font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.allergydotImg{
+   display: inline-flex;
+   align-items: center;
+   padding-right: 7px;
+   display: inline-block;
+   vertical-align: middle; 
+   font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.allergydotImg svg{
+    width: .6875rem;
+    height: .6875rem;
+    flex-shrink: 0;
+}
+.allergydiscWrite{
+  padding: 0 16px;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row-reverse;
+  position: relative;
+  overflow: visible;
+}
+.allergyPop{
+  display: none;
+  position: absolute;
+  bottom: 135%;           
+  right: 0;
+  transform: none;
+  left: 60%;
+  background: #fff;
+  border: 1px solid #dedede;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  padding-left: 16px;
+  width: 413px;
+  max-width: none;
+  z-index: 10;
+}
+.allergyPopArrow{
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  /* right: 40px; */
+  width: 12px;
+  height: 12px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.allergyPopArrow::before{
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.allergyFlexcard{
+  display: flex;
+  flex-direction: column;
+}
+
+.allergyCloseBtn{
+  margin-left: auto;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;        
+  align-items: center;
+}
+
+.allergycontPop{
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.allergySidepadd{
+  padding: 4px 0 16px 0;
+  margin: 0;
+  min-width: 110px;
+}
+
+.allergypopHead{
+  margin: 0 0 10px 0;
+  font-size: .875rem;
+  font-weight: 700;
+  margin-top: 10px;
+  line-height: 1;
+  color: #2b2b2b;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;;
+}
+.allergyUl{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.allergyli{
+  padding: 2px 0;
+}
+
+.allergylevel{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.allergylevel svg{
+  width: 10px;
+  height: 10px;
+}
+
+.allergyColor{
+  font-size: .75rem;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+  color: #2b2b2b;
+}
+.allergyText{
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+.allergyPara{
+  margin: 0;
+  color: #2b2b2b;
+  padding-right: 31px;
+  font-size: .75rem;
+  /* line-height: 1.25; */
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;;
+}
+
+.allergybtnDis{
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  min-width: 100px;
+}
+.allergyimgSpan{
+  display: contents;
+}
+
+.allergyspanWrite{
+  margin-left: 5px;
+  text-align: left;
+  color: #2b2b2b;
+}
+
+.allergybeforeHead{
+  padding: 16px 0 0 16px;
+  align-items: center;
+  display: inline-flex;
+}
+
+.allergyHeaad2{
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+  color: #252422;
+}
+
+.allergysecCont{
+  margin-top: 28px;
+  margin-left: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.allergyeachOne{
+  padding: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  align-items: flex-start;
+  display: flex;
+  font-size: .875rem;
+  line-height: 1.4;
+}
+
+.allergysmImg{
+  margin-right: 25px;
+  height: 56px;
+  width: 56px;
+}
+
+.allergyWriting{
+  font-size: .875rem;
+  line-height: 1.4;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+
+.allergyspan1{
+  font-weight: 700;
+  font-size: .875rem;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+  color: #252422;
+}
+
+.allergyspan2{
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+  font-size: .875rem;
+  color: #252422;
+}
+.allergysideAd{
+    padding: 0 0 24px 0;
+    height: 620px;
+    background: #f2f2f2;
+    /* border-bottom: 1px solid #676767; */
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    position: relative;
+}
+.allergysidead{
+    height: 600px;
+    width: 300px;
+    margin-left: 26px;
+    margin-top: 16px;
+}
+    .allergysideAd2{
+    display: none;
+}
+.todayPollenCard{
+    display: none;
+  padding: 16px;
+  /* border-top: 1px solid #676767; */
+  margin-top: 24px;
+  font-family: Inter, Arial, sans-serif;
+}
+.todayPollenHeading{
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #252422;
+}
+.todayPollenText,
+.todayPollenFooter{
+  margin: 0;
+  font-size: .875rem;
+  color: #2b2b2b;
+}
+.todayPollenValue{
+  margin: 16px 0 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #252422;
+}
+.todayPollenUnit{
+  font-size: .875rem;
+  font-weight: 400;
+}
+@media screen and (max-width: 991px){
+    .allergyflexThree{
+        flex-wrap: wrap;
+    }
+    .allergysingleItem{
+        border-bottom: 1px solid #dedede;
+        padding-bottom: 20px;
+        border-right: none;
+    }
+    .allergyfirstHead{
+        order: 0;
+        padding: 0;
+    }
+    .allergyeachOne{
+        width: 100%;
+    }
+    .allergyslipped{
+        width: 50%;
+        padding: 20px 0 20px 20px;
+    }
+    .allergysideAd2{
+    display: block;
+    }
+}
+@media screen and (max-width: 450px){
+    .allergyflexThree{
+        flex-direction: column;
+    }
+    .allergyslipped{
+        width: 100%;
+        padding: 12px 16px;
+    }
+    .allergysingleItem,.allergysingleItem2{
+        border-right: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .allergytreeImg {
+        max-width: 70px;
+        max-height: 70px;
+    }
+    .allergyfirstHead{
+        order: -1;
+        width: 100%;
+        padding-top: 0;
+        margin-top: 8px;
+    }
+    .allergyimgClass {
+    order: 0;
+    width: 90px;         
+    flex: 0 0 90px;
+    display: flex;
+    justify-content: flex-start; 
+  }
+  .allergythreeText {
+    order: 1;
+    width: 100px; 
+    padding-top: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+  .allergyliCls {
+    margin: 6px 0;
+  }
+
+  .allergydotImg {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .allergygridMake{
+    /* grid-template-columns: none; */
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.allergyparaClass{
+    width: 400px;
+}
+.allergysideAd2{
+    display: block;
+    }
+    .allergyPop {
+    left: 55% !important;
+    transform: translateX(-50%) !important;
+    bottom: 120%; 
+    width: 90%;                
+    max-width: 360px;
+    padding: 16px;
+  }
+
+  .allergyPopArrow {
+    left: 70% !important; 
+    right: auto !important;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 500px) and (max-width: 900px) {
+  .allergyPop {
+    width: 85%;                    
+    max-width: 400px;              
+    left: 70%;                      
+    right: auto;                    
+    transform: translateX(-50%);    
+    bottom: 130%;                   
+    padding: 20px;
+  }
+  .allergyPopArrow {
+    left: 70%;                     
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 990px){
+.allergysideAd{
+    display: none;
+}
+.allergygridMake{
+    grid-template-columns: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: -21px;
+    padding-bottom: 21px;
+    max-width: 100%;
+    margin: auto;
+}
+.allergyflexThree{
+        flex-direction: column;
+    }
+    .allergyslipped{
+        width: 100%;
+        padding: 12px 16px;
+    }
+    .allergysingleItem,.allergysingleItem2{
+        border-right: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20%;
+    }
+    .allergytreeImg {
+        max-width: 70px;
+        max-height: 70px;
+        margin: 0;
+        margin-left: 60%;
+    }
+    .allergyfirstHead{
+        order: -1;
+        width: 100%;
+        padding-top: 0;
+        margin-top: 8px;
+    }
+    .allergyimgClass {
+    order: 0;
+    width: 90px;         
+    flex: 0 0 90px;
+    display: flex;
+    justify-content: flex-start; 
+  }
+  .allergythreeText {
+    order: 1;
+    width: 100px; 
+    padding-top: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+  .allergyliCls {
+    margin: 6px 0;
+  }
+
+  .allergydotImg {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .allergyparaClass{
+    width: 90%;
+  }
+  .allergyPop{
+    left: 50%;
+  }
+  .allergyPopArrow{
+    left: 50%;
+  }
+}
+
