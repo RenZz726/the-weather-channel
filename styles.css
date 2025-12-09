@@ -24,7 +24,7 @@ body{
     grid-template-columns: minmax(0, 1fr) 350px;
     grid-column-gap: 22px;
     max-width: 1162px;  /* 278 px balance*/
-    padding: 0 16px;
+    padding: 0 0 21px;
 }
 .content{
     border-bottom: 1px solid #676767;
@@ -234,7 +234,7 @@ body{
     margin-right: 3px;   
 }
 .percent{
-    font-size: 16px;body{
+    font-size: 16px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -479,9 +479,87 @@ body{
 .plus-img{
     margin-left: 6px;
 }
-
-    font-weight: 500 !important;
+.radar-container{
+    padding: 0 16px 24px;
 }
-.plus-img{
-    margin-left: 6px;
+.radar-header{
+    position: relative;
+    padding: 0 0 16px;
+    display: flex;
+    align-items: center;
+    
+}
+.radar-header h2{
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+.TenDayRadar{
+    position: relative;
+    border-bottom: 1px solid #676767;
+    margin-bottom: 24px;
+    max-width: 788px;
+}
+.Radar-img{
+    background-image: url('https://api.weather.com/v2/maps/dynamic?geocode=28.60,77.20&h=320&w=568&lod=9&product=twcRadarHcMosaic&map=light&format=jpg&language=en-IN&apiKey=71f92ea9dd2f4790b92ea9dd2f779061&a=0&region=in');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+    height: 275px;
+    position: relative;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.location-point{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: #0000004d;
+    left: calc(50% - 15px);
+    top: calc(50% - 30px);
+    border-radius: 30px;
+}
+.location-dot{
+    background: #1b4de4;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+.now-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    background: #252422;
+    border-radius: 6px;
+    padding: 8px 12px !important;
+    color: white;
+    min-width: 50px;
+    width: 74px;
+    height: 29px;
+}
+.map-icon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    z-index: 2;
+    width: 75px;
+    height: auto;
+    filter: drop-shadow(0 0 2px black);
+    opacity: .75px;
+    fill: #fff;
 }

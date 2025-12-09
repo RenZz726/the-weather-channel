@@ -10,7 +10,7 @@ export function weatherDetails(id, obj,data){
     
     cardsContent.innerHTML = ` 
         <div class="today" id="${id}-cls">
-            <h2 class="cards-date">${id === 0 ? 'Today' : date.toLocaleString('en-US', {weekday: 'short'})+ ' ' + date.getDate()}</h2>
+            <h2 class="cards-date">${id === 0 ? (data.current.is_day === 1 ? 'Today': 'Tonight') : date.toLocaleString('en-US', {weekday: 'short'})+ ' ' + date.getDate()}</h2>
             <svg width="24" name="subtract" class="subtract-img" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                 <path d="M15 9.875H5v1.25h10v-1.25Z" fill="currentColor"></path>
             </svg>
@@ -50,7 +50,7 @@ export function weatherDetails(id, obj,data){
                 </div>
 
             </div>
-            <p class="explanation">${id === 0 ? data.current.condition.text : obj.dayText}. Visibility reduced by smoke. High 25°C. Winds light and variable.</p>
+            <p class="explanation">${id === 0 ? data.current.condition.text : obj.dayText}. ${obj.dayTemp >= 20 ? 'High ' + obj.dayTemp + '°C': 'Low ' + obj.dayTemp + '°C'}. Winds ${data.current.wind_dir} at ${d.day.maxwind_kph} km/h.</p>
         </div>
         <div class="day-section2 measurements day-${id}">
             <ul class="weather">
@@ -128,7 +128,7 @@ export function weatherDetails(id, obj,data){
                 </div>
                 
             </div>
-            <p class="explanation">${obj.nightText}. Hazy. Low 10°C. Winds light and variable.</p>
+            <p class="explanation">${obj.nightText}. ${obj.nightTemp >= 20 ? 'High ' + obj.nightTemp + '°C': 'Low ' + obj.nightTemp + '°C'}. Winds ${obj.nightDir} at ${obj.nightWind} km/h.</p>
         </div>
         <div class="night-section2 measurements">
             <ul class="weather">
