@@ -566,3 +566,54 @@ tr{
 .l1,.l2{
     white-space: nowrap;
 }
+.tooltiptext h2{
+    margin:0px;
+    margin-bottom:5px;
+    font-size:15px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.tooltiptext p{
+    margin:0px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:12px;
+    letter-spacing:0.3px;
+    line-height:15px;
+}
+.tooltiptext span{
+    margin:0px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:12px;
+}
+.closebtn{
+    display:flex;
+    justify-self: right;
+    margin-right:-30px;
+}
+.air-quality-index{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    padding-bottom:20px;
+}
+.air-button span{
+    color:rgb(43, 43, 43);
+    font-size:12px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.air-button{
+    display:flex;
+    flex-direction:row;
+    gap:5px;
+    padding:3px 5px;
+    border-radius:5px;
+    border:1px solid rgb(236, 233, 233);
+    width:fit-content;
+}
+.air-with-button{
+    padding-bottom:5px;
+}
+.adv2,.adv3{
+    height:400px;
+    background-color:rgb(236, 233, 233);
+    padding-bottom:25px;
+}
