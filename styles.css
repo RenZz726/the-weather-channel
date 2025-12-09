@@ -338,3 +338,121 @@ input {
   font-size: 12px;
   margin-top: 4px;
 }
+
+
+.forgotten-password {
+  padding: 0 15px 25px;
+}
+.forgotten-password h2 {
+  margin: 30px 0 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.16;
+  color: #252422;
+  font-family: "regular-500";
+}
+.forgotten-password p {
+  margin: 0 0 24px;
+  padding-top: 5px;
+  font-size: 0.875rem;
+  line-height: 1.28;
+  color: #252422;
+}
+.signin-backbtn {
+  margin: 0 0 16px;
+}
+.signin-backbtn a {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.28;
+  text-decoration: none;
+  height: 20px;
+}
+.signin-backbtn img {
+  margin-right: 10px !important;
+  transform: rotate(90deg);
+  color: #252422cc;
+  height: 20px;
+  width: 20px;
+  margin-top: 5px;
+}
+.forgoten-form {
+  margin-top: 0;
+}
+.forgoten-form button {
+  margin: 0;
+  background-color: #dee0e3;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 16px;
+  font-size: 0.8125rem;
+  line-height: 1.15;
+  min-width: 215px;
+  pointer-events: none;
+  white-space: nowrap;
+  color: #6f7585;
+  font-family: "regular-500";
+}
+.forgotten-password .signin-up {
+  margin: 32px 0;
+}
+
+@media (max-width: 585px) {
+  .signin-inputbox input {
+    width: calc(100% - 25px);
+  }
+  .forgot {
+    margin-right: 30px;
+  }
+  .forgotten-password p,
+  .signin-backbtn a {
+    margin: 0 0 20px;
+    padding-top: 5px;
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+  .signinup-form .signin-inputbox {
+    max-width: none;
+  }
+}
+@media (max-width: 768px) {
+  .signup-adds {
+    display: none;
+  }
+  .signin-h2 {
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .signin-p {
+    margin: 6px 0 20px;
+    font-size: 1rem;
+    line-height: 1.38;
+  }
+  .signin-up {
+    font-size: 0.8125rem;
+    line-height: 1.15;
+  }
+  .forgotten-password p,
+  .signin-backbtn a {
+    margin: 0 0 20px;
+    padding-top: 5px;
+    font-size: 1rem;
+    line-height: 1.375;
+  }
+  .signup-form h2 {
+    margin: 10px 0 16px;
+    font-size: 1.5rem;
+  }
+  .signin-passwordinfo li {
+    font-size: 0.8125rem;
+    line-height: 1.15;
+  }
+  .signup-privacypolicy .signin-p {
+    font-size: 0.8125rem;
+    line-height: 1.1538461538;
+  }
+}
