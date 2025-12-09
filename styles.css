@@ -1,0 +1,162 @@
+/* air-quality-index */
+@font-face {
+  font-family: "font1";
+  src: url("fonts/inter-v19-latin-regular.woff2");
+}
+@font-face {
+  font-family: "font700";
+  src: url("fonts/inter-v19-latin-700.woff2");
+}
+@font-face {
+  font-family: "font600";
+  src: url("fonts/inter-v19-latin-600.woff2");
+}
+html {
+  line-height: 1.5;
+  color: #252422;
+}
+body {
+  margin: 0;
+  overflow: scroll;
+}
+.aircontainer {
+  font-family: "font1", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,sans-serif;
+}
+.airadvertisement {
+  width: 968px;
+  height: 248px;
+  overflow: hidden;
+}
+.airadImg1 {
+  border: none;
+  max-width: 970px;
+  max-height: 250px;
+}
+.aircontents {
+  padding-left: 14px;
+  padding-right: 16px;
+  margin: 0;
+}
+.airtitle h1 {
+  display: block;
+  white-space: normal;
+  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",   Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  line-height: 25.92px;
+  padding-bottom: 16px;
+  margin: 0;
+  margin-left: -2px;
+}
+.airsubtit {
+  font-family: "font1";
+}
+.airtitle span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.airsection1 {
+  padding-bottom: 26px;
+  border-bottom: 1px solid #676767;
+  margin-bottom: 30px;
+}
+.airsection1-left {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 3px;
+}
+.airvalue {
+  padding: 2px 0 0 20px;
+}
+.aircirclesvg {
+  border-radius: 50%;
+  display: block;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  transform: rotate(90deg);
+}
+.aircir1 {
+  fill: #0000;
+  stroke: #e7ecf1;
+  r: 48.5;
+  cx: 51;
+  cy: 51;
+  fill-opacity: 0;
+  stroke-width: 5px;
+}
+.aircir2 {
+  fill: #0000;
+  stroke-dasharray: 305;
+  stroke-dashoffset: 305;
+  transition: stroke-dashoffset 0.3s ease;
+  r: 48.5;
+  cx: 51;
+  cy: 51;
+  stroke: rgb(255, 0, 0);
+  stroke-width: 5px;
+  fill-opacity: 0;
+  stroke-linecap: round;
+}
+.aircir-value {
+  font-size: 26px;
+  font-weight: 600;
+  fill: #2b2b2b;
+  transform: rotate(-90deg);
+  text-anchor: middle;
+  alignment-baseline: middle;
+  transform-origin: 51px 51px;
+  letter-spacing: -0.5px;
+  font-family: "font600";
+}
+.airleft-contents {
+  padding: 12px 16px 0 26px;
+}
+.airleft-title {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",Arial, sans-serif;
+}
+.airleft-text {
+  margin: 0;
+  padding: 0 0 15px;
+  color: #6f7585;
+  font-weight: 400;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  transform-origin: 51px 51px;
+  font-size: 14px;
+  line-height: 1.25;
+  font-family: "font1", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,sans-serif;
+}
+.airsection1-right {
+  border-top: 1px solid #dedede;
+  margin: 16px 0 0;
+  padding: 16px 0;
+}
+.airright-title {
+  display: block;
+  margin: 0 24px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  font-family: "font600", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+  color: #252422;
+}
+.airright-text {
+  margin: 0 24px;
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+}
+.airinfo {
+  font-family: "font1";
+  padding: 0 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.airinfo span {
+  margin-left: 5px;
+}
