@@ -137,8 +137,8 @@ emailInput.addEventListener("blur", () => {
 const passwordInput = document.querySelector("#password");
 const passwordBox = passwordInput.closest(".signin-inputbox");
 const passwordIcon = passwordBox.querySelector(".signin-validicon");
-const TICK_IMG = "img/tick1.svg";
-const CROSS_IMG = "img/cross1.svg";
+const TICK_IMG = "assests/tick1.svg";
+const CROSS_IMG = "assests/cross1.svg";
 const ruleLength = document.querySelector("#rule-length");
 const ruleNumber = document.querySelector("#rule-number");
 const ruleSpecial = document.querySelector("#rule-special");
@@ -209,6 +209,20 @@ passwordInput.addEventListener("blur", () => {
   }
 });
 
+const eyeButtons = document.querySelectorAll(".eye-btn");
+eyeButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const input = btn.closest(".signin-password").querySelector("input");
+    if (input.type === "password") {
+      input.type = "text";
+      btn.querySelector("img").src = "assets/eye-open.svg";
+    } else {
+      input.type = "password";
+      btn.querySelector("img").src = "assets/password.svg";
+    }
+  });
+});
+
 const confirmInput = document.querySelector("#confirmPassword");
 const confirmBox = confirmInput.closest(".signin-inputbox");
 const confirmIcon = confirmBox.querySelector(".signin-validicon");
@@ -248,3 +262,5 @@ passwordInput.addEventListener("input", () => {
     checkConfirmPassword();
   }
 });
+
+
