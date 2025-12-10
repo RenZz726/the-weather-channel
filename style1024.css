@@ -22,11 +22,16 @@
     .location-img{
         margin-right: 8px;
     }
+    .marginBar{
+        margin: 12px  auto 0 auto;
+    }
     .mainBar{
         display: block;
-        padding: 0 16px;
-        /* max-width: 80%; */
     }
+    /* .radar-container{
+        max-width: 1162px;
+        margin-top: 16px;
+    } */
     .title h1{
         font-size: 20px;
         line-height: 1;
@@ -93,14 +98,12 @@
     }
 }
 @media screen and (min-width: 481px){
-    /* .marginBar{
-        justify-self: center;
-    } */
+    .marginBar{
+        /* max-width: 1162px; */
+        margin: 12px auto 0 auto; 
+    }
 }
 @media screen and (min-width: 1241px) {
-    /* .marginBar{
-        justify-self: center;
-    } */
     .Radar-img{
         height: 400px;
     }
