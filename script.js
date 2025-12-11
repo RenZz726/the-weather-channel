@@ -184,3 +184,209 @@ main.addEventListener("click",(event)=>{
             airbtn.style.border="none";
         }
 }, true);
+
+const loc=document.querySelector(".location span");
+const temp=document.querySelector(".thermo-value");
+const w=document.querySelector(".wind-value");
+const hum=document.querySelector(".humid-value");
+const dew=document.querySelector(".dew-value");
+const pres=document.querySelector(".pressure-value");
+const uv=document.querySelector(".uv-value");
+const vis=document.querySelector(".visible-value");
+const moon=document.querySelector(".moon-value");
+const t2=document.querySelector(".t2");
+const feel=document.querySelector(".temp span")
+const wd=document.querySelector(".weather-descp");
+const rise=document.querySelector(".rise span");
+const set=document.querySelector(".set span");
+const time=document.querySelector(".time span");
+
+async function fetchData(){
+  const response1=await fetch("https://api.openweathermap.org/data/2.5/weather?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1");
+  const data1=await response1.json();
+  w.textContent=data1.wind.speed + "km/h"
+  hum.textContent=data1.main.humidity + "%";
+  pres.textContent=data1.main.pressure + "mb";
+  vis.textContent=data1.visibility + "km";
+  let m1=Math.floor((data1.main.temp_max)-273)+"°";
+  let m2=Math.floor((data1.main.temp_min)-273)+"°";
+  let tm1m2=m1+"/"+m2;
+  temp.textContent=tm1m2;
+  t2.textContent=Math.floor(data1.main.feels_like-273)+"°";
+  feel.textContent=Math.floor(data1.main.feels_like-273)+"°";
+  loc.textContent=data1.name;
+  wd.textContent=`Weather Today in ${data1.name}`;
+  const now=new Date();
+  let today=now.toString().split(" ");
+  time.textContent=`As of ${today[4]} IST`;
+  const a=new Date(data1.sys.sunrise);
+  let s1=a.toString().split(" ");
+  rise.textContent=s1[4].slice(0,s1.length-4);
+  const b=new Date(data1.sys.sunset);
+  let s2=b.toString().split(" ");
+  set.textContent=s2[4].slice(0,s2.length-4);
+}
+fetchData();
+
+const mt=document.querySelector(".morning-temp");
+const at=document.querySelector(".afternoon-temp");
+const et=document.querySelector(".evening-temp");
+const ot=document.querySelector(".overnight-temp");
+
+const h0=document.querySelector(".now-temp");
+const h1=document.querySelector(".hour1-temp");
+const h2=document.querySelector(".hour2-temp");
+const h3=document.querySelector(".hour3-temp");
+const h4=document.querySelector(".hour4-temp");
+
+const tm1=document.querySelector(".hour1-time");
+const tm2=document.querySelector(".hour2-time");
+const tm3=document.querySelector(".hour3-time");
+const tm4=document.querySelector(".hour4-time");
+const tm=[tm1,tm2,tm3,tm4];
+
+const tmp1=document.querySelector(".today-temp");
+const tmp2=document.querySelector(".date1-temp");
+const tmp3=document.querySelector(".date2-temp");
+const tmp4=document.querySelector(".date3-temp");
+const tmp5=document.querySelector(".date4-temp");
+const tmp=[tmp1,tmp2,tmp3,tmp4,tmp5];
+
+const d1=document.querySelector(".date1");
+const d2=document.querySelector(".date2");
+const d3=document.querySelector(".date3");
+const d4=document.querySelector(".date4");
+const da=[d1,d2,d3,d4];
+
+let maximum=0;
+let minimum=0;
+
+async function getData(){
+  const response1=await fetch("https://api.openweathermap.org/data/2.5/weather?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1");
+  const data1=await response1.json();
+
+  const response2=await fetch("https://api.openweathermap.org/data/2.5/forecast?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1");
+  const data2=await response2.json();
+    let k=1;
+
+  for(let i=0;i<=39;i++){
+        let num=data2.list[i].dt_txt;
+       let str=num.toString().split(" ");
+       let dstr=str[0];
+       let d1=dstr.split("-");
+       let rdate=d1[2];
+       let taken=str[1];
+       let t=taken.split(":");
+       let ht=parseInt(t[0]);
+       let today=new Date();
+       let ttime=today.getHours();
+       let td=today.toString().split(" ");
+       let todaydate=td[2];
+       h0.textContent=Math.floor(data1.main.temp-273)+"°";
+      if(rdate===todaydate){
+        if(ht>=6 && ht < 12){
+          let ta=Math.floor(data2.list[i].main.temp-273) + "°";
+          mt.textContent=ta;
+        }
+            else if(ht>=12 && ht< 18){
+          let tb=Math.floor(data2.list[i].main.temp-273) + "°";
+          at.textContent=tb;
+        }
+        else if(ht>=18 && ht< 24){
+          let tc=Math.floor(data2.list[i].main.temp-273) + "°";
+          et.textContent=tc;
+        }
+        else if(ht>=0 && ht< 6){
+          let td=Math.floor(data2.list[i].main.temp-273) + "°";
+          ot.textContent=td;
+        }
+         // hourly forecast
+          if(k<=4){
+            let kt=Math.floor(data2.list[i].main.temp-273)+"°";
+            if(k===1){
+              h2.textContent=kt;
+            }
+            else if(k===2){
+              h2.textContent=kt;
+            }
+            else if(k===3){
+              h3.textContent=kt;
+            }
+            else if(k===4){
+              h4.textContent=kt;
+            }
+            k++;
+          }
+          if(Number(ttime)>=12 && Number(ttime)<15){
+            tm1.textContent="15:00"
+          }
+          else if(Number(ttime)>=15 && Number(ttime)<18){
+          tm1.textContent="18:00"
+        }
+        else if(Number(ttime)>=18 && Number(ttime)<21){
+          tm1.textContent="21:00";
+        } 
+        else if(Number(ttime)>=21 && Number(ttime)<24){
+          tm1.textContent="00:00";
+        } 
+        else if(Number(ttime)>=0 && Number(ttime)<3){
+          tm1.textContent="03:00";
+        } 
+        else if(Number(ttime)>=3 && Number(ttime)<6){
+          tm1.textContent="06:00";
+        }
+        else if(Number(ttime)>=6 && Number(ttime)<9){
+          tm1.textContent="09:00";
+        } 
+        else if(Number(ttime)>=9 && Number(ttime)<12){
+          tm1.textContent="12:00";
+        } 
+        let hour=(tm1.textContent);
+          let splithour=hour.split(":");
+          let firstsplit=splithour[0];
+          let numhour=Number(firstsplit);
+          let attach=":00"
+
+        for(let z=1;z<4;z++){
+        let numberh=(numhour+3).toString();
+        tm[z].textContent=(numberh+attach);
+        numhour+=3;
+       }
+      }
+}
+               // daily forecast
+        for(let j=0;j<=4;j++){
+          for(let i=0;i<=39;i++){
+             let num=data2.list[i].dt_txt;
+              let str=num.toString().split(" ");
+              let dstr=str[0];
+              let d1=dstr.split("-");
+              let rdate=d1[2];
+              let taken=str[1];
+              let t=taken.split(":");
+              let ht=parseInt(t[0]);
+              let today=new Date();
+              let ttime=today.getHours();
+              let td=today.toString().split(" ");
+              let todaydate=td[2];
+              if(Number(rdate)===Number(todaydate)+j){
+              maximum+=data2.list[i].main.temp_max-273;
+              let avgmax=Math.floor(maximum/8)+ "°";
+              minimum+=data2.list[i].main.temp_min-273;
+              let avgmin=Math.floor(minimum/8)+ "°";
+              tmp[j].textContent=avgmax+"/"+avgmin;
+              if(j!=4){
+                let one=new Date(today);
+              one.setDate(today.getDate()+j+1);
+              let daily=one.toString().split(" ");
+              let dailyarr=[];
+              dailyarr.push(daily[0]);
+              dailyarr.push(daily[2]);
+              let dailystr=dailyarr.toString().replace(","," ");
+              da[j].textContent=dailystr;
+              }
+      }
+        }
+      }
+}
+getData()
