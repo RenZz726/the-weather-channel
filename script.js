@@ -350,7 +350,12 @@ async function getData(){
         for(let z=1;z<4;z++){
         let numberh=(numhour+3).toString();
         tm[z].textContent=(numberh+attach);
-        numhour+=3;
+          if(numhour<=24){
+           numhour+=3;
+        }
+        else{
+          numhour=3;
+        }
        }
       }
 }
