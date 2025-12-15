@@ -1,3 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .add1 {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(190, 190, 190);
+} */
+.monthly {
+  padding: 10px 20px 0 20px;
+}
+
+.monthly-con {
+  width: 100%;
+  display: flex;
+}
+
+.monthly-content {
+  width: 100%;
+  /* height: 300px; */
+  background-color: rgb(255, 255, 255);
+}
+
+.monthly-side-content {
+  /* width: 100%; */
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  /* max-width: 350px; */
+}
+
+.monthly-side-content .side-data {
+  /* width: 100%; */
+  background-color: rgb(255, 255, 255);
+  height: 650px;
+  border-top: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  /* border: 1px solid black; */
+  padding: 30px;
+}
+
+.monthly-side-head {
+  padding: 10px 0 0 10px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.monthly-side-content .side-data .table1 {
+  width: 100%;
+  padding-top: 10px;
+  border-spacing: 25px 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.monthly-side-content .side-data .table2 {
+  width: 100%;
+  border-spacing: 25px 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.monthly-side-content .side-data .table3 {
+  width: 100%;
+  border-spacing: 25px 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.monthly-side-head1 {
+  padding: 15px 0 10px 10px;
+  font-size: 17px;
+  font-weight: 600;
+  border-top: 1px solid rgb(204, 204, 204);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.monthly-content-head {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 25px 0 0 50px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.monthly-content-head span {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.monthly .part1 {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 40px 0 40px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.monthly .part1 .section1 {
+  align-self: anchor-center;
+}
+.monthly .part1 .section1 button {
+  background-color: white;
+}
+.monthly .part1 .section2 {
+  display: flex;
+  gap: 15px;
+}
+
+.monthly .part1 .section3 {
+  align-self: anchor-center;
+}
+
+.monthly .part1 .section3 button {
+  background-color: white;
+  border: none;
+}
+
+.monthly .part2 {
+  width: 100%;
+}
+
+.monthly .part2 .days {
+  width: 90%;
+  margin: 15px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  /* border-bottom: 1px solid; */
+  border-top: 1px solid rgb(212, 212, 212);
+  padding: 8px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(155, 155, 155);
 @font-face{
     font-family: 'bold';
     src: url(fonts/inter-v19-latin-700.woff2);
