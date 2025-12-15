@@ -210,3 +210,9 @@ font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Rob
     display:flex;
     flex-direction:row;
 }
+.adv1{
+    height:50px;
+    width:100%;
+    background-color:rgb(236, 233, 233);
+    margin-bottom:5px;
+}
