@@ -1009,3 +1009,206 @@ tr{
     flex-direction:row;
     gap:10px;
 }
+@media screen and (min-width:425px){
+    .search-image{
+        left:210px;
+    }
+}
+@media screen and (min-width:768px){
+        .air-with-health{
+        display:flex;
+        flex-direction:column;
+    }
+    .main-body{
+        padding:0px;
+    }
+    .main-without-footer{
+        display:flex;
+        flex-direction:row;
+        gap:20px;
+        padding-left:40px;
+    }
+    .part2-of-main-body{
+        min-width:338px;
+    }
+    .adv2{
+        display:none;
+    }
+    .menu svg,.today-icon svg,.hourly-icon svg,.day-icon svg,.monthly-icon svg,.radar-icon svg{
+        height:24px;
+        width:22px;
+        padding:12px;
+    }
+    .today-with-content span,.hourly-with-content span,.day-with-content span,.monthly-with-content span,.radar-with-content span{
+        font-size:10px;
+    }
+    .logo svg{
+        height:48px;
+        width:48px;
+        margin-left:35px;
+    }
+    #searchbox{
+        font-size:16px;
+        height:48px;
+        min-width:280px;
+        padding-left:15px;
+        border-radius:8px;
+        padding-right:50px;
+        margin-left:-30px;
+    }
+    .search-image{
+        left:420px;
+    }
+    .search-image svg{
+        height:20px;
+        width:48px;
+    }
+    .main-head{
+        padding:10px;
+    }
+    .globe svg{
+        height:33px;
+        width:23px; 
+        padding:0px 4px; 
+    }
+    #in,#deg{
+        font-size:18px;
+        padding:0px 4px;
+    }
+    .down svg{
+        height:20px;
+        width:20px;
+    }
+    .signin span{
+        font-size:16px;
+        font-weight:600;
+    }
+    .signin { 
+        padding:10px 14px;
+        padding-top:23px;
+        border-radius:8px;
+        margin-top:5px;
+    }
+    .head-drop{
+        margin-left:-30px;
+    }
+    .path span{
+        font-size:16px;
+    }
+    .path{
+        gap:10px;
+        align-items:center;
+        padding:15px;
+    }
+    .star-icon svg{
+        height:18px;
+        width:18px;
+    }
+    .adv1{
+        height:110px;
+    }
+    .temp-grid{
+        display:flex;
+        flex-direction:column;
+    }
+    .weather-descp{
+        font-size:20px;
+        line-height:20px;
+    }
+    .location span{
+        font-size:18px;
+        padding:0px;
+        white-space:normal;
+        line-height:25px;
+    }
+    .time span{
+        font-size:14px;
+        white-space:normal;
+        line-height:20px;
+    }
+    .s1-sub1{
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        padding:15px 15px;
+        border-top-right-radius:10px;
+        border-top-left-radius:10px;
+    }
+    .temp span{
+        font-size:80px;
+    }
+    .s1-sub2{
+        padding-bottom:120px;
+    }
+    .sun-icon svg{
+        height:100px;
+        width:100px;
+    }
+    .weather{
+        font-size:20px;
+    }
+    .day-night-temp{
+        font-size:18px;
+        margin-top:5px;
+    }
+    .screen1{
+        border-radius:10px;
+        margin-bottom:25px;
+    }
+    .t1{
+        font-size:16px;
+    }
+    .t2{
+        font-size:40px;
+    }
+    .display{
+        padding:0px 15px;
+    }
+    .therm svg, .winds svg,.humid svg,.dew svg,.pressure svg,.uv-image svg,.visible svg,.moon-phase svg{
+        height:24px;
+        width:25.19px;
+    }
+     .temp-grid span{
+        font-size:16px;
+        letter-spacing:0.3px;
+     }
+     .temp-grid{
+        padding:20px 20px;
+     }
+     .thermo-value,.wind-value,.humid-value,.dew-value,.pressure-value,.uv-value,.visible-value,.moon-value{
+    font-size:16px;
+    }
+    .thermo,.wind1,.humidity,.dewpoint,.pressures,.uv-index,.visibility,.moon-phase{
+        padding:10px 16px;
+    }
+    td{
+        font-size:14px;
+    }
+    .daily-climate span,.hours-status span,.daily-forecast span{
+        font-size:16px;
+    }
+    .morning-temp,.afternoon-temp,.evening-temp,.overnight-temp{
+        font-size:18px;
+    }
+    .daily-climate svg,.hours-status svg,.daily-forecast svg{
+        height:35px;
+        width:35px;
+    }
+    .rain-icon svg{
+        height:6.75px;
+        width:9.37px;
+    }
+    .next-48-hours1,.next-48-hours2,.next-10-days{
+        font-size:14px;
+        padding:10px 16px;
+        border-radius:8px;
+        margin:10px;
+    }
+    .hourly-forecast h1,.daily-forecast h1{
+        font-size:20px;
+        padding-top:5px;
+    }
+    .cwu{
+        font-size:18px;
+    }
+}  
