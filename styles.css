@@ -1372,3 +1372,116 @@ tr{
 }
 
 }
+
+@media screen and (min-width:1440px){
+    .today-with-content,.hourly-with-content,.day-with-content,.monthly-with-content,.radar-with-content{
+        flex-direction: row;
+        padding-right:150px;
+        gap:20px;
+        /* width:212px;
+        height:24px; */
+    }
+    .search-image{
+        left:800px;
+    }
+    .side-bar span{
+        font-size:14px;
+    }
+    .side-bar svg{
+        height:24px;
+        width:24px;
+    }
+    .side-bar{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        padding-left:20px;
+        height:3350px;
+    }
+    .main-body{
+        margin-left:300px;
+    }
+    .adv1{
+        height:280px;
+    }
+    .allergy-with-contents,.air-quality-with-contents{
+    display:flex;
+    flex-direction:row;
+    gap:40px;
+    }
+    .hiding-contents-of-side-bar{
+        display:flex;
+        flex-direction:column;
+        gap:30px;
+        padding-top:20px;
+        margin-left:-65px;
+    }
+    .radar-section img{
+        height:400px;
+        padding-bottom:30px;
+        border-bottom:1px solid gray;
+    }
+    .footer{
+        margin-top:200px;
+    }
+    .logo svg{
+        display:none;
+    }
+    .logo1{
+        /* display:block; */
+        display:flex;
+        margin-left:-240px;
+        margin-top:10px;
+    }
+   .logo1 svg{
+    height:48px;
+    width:48px;
+   }
+   .menu{
+    display:none;
+   }
+
+   .hide {
+  display: none;
+}
+.countries1 ,
+.countries2 ,
+.countries3 ,
+.countries4 ,
+.countries5 {
+flex-direction:row;
+margin-right:30px;
+}
+.tabs span{
+    font-size:19px;
+}
+.daily-climate-with-button,.hourly-forecast,.daily-forecast{
+    margin-left:25px;
+}
+.footer .part1{
+    justify-content: space-between;
+}
+.company{
+    margin-right:30px;
+}
+.social{
+    margin-left:20px;
+}
+.signin span{
+    font-size:18px;
+}
+.search-image{
+    margin-left:-300px;
+}
+.head-drop{
+    left:185px;
+}
+.daily-climate tr,.hours-status tr,.daily-table tr{
+    line-height:40px;
+}
+.daily-climate td,.hours-status td,.daily-table td{
+    border-collapse:collapse;
+    border-spacing:20px 0px;
+    padding:0px 10px;
+}
+}
