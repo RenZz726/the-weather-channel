@@ -385,3 +385,31 @@ font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Rob
     padding-left:10px;
     padding-bottom:5px;
 }
+.now-weather-with-text,.rain-drop-with-now-percent0,.hour1-weather-with-text,.rain-drop-with-hour1-percent,.hour2-weather-with-text,.rain-drop-with-hour2-percent,.hour3-weather-with-text,.rain-drop-with-hour3-percent,.hour4-weather-with-text,.rain-drop-with-hour4-percent{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:4px;
+}
+.hour1-status,.hour2-status,.hour3-status,.hour4-status{
+    border-top: 1px solid rgb(236, 233, 233);
+}
+.hourly-forecast h1{
+    font-size:9px;
+    padding-bottom:10px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.hours-status{
+    width:100%;
+    padding:10px;
+    font-size:9px;
+    border-spacing: 15px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.hours-status span{
+    font-size:6.5px;
+}
+.hourly-forecast{
+    padding-left:10px;
+    padding-bottom:5px;
+}
