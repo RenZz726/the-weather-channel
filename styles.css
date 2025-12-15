@@ -235,10 +235,6 @@
   }
 }
 
-@media (max-width: 520px) {
-  .cards {
-    margin: 0;
-  }
 
 
 * {
@@ -2235,6 +2231,12 @@ margin-right:30px;
     border-spacing:20px 0px;
     padding:0px 10px;
 }
+}
+
+@media (max-width: 520px) {
+  .cards {
+    margin: 0;
+  }
 }
 
   @font-face{
