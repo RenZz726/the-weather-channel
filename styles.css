@@ -66,12 +66,15 @@ border-bottom:1px solid rgba(37, 36, 34, 0.1);
     line-height:18.4px;
 }
 .search-image{
-    position:absolute;
+    /* position:absolute; */
     left:190px;
+    z-index: 100;
 }
 .input-box{
+    background-color:#f2f2f2;
     display:flex;
     align-items:center;
+    border-radius: 5px;
 }
 #in{
     color:rgb(37, 36, 34);
