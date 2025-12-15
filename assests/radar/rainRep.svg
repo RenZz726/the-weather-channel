@@ -1,0 +1,32 @@
+<svg class="styles--legendImage--Xpun8">
+              <defs>
+                <linearGradient
+                  id="GradientDefinition-rain"
+                  x1="0"
+                  x2="1"
+                  y1="0"
+                  y2="0"
+                >
+                  <stop offset="0%" stop-color="#63EB63"></stop>
+                  <stop offset="10.91%" stop-color="#1C9E34"></stop>
+                  <stop offset="22.1%" stop-color="#003F00"></stop>
+                  <stop offset="33.28%" stop-color="#FBEB02"></stop>
+                  <stop offset="44.48%" stop-color="#EE6D02"></stop>
+                  <stop offset="55.31%" stop-color="#D20B06"></stop>
+                  <stop offset="66.57%" stop-color="#A90503"></stop>
+                  <stop offset="77.74%" stop-color="#800000"></stop>
+                  <stop offset="88.99%" stop-color="#FFFFFF"></stop>
+                  <stop offset="100%" stop-color="#FAFAFA"></stop>
+                </linearGradient>
+              </defs>
+              <rect
+                width="calc(100% - 2px)"
+                height="calc(100% - 2px)"
+                stroke="#A7A7A7"
+                radius="6px"
+                rx="6px"
+                x="1"
+                y="1"
+                fill="url(#GradientDefinition-rain)"
+              ></rect>
+            </svg>
