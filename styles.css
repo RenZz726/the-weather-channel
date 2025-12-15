@@ -309,3 +309,42 @@ font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Rob
     align-items:center;
     justify-content:space-between;
 }
+.therm,.winds,.windy,.humid,.dew,.pressure,.stress,.uv-image,.visible,.moon{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    align-items: center;
+}
+.thermo{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:2px;
+}
+.wind1,.humidity,.dewpoint,.pressures,.uv-index,.visibility,.moon-phase{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:2px;
+    border-top:1px solid rgb(236, 233, 233);
+}
+.temp-grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 25px;
+    row-gap:5px;
+    padding:10px;
+}
+.temp-grid span{
+    font-size:8px;
+    white-space:nowrap;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    color:rgb(37, 36, 34);
+}
+.thermo-value,.wind-value,.humid-value,.dew-value,.pressure-value,.uv-value,.visible-value,.moon-value{
+    font-size:8px;
+    color:rgb(37, 36, 34);
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
