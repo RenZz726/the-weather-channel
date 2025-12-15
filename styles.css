@@ -566,3 +566,250 @@ tr{
 .l1,.l2{
     white-space: nowrap;
 }
+.tooltiptext h2{
+    margin:0px;
+    margin-bottom:5px;
+    font-size:15px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.tooltiptext p{
+    margin:0px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:12px;
+    letter-spacing:0.3px;
+    line-height:15px;
+}
+.tooltiptext span{
+    margin:0px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:12px;
+}
+.closebtn{
+    display:flex;
+    justify-self: right;
+    margin-right:-30px;
+}
+.air-quality-index{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    padding-bottom:20px;
+}
+.air-button span{
+    color:rgb(43, 43, 43);
+    font-size:12px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.air-button{
+    display:flex;
+    flex-direction:row;
+    gap:5px;
+    padding:3px 5px;
+    border-radius:5px;
+    border:1px solid rgb(236, 233, 233);
+    width:fit-content;
+}
+.air-with-button{
+    padding-bottom:5px;
+}
+.adv2,.adv3{
+    height:400px;
+    background-color:rgb(236, 233, 233);
+    padding-bottom:25px;
+}
+.health-with-text-arrow span{
+    color:rgb(43, 43, 43);
+    font-size:19px;
+    max-width:170px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.health-icon{
+    padding:10px 14px 0px 14px;
+    border:5px solid rgb(236, 233, 233);
+    border-radius:80px;
+    width:fit-content;
+}
+.health-text{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:40px;
+}
+.health-with-text-arrow{
+    display:flex;
+    flex-direction:row;
+    gap:25px;
+}
+.pollen-remark{
+    display:flex;
+    justify-self:right;
+    font-size:15px;
+    color:rgb(111, 117, 133);
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    padding-right:45px;
+}
+.health-activity h1{
+    font-size:20px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.health-activity{
+    padding-bottom:20px;
+}
+/* footer */
+.footer {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+.footer .part1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  padding-top: 15px;
+}
+.social {
+  display: flex;
+  gap:2px;
+}
+.company {
+  display: flex;
+  gap: 10px;
+}
+.fb,.x,.insta,.yt {
+  display:flex;
+  justify-self:center;
+  padding:5px 5px;
+  border-radius: 70px;
+  background-color: rgb(236, 236, 236);
+}
+.cwu {
+  color: rgb(43, 43, 43);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 27px;
+}
+.footer .part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 50px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.footer .part2 .p1 {
+  color: rgb(43, 43, 43);
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 21px;
+  white-space:nowrap;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.footer .part2 .p2 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+  flex-direction:column;
+  padding:10px;
+  /* gap: 5px; */
+  justify-content: center;
+}
+.one,.two{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
+.footer .part2 .p2 div{
+    white-space: nowrap;
+}
+.footer .part2 .p3 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.footer .part2 .p4 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.footer .part2 .p5 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+}
+.footer .part2 .p6 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.footer .part2 .p7 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.footer .part2 .p8 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.hide{
+    display:none;
+}
+.allergy-with-contents,.air-quality-with-contents,.logo1,.part2-adv{
+    display:none;
+}
+.display{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-between;
+}
+.arc-with-temp{
+    display:flex;
+    flex-direction:column;
+}
+.temp-view span{
+    font-size:12px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+}
+.temp-view{
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+}
