@@ -44,3 +44,113 @@ body{
     padding-bottom:5px;
 }
 /* sidebar end */
+.main-head{
+padding:3px;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+padding-bottom:0px;
+border-bottom:1px solid rgba(37, 36, 34, 0.1);
+}
+#searchbox{
+    position:relative;
+    left:20px;
+    height:20px;
+    padding:0px 65px 0px 6px;
+    background-color:#f2f2f2;
+    border:none;
+    color:rgb(37, 36, 34);
+    border-radius:5px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:6px;
+    line-height:18.4px;
+}
+.search-image{
+    position:absolute;
+    left:190px;
+}
+.input-box{
+    display:flex;
+    align-items:center;
+}
+#in{
+    color:rgb(37, 36, 34);
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:7px;
+    font-weight:700;
+    line-height:20.7px;
+    padding:0px 2px;
+}
+#deg{
+    color:rgb(37, 36, 34);
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:7px;
+    font-weight:700;
+    padding:0px 1px 0px 2px;
+}
+#or{
+    color:rgb(37, 36, 34);
+}
+.signin{
+    background-color:#252422;
+    border-radius:3px;
+    padding:3px 5px;
+    padding-bottom:0px;
+    line-height:0px;
+    height:13px;
+}
+.signin span{
+    color:rgb(255, 255, 255);
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+    font-size:6px;
+    padding:0px;
+    line-height:0px;
+}
+.head-drop{
+    display:flex;
+    align-items:center;
+    padding:1px 6px;
+    position:relative;
+    left:25px;
+}
+.tabs {
+  position:absolute;
+  margin-top: 20px;
+  width: 100%;
+  margin-left:0px;
+  background-color:rgb(255, 255, 255);
+  padding-top:10px;
+  margin-top:0px;
+}
+.tabs .part1 {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.tabs .part2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.tabs .part3 {
+  width: 100%;
+}
+.tabs .part3 .country {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+.tabs span{
+    font-size:7px;
+    font-weight:700;
+    letter-spacing:0.3px;
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.tabs p{
+    font-size:5.3px;
+    color:#747272;
+    /* letter-spacing:0.3px; */
+    font-family:Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
