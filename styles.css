@@ -1323,3 +1323,52 @@ tr{
   display: none;
 }
 }  
+
+@media screen and (min-width:1024px){
+    .temp-grid{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .part2-of-main-body{
+        display:flex;
+        flex-direction:column;
+    }
+    .search-image{
+        left:505px;
+    }
+    .t2{
+        font-size:60px;
+    }
+    td{
+        font-size:18px;
+    }
+    .morning-temp,.afternoon-temp,.evening-temp,.overnight-temp,
+    .now-temp,.hour1-temp,.hour2-temp,.hour3-temp,.hour4-temp,
+    .today-temp,.date1-temp,.date2-temp,.date3-temp,.date4-temp{
+        font-size:36px;
+    }
+    .morning-icon-with-text svg,.afternoon-icon-with-text svg,.evening-icon-with-text svg,.overnight-icon-with-text svg,
+    .now-weather-with-text svg,.hour1-weather-with-text svg,.hour2-weather-with-text svg,.hour3-weather-with-text svg,.hour4-weather-with-text svg,
+    .date0-icon-with-text svg,.date1-icon-with-text svg,.date2-icon-with-text svg,.date3-icon-with-text svg,.date4-icon-with-text svg{
+        height:55px;
+        width:55px;
+    }
+    .rain-icon svg{
+        height:18px;
+        width:27px;
+    }
+    .now-time,.hour1-time,.hour2-time,.hour3-time,.hour4-time{
+        font-size:18px;
+    }
+    .footer .part2 .p1,.footer .part2 .p2,.footer .part2 .p3{
+        justify-content:center;
+    }
+    .footer .part2 .p4,.footer .part2 .p5,.footer .part2 .p6,.footer .part2 .p7,.footer .part2 .p8{
+        text-align:center;
+    }
+    .hide {
+  display: none;
+}
+
+}
