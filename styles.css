@@ -178,6 +178,7 @@
 
 .active {
   border: 2px solid blue;
+}
 @font-face{
     font-family: 'bold';
     src: url(fonts/inter-v19-latin-700.woff2);
