@@ -135,6 +135,7 @@
   font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
     Roboto, sans-serif;
   color: rgb(155, 155, 155);
+}
 @font-face{
     font-family: 'bold';
     src: url(fonts/inter-v19-latin-700.woff2);
