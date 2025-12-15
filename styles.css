@@ -136,6 +136,48 @@
     Roboto, sans-serif;
   color: rgb(155, 155, 155);
 }
+
+.monthly .part2 .cards {
+  width: 100%;
+}
+.monthly .part2 .cards .container1 {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2px auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.monthly .part2 .cards .card {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(230, 229, 229);
+  position: relative;
+}
+
+.info {
+  align-self: center;
+  padding: 4px;
+}
+
+.num {
+  color: rgb(155, 155, 155);
+}
+
+.dg {
+  color: rgb(95, 90, 90);
+  font-size: 22px;
+}
+.dg1 {
+  color: gray;
+}
+.day {
+  color: rgb(65, 65, 65);
+}
+
+.active {
+  border: 2px solid blue;
 @font-face{
     font-family: 'bold';
     src: url(fonts/inter-v19-latin-700.woff2);
