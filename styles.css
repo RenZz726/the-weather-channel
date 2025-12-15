@@ -1211,4 +1211,115 @@ tr{
     .cwu{
         font-size:18px;
     }
+    .fb svg,.x svg,.insta svg,.yt svg{
+        height:23px;
+        width:23px;
+        padding:5px;
+    }
+    .social-media{
+        display:flex;
+        flex-direction:row;
+        gap:8px;
+    }
+    .social{
+        gap:10px;
+    }
+    .footer .part2 .p1{
+        font-size:14px;
+        justify-content:left;
+    }
+    .footer .part2 .p2{
+        font-size:14px;
+        flex-direction:row;
+        justify-content:left;
+        padding-left:0px;
+    }
+    .footer .part2 .p3{
+        justify-content:left;
+        padding-left:10px;
+    }
+    .footer .part2 .p4{
+        text-align:left;
+        font-size:14px;
+        color:rgb(104, 103, 103);
+    }
+    .footer .part2 .p5{
+        text-align:left;
+        font-size:14px;
+    }
+    .footer .part2 .p6,.footer .part2 .p7,.footer .part2 .p8{
+        text-align:left;
+        font-size:14px;
+        color:rgb(104, 103, 103);
+    }
+    .footer{
+        padding-bottom:10px;
+    }
+
+    .air-value{
+        margin-bottom:0px;
+    }
+    .air-index-text p{
+        margin-top:2px;
+    }
+    .health-text span{
+        font-size:18px;
+        max-width:185px;
+    }
+    .health-with-text-arrow{
+        margin-left:20px;
+    }
+    .health-text{
+        gap:20px;
+    }
+    .health-icon{
+        padding:7px 8px;
+    }
+    .pollen-remark{
+        margin:0px;
+        justify-self:left;
+        padding-left:76px;
+    }
+    .ho1{
+        display:none;
+    }
+    .air-with-button h1{
+        padding:0px;
+        margin-top:4px;
+    }
+    .progress{
+        width:70px;
+    }
+    .air-quality-index{
+        margin-left:20px;
+    }
+    .tabs span{
+        font-size:16px;
+    }
+    .tabs p{
+        font-size:12px;
+    }
+    .tabs .part3 .country{
+       margin:18px 45px;
+       padding:5px 0px;
+    }
+    .countries1 a,
+    .countries2 a,
+    .countries3 a,
+    .countries4 a,
+    .countries5 a{
+        font-size:17px;
+        padding:3px 0px;
+    }
+    .countries1,
+.countries2,
+.countries3,
+.countries4,
+.countries5 {
+    gap:10px;
+    max-height:810px;
+}
+.hide {
+  display: none;
+}
 }  
