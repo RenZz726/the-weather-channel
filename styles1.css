@@ -100,6 +100,230 @@ font-size: 10px;
     opacity: 0.65;
     font-size: 14px;
 }
+/**/
+.hourtime{
+    flex:0 0 50px;
+    font-weight: 500px;
+    font-size: 14px;
+}
+.hourtemp{
+    font-family: bold;  
+    flex: 0 .5 94px;
+}
+.hoursun{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1 1 160px;
+}
+.hourperc{
+    padding-right: 15px;
+    flex: 0 0 54px;
+    justify-content: flex-end;
+    display: flex;
+}
+.hourwind{
+    padding-left: 13px;
+    font-size: 1rem;
+    flex:0 0 145px
+}
+.hourdate{
+    font-family: bold;
+    padding: 16px 0;
+    font-weight: 600;
+    line-height: 1;
+    border-bottom: 1px solid #dedede;
+    border-top: 1px solid #dedede;
+    margin: 0;
+    font-size: 1rem;
+}
+.hoursummary{
+    padding: 4px 0;
+    font-family: light;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    max-width: 100%;
+    justify-content: space-between;
+}
+.hoursummaryContent{
+    padding: 4px 0;
+    display: flex;
+    flex-direction: row;
+    font-weight: 500;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: rgb(37, 36, 34);
+    font-size: 16px;
+}
+.hoursummaryContent .times{
+    flex: 0 0 80px;
+}
+
+.hourrain-drop{
+    margin-right: 3px; 
+    width: 17px; 
+}
+.hourarrow{
+    margin-right: -2px;
+    color: #8d8d8d;
+    width: 17px;
+    height: auto;
+}
+.hoursubtract, .houradd{
+    margin-left: 6px;
+}
+.hoursubtract{
+    display: none;
+}
+.hoursummaryContents .houradd{
+    display:block;
+}
+.hourdayPartDetails{
+    margin-top: 10px;
+    margin-bottom: 16px;
+    background:#e8e8e8 ;
+    border-radius: 16px;
+    padding: 16px 24px;
+    list-style: none;
+    display: none;
+}
+.hourweather{
+    font-size: 0.875rem;
+    margin: 0 0 14px;
+    margin-top: 16px;
+}
+.hourdata{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    padding-left: 0;
+    display: none;
+}
+.hourlist, .hourlists{
+    display: flex;
+   border-top: none;
+   margin-top: 0;
+   padding-top:0;
+   width: 50%;
+   max-width: 901px;
+}
+.hourlists{
+    border-top: 1px solid #dedede;
+    margin: 15px 0 0;
+    padding: 15px 0 0;
+}
+.hourimg{
+    width: 24px;
+    margin-right: 10px;
+}
+.hourfeelsLike{
+    font-family: medium;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+.hourtempValue{
+    margin: 0;
+    font-size: 0.875rem;
+    font-family: bold;
+}
+.hourexpandedDetails{
+    padding-top: 4px 0;    
+}
+.hourads{
+    border-bottom: 1px solid #676767;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    height: auto;
+    width: 100%;
+
+    background-color: #f2f2f2;
+    color: #6f7585;
+    font-size: 10px;
+    text-align: center;
+    margin-left: auto;
+}
+.hourads img {
+    width: auto;
+    max-width: 280px;
+}
+.hourads, .hourads img, .rightads{
+    position: static;
+    max-width: 350px;
+    width: 100%;
+    display: block;
+    z-index: 1;
+}
+.active{
+    border: 2px solid;
+    font-weight: 700;
+}
+.hidden{
+    display: none;
+}
+.hourTenDay{
+  display: flex;
+  justify-content: flex-end;
+}
+.hourTenDayBtn{
+    margin: 0 16px 16px;
+    background-color: #252422;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 16px;
+    line-height: 1.5;
+    font-size: 14px;
+}
+@media (min-width:1024px){
+    .hourlist, .hourlists{
+        width: 33.33%;
+    }
+    .none{
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    .hourHeaderAddress{
+        display: none;
+    }
+    .hourweather{
+        display: block;
+    }
+}
+@media (max-width:768px){
+    .hourlist, .hourlists{
+        width: 50%;
+    }
+    .hourdayPartDetails{
+        width: 66vw;
+        max-width: 100vw;
+        margin: 0;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+    .hourlargeScreen{
+        grid-template-columns: minmax(0, 17fr) minmax(0, 8fr);
+    }
+    .hourweather{
+        display: none;
+    }
+}
+@media (max-width:425px){
+    .hourcontent, .hoursummaryContent, .hourtableDetails{
+        width: 100vw
+    }
+    .hourads{
+        display: none;
+    }
+    .hourlargeScreen{
+        display: block;
+    }
+}
+/**/
 .hourTenDay{
   display: flex;
   justify-content: flex-end;
