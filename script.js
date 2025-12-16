@@ -1,3 +1,53 @@
+const mainBody = document.querySelector(".main-without-footer");
+const adBlock = document.querySelector(".adv1");
+const footerSection = document.querySelectorAll(".footer");
+
+const todayButton = document.querySelector('.today-with-content')
+const hourlySection = document.querySelector(".hourhourly");
+const hourlyButton = document.querySelector(".hourly-with-content");
+
+const monthlySection = document.querySelector(".monthly");
+const monthlyButton = document.querySelector(".monthly-with-content");
+
+const radarButton = document.querySelector(".radar-with-content");
+const radarSection = document.querySelector(".radar");
+const radarFooterSection = document.querySelector(".radar-footer");
+
+hourlySection.classList.add("hide");
+monthlySection.classList.add("hide");
+radarSection.classList.add("hide");
+
+todayButton.addEventListener('click',()=>{
+mainBody.classList.remove('hide')
+hourlySection.classList.add("hide");
+monthlySection.classList.add("hide");
+radarSection.classList.add("hide");
+})
+hourlyButton.addEventListener("click", () => {
+  mainBody.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  hourlySection.classList.remove("hide");
+  footerSection[1].classList.remove("hide");
+});
+
+monthlyButton.addEventListener("click", () => {
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  monthlySection.classList.remove("hide");
+  footerSection[1].classList.remove("hide");
+});
+
+radarButton.addEventListener("click", () => {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  footerSection[1].classList.add("hide");
+  radarSection.classList.remove("hide");
+});
+
 let calendar_previous = document.querySelector(".calendar-previous");
 let calendar_next = document.querySelector(".calendar-next");
 let month_name = document.querySelector(".month-name");
@@ -20,7 +70,6 @@ let monthArray = [
   "Dec",
 ];
 
-console.log(calendar_next);
 let i;
 calendar_next.addEventListener("click", () => {
   if (Number(year_name.value) > 0) {
@@ -346,78 +395,78 @@ setTimeout(() => {
 weatherMap[0].style.display = "flex";
 radarMapOptions.style.display = "none";
 radarSpecialityMaps.style.display = "none";
-const hourPlace = document.querySelector('.hourplace')
-const ist = document.querySelector('.ist')
-const hoursummary = document.querySelector('.hoursummary')
-const hourdayPartDetails = document.querySelector('.hourdayPartDetails')
+const hourPlace = document.querySelector(".hourplace");
+const ist = document.querySelector(".ist");
+const hoursummary = document.querySelector(".hoursummary");
+const hourdayPartDetails = document.querySelector(".hourdayPartDetails");
 
-const API_KEY = 'e687396580364dc882344618250512'
-const LOCATION = 'palakkad'
+const API_KEY = "e687396580364dc882344618250512";
+const LOCATION = "palakkad";
 
-const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${LOCATION}&days=3`
+const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${LOCATION}&days=3`;
 
 fetch(url)
-.then(res => res.json())
-.then(data =>{
-  //location
-     const loc = data.location
-  //header location,IST
-     hourPlace.textContent = `${loc.name}, ${loc.region}, ${loc.country}`
-     ist.textContent = `${loc.localtime.split(' ')[1]}`
-      let minutes;
-      let hr;
-      
-    let days = data.forecast.forecastday
-    for(let day of days){
-      //dataList
-      const HourDate = document.createElement('div')
-       const hours = day.hour
-       let formattedDate = new Date(day.date).toLocaleDateString('en-US',{
-        weekday:'long',
-        day:'numeric',
-        month:'long'
-        })
-        HourDate.classList.add('hourdate')
-        hoursummary.appendChild(HourDate)
+  .then((res) => res.json())
+  .then((data) => {
+    //location
+    const loc = data.location;
+    //header location,IST
+    hourPlace.textContent = `${loc.name}, ${loc.region}, ${loc.country}`;
+    ist.textContent = `${loc.localtime.split(" ")[1]}`;
+    let minutes;
+    let hr;
 
-        let items = formattedDate.split(' ');
-        formattedDate = `${items[0]} ${items[2]} ${items[1]}`
-        formattedDate = formattedDate.replace(',','')
-        //date
-        HourDate.textContent = formattedDate
-        let listId;
-        hours.forEach((hrs,index) =>{
-        let fullHrs = hrs.time 
-        let dateObj = new Date(fullHrs)
-        let apiHour = Number(fullHrs.split(' ')[1].split(':')[0]);
-        let hourDate = fullHrs.split(' ')[0]
-        let todayDate = loc.localtime.split(' ')[0]
-        
-        if(hourDate === todayDate){
-         let currentHr = Number(loc.localtime.split(' ')[1].split(':')[0])
-         let  currentMin = Number(loc.localtime.split(' ')[1].split(':')[1])
-        //  console.log(currentHr,currentMin)
-         if(currentMin <= 30){
-           currentMin = 30
-         }else{
-          currentHr += 1
-          currentMin = 30
-          // console.log(hr, minutes)
-         }
-         if(currentHr === 24) currentHr = 0
-         if(apiHour < currentHr) return;
-         hr = apiHour
-         minutes = 30      
-     }else{
-      hr = apiHour
-      minutes  = 30
-     }
-          const div = document.createElement('div')
-          let weatherIcon =  'https:' + hrs.condition.icon
-          div.id = `class-${new Date(day.date).getDate()}:${index}`
-          // console.log(fullHrs.split(' ')[1].split(':')[0])
-       div.innerHTML = `
-        <div class="hourtime">${String(hr).padStart(2,'0')}:${minutes}</div>
+    let days = data.forecast.forecastday;
+    for (let day of days) {
+      //dataList
+      const HourDate = document.createElement("div");
+      const hours = day.hour;
+      let formattedDate = new Date(day.date).toLocaleDateString("en-US", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+      });
+      HourDate.classList.add("hourdate");
+      hoursummary.appendChild(HourDate);
+
+      let items = formattedDate.split(" ");
+      formattedDate = `${items[0]} ${items[2]} ${items[1]}`;
+      formattedDate = formattedDate.replace(",", "");
+      //date
+      HourDate.textContent = formattedDate;
+      let listId;
+      hours.forEach((hrs, index) => {
+        let fullHrs = hrs.time;
+        let dateObj = new Date(fullHrs);
+        let apiHour = Number(fullHrs.split(" ")[1].split(":")[0]);
+        let hourDate = fullHrs.split(" ")[0];
+        let todayDate = loc.localtime.split(" ")[0];
+
+        if (hourDate === todayDate) {
+          let currentHr = Number(loc.localtime.split(" ")[1].split(":")[0]);
+          let currentMin = Number(loc.localtime.split(" ")[1].split(":")[1]);
+          //  console.log(currentHr,currentMin)
+          if (currentMin <= 30) {
+            currentMin = 30;
+          } else {
+            currentHr += 1;
+            currentMin = 30;
+            // console.log(hr, minutes)
+          }
+          if (currentHr === 24) currentHr = 0;
+          if (apiHour < currentHr) return;
+          hr = apiHour;
+          minutes = 30;
+        } else {
+          hr = apiHour;
+          minutes = 30;
+        }
+        const div = document.createElement("div");
+        let weatherIcon = "https:" + hrs.condition.icon;
+        div.id = `class-${new Date(day.date).getDate()}:${index}`;
+        // console.log(fullHrs.split(' ')[1].split(':')[0])
+        div.innerHTML = `
+        <div class="hourtime">${String(hr).padStart(2, "0")}:${minutes}</div>
         <div class="hourtemp">${Math.round(hrs.temp_c)}°</div>
         <div class="hoursun">
         <img class ="hoursunny" src ='${weatherIcon}'>
@@ -444,13 +493,13 @@ fetch(url)
           <path d="M15 9.875H5v1.25h10v-1.25Z" fill="currentColor"></path>
         </svg>
         </span>
-     `
-      div.classList.add('hoursummaryContent')
-       hoursummary.appendChild(div)
-     // card
-       const ul = document.createElement('ul')
-       ul.id = `card-${new Date(day.date).getDate()}:${index}`
-       ul.innerHTML = `          
+     `;
+        div.classList.add("hoursummaryContent");
+        hoursummary.appendChild(div);
+        // card
+        const ul = document.createElement("ul");
+        ul.id = `card-${new Date(day.date).getDate()}:${index}`;
+        ul.innerHTML = `          
                     <li class="hourlist">
                       <svg class ='hourimg' name="feels-like" class="hourDetailsTable--icon--t9ZNa Icon--icon--ySD-o Icon--actionTheme--Xn6vT" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                         <title>Temperature feels like</title>
@@ -467,7 +516,9 @@ fetch(url)
                       </svg>
                       <div class="hourfield">
                         <span class="hourfeelsLike">Wind</span>
-                        <p class="hourtempValue">${hrs.wind_dir} ${Math.round(hrs.wind_kph)}</p>
+                        <p class="hourtempValue">${hrs.wind_dir} ${Math.round(
+          hrs.wind_kph
+        )}</p>
                       </div>
                     </li>
                     <li class="hourlists none">
@@ -517,60 +568,60 @@ fetch(url)
                         <p class="hourtempValue">${hrs.chance_of_rain} mm</p>
                       </div>
                     </li>
-       `
-      ul.classList.add(`hourdata`);     
-       ul.classList.add('hourdayPartDetails')
-      const listItem = document.getElementById(`class-${new Date(day.date).getDate()}:${index}`)
-      listItem.insertAdjacentElement('afterend',ul)
-        })  
+       `;
+        ul.classList.add(`hourdata`);
+        ul.classList.add("hourdayPartDetails");
+        const listItem = document.getElementById(
+          `class-${new Date(day.date).getDate()}:${index}`
+        );
+        listItem.insertAdjacentElement("afterend", ul);
+      });
     }
-        document.querySelectorAll('[id^="class-"]').forEach(el =>{
-          let add = el.querySelector('.houradd')
-          let sub = el.querySelector('.hoursubtract')
-          el.addEventListener('click',(e)=>{
-
-          document.querySelectorAll('[id^="class-"]').forEach(item =>{
-            if(item !== el){
-              item.classList.remove('active')
-            }
-          })
-          let dateId = e.currentTarget.id.split('-')[1]
-          add.style.display = add.style.display === 'none'?'block':'none'
-          sub.style.display = sub.style.display === 'block'?'none':'block'
-           el.classList.toggle('active')
-          const ul = document.getElementById(`card-${dateId}`)   
-          ul.style.display = ul.style.display === 'flex' ? 'none':'flex'
-
-    })
-}) 
-const firstItem = document.querySelector('[id^="card-"]')
-const firstList = document.querySelector('[id^="class-"]')
-if(firstItem){
-  firstItem.style.display = 'flex'
-  firstList.querySelector('.hoursubtract').style.display = 'block'
-  firstList.querySelector('.houradd').style.display = 'none'
-}
-})
-.catch(err => console.log(err));
-const airbtn=document.querySelector(".air-button");
-const ttip=document.querySelector(".tooltip");
-const tttext=document.querySelector(".tooltiptext");
-const headdrop=document.querySelector(".head-drop");
+    document.querySelectorAll('[id^="class-"]').forEach((el) => {
+      let add = el.querySelector(".houradd");
+      let sub = el.querySelector(".hoursubtract");
+      el.addEventListener("click", (e) => {
+        document.querySelectorAll('[id^="class-"]').forEach((item) => {
+          if (item !== el) {
+            item.classList.remove("active");
+          }
+        });
+        let dateId = e.currentTarget.id.split("-")[1];
+        add.style.display = add.style.display === "none" ? "block" : "none";
+        sub.style.display = sub.style.display === "block" ? "none" : "block";
+        el.classList.toggle("active");
+        const ul = document.getElementById(`card-${dateId}`);
+        ul.style.display = ul.style.display === "flex" ? "none" : "flex";
+      });
+    });
+    const firstItem = document.querySelector('[id^="card-"]');
+    const firstList = document.querySelector('[id^="class-"]');
+    if (firstItem) {
+      firstItem.style.display = "flex";
+      firstList.querySelector(".hoursubtract").style.display = "block";
+      firstList.querySelector(".houradd").style.display = "none";
+    }
+  })
+  .catch((err) => console.log(err));
+const airbtn = document.querySelector(".air-button");
+const ttip = document.querySelector(".tooltip");
+const tttext = document.querySelector(".tooltiptext");
+const headdrop = document.querySelector(".head-drop");
 const tabs = document.querySelector(".tabs");
-const blankp=document.querySelector(".path-blank");
-headdrop.addEventListener("click",()=>{
-    tabs.classList.toggle("hide");
-    americas.style.border="none";
-    americas.style.borderBottom="1px solid rgb(218, 218, 218)";
-    me.style.border="none";
-    me.style.borderBottom="1px solid rgb(218, 218, 218)";
-    afr.style.border="none";
-    afr.style.borderBottom="1px solid rgb(218, 218, 218)";
-    ap.style.border="none";
-    ap.style.borderBottom="1px solid rgb(218, 218, 218)";
-    eur.style.border="none";
-    eur.style.borderBottom="1px solid rgb(218, 218, 218)";
-})
+const blankp = document.querySelector(".path-blank");
+headdrop.addEventListener("click", () => {
+  tabs.classList.toggle("hide");
+  americas.style.border = "none";
+  americas.style.borderBottom = "1px solid rgb(218, 218, 218)";
+  me.style.border = "none";
+  me.style.borderBottom = "1px solid rgb(218, 218, 218)";
+  afr.style.border = "none";
+  afr.style.borderBottom = "1px solid rgb(218, 218, 218)";
+  ap.style.border = "none";
+  ap.style.borderBottom = "1px solid rgb(218, 218, 218)";
+  eur.style.border = "none";
+  eur.style.borderBottom = "1px solid rgb(218, 218, 218)";
+});
 const countries1 = document.querySelector(".countries1");
 const countries2 = document.querySelector(".countries2");
 const countries3 = document.querySelector(".countries3");
@@ -592,360 +643,356 @@ let afr = document.querySelector(".afr");
 let ap = document.querySelector(".ap");
 let eur = document.querySelector(".eur");
 americas.addEventListener("click", () => {
-  americas.style.border="1px solid #f3cb17ff";
+  americas.style.border = "1px solid #f3cb17ff";
   countries1.classList.toggle("hide");
   add1.classList.toggle("hide");
   minus1.classList.toggle("hide");
   countries2.classList.add("hide");
   add2.classList.remove("hide");
   minus2.classList.add("hide");
-  me.style.border="none";
-  me.style.borderBottom="1px solid rgb(218, 218, 218)";
+  me.style.border = "none";
+  me.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries3.classList.add("hide");
   add3.classList.remove("hide");
   minus3.classList.add("hide");
-  afr.style.border="none";
-  afr.style.borderBottom="1px solid rgb(218, 218, 218)";
+  afr.style.border = "none";
+  afr.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries4.classList.add("hide");
   add4.classList.remove("hide");
   minus4.classList.add("hide");
-  ap.style.border="none";
-  ap.style.borderBottom="1px solid rgb(218, 218, 218)";
+  ap.style.border = "none";
+  ap.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries5.classList.add("hide");
   add5.classList.remove("hide");
   minus5.classList.add("hide");
-  eur.style.border="none";
-  eur.style.borderBottom="1px solid rgb(218, 218, 218)";
+  eur.style.border = "none";
+  eur.style.borderBottom = "1px solid rgb(218, 218, 218)";
   ttip.classList.toggle("hide");
 });
 me.addEventListener("click", () => {
   countries2.classList.toggle("hide");
   add2.classList.toggle("hide");
   minus2.classList.toggle("hide");
-  me.style.border="1px solid #f3cb17ff";
+  me.style.border = "1px solid #f3cb17ff";
   countries1.classList.add("hide");
   add1.classList.remove("hide");
   minus1.classList.add("hide");
-  americas.style.border="none";
-  americas.style.borderBottom="1px solid rgb(218, 218, 218)";
+  americas.style.border = "none";
+  americas.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries3.classList.add("hide");
   add3.classList.remove("hide");
   minus3.classList.add("hide");
-  afr.style.border="none";
-  afr.style.borderBottom="1px solid rgb(218, 218, 218)";
+  afr.style.border = "none";
+  afr.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries4.classList.add("hide");
   add4.classList.remove("hide");
   minus4.classList.add("hide");
-  ap.style.border="none";
-  ap.style.borderBottom="1px solid rgb(218, 218, 218)";
+  ap.style.border = "none";
+  ap.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries5.classList.add("hide");
   add5.classList.remove("hide");
   minus5.classList.add("hide");
-  eur.style.border="none";
-  eur.style.borderBottom="1px solid rgb(218, 218, 218)";
+  eur.style.border = "none";
+  eur.style.borderBottom = "1px solid rgb(218, 218, 218)";
   ttip.classList.toggle("hide");
 });
 afr.addEventListener("click", () => {
   countries3.classList.toggle("hide");
   add3.classList.toggle("hide");
   minus3.classList.toggle("hide");
-  afr.style.border="1px solid #f3cb17ff";
+  afr.style.border = "1px solid #f3cb17ff";
   countries1.classList.add("hide");
   add1.classList.remove("hide");
   minus1.classList.add("hide");
-  americas.style.border="none";
-  americas.style.borderBottom="1px solid rgb(218, 218, 218)";
+  americas.style.border = "none";
+  americas.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries2.classList.add("hide");
   add2.classList.remove("hide");
   minus2.classList.add("hide");
-  me.style.border="none";
-  me.style.borderBottom="1px solid rgb(218, 218, 218)";
+  me.style.border = "none";
+  me.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries4.classList.add("hide");
   add4.classList.remove("hide");
   minus4.classList.add("hide");
-  ap.style.border="none";
-  ap.style.borderBottom="1px solid rgb(218, 218, 218)";
+  ap.style.border = "none";
+  ap.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries5.classList.add("hide");
   add5.classList.remove("hide");
   minus5.classList.add("hide");
-  eur.style.border="none";
-  eur.style.borderBottom="1px solid rgb(218, 218, 218)";
+  eur.style.border = "none";
+  eur.style.borderBottom = "1px solid rgb(218, 218, 218)";
   ttip.classList.toggle("hide");
 });
 ap.addEventListener("click", () => {
   countries4.classList.toggle("hide");
   add4.classList.toggle("hide");
   minus4.classList.toggle("hide");
-  ap.style.border="1px solid #f3cb17ff";
+  ap.style.border = "1px solid #f3cb17ff";
   countries1.classList.add("hide");
   add1.classList.remove("hide");
   minus1.classList.add("hide");
-  americas.style.border="none";
-  americas.style.borderBottom="1px solid rgb(218, 218, 218)";
+  americas.style.border = "none";
+  americas.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries2.classList.add("hide");
   add2.classList.remove("hide");
   minus2.classList.add("hide");
-  me.style.border="none";
-  me.style.borderBottom="1px solid rgb(218, 218, 218)";
+  me.style.border = "none";
+  me.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries3.classList.add("hide");
   add3.classList.remove("hide");
   minus3.classList.add("hide");
-  afr.style.border="none";
-  afr.style.borderBottom="1px solid rgb(218, 218, 218)";
+  afr.style.border = "none";
+  afr.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries5.classList.add("hide");
   add5.classList.remove("hide");
   minus5.classList.add("hide");
-  eur.style.border="none";
-  eur.style.borderBottom="1px solid rgb(218, 218, 218)";
+  eur.style.border = "none";
+  eur.style.borderBottom = "1px solid rgb(218, 218, 218)";
   ttip.classList.toggle("hide");
 });
 eur.addEventListener("click", () => {
   countries5.classList.toggle("hide");
   add5.classList.toggle("hide");
   minus5.classList.toggle("hide");
-  eur.style.border="1px solid #f3cb17ff";
+  eur.style.border = "1px solid #f3cb17ff";
   countries1.classList.add("hide");
   add1.classList.remove("hide");
   minus1.classList.add("hide");
-  americas.style.border="none";
-  americas.style.borderBottom="1px solid rgb(218, 218, 218)";
+  americas.style.border = "none";
+  americas.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries2.classList.add("hide");
   add2.classList.remove("hide");
   minus2.classList.add("hide");
-  me.style.border="none";
-  me.style.borderBottom="1px solid rgb(218, 218, 218)";
+  me.style.border = "none";
+  me.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries3.classList.add("hide");
   add3.classList.remove("hide");
   minus3.classList.add("hide");
-  afr.style.border="none";
-  afr.style.borderBottom="1px solid rgb(218, 218, 218)";
+  afr.style.border = "none";
+  afr.style.borderBottom = "1px solid rgb(218, 218, 218)";
   countries4.classList.add("hide");
   add4.classList.remove("hide");
   minus4.classList.add("hide");
-  ap.style.border="none";
-  ap.style.borderBottom="1px solid rgb(218, 218, 218)";
+  ap.style.border = "none";
+  ap.style.borderBottom = "1px solid rgb(218, 218, 218)";
   ttip.classList.toggle("hide");
 });
-ttip.addEventListener("click",()=>{
-    airbtn.style.border="2px solid blue";
-    tttext.classList.toggle("ttvisible");
-})
-const closedbtn=document.querySelector(".closedbtn");
-const main=document.querySelector(".main-body");
-main.addEventListener("click",(event)=>{
-        console.log(event.target)
-        if(event.target !== airbtn ){
-            airbtn.style.border="none";
-        }
-}, true);
+ttip.addEventListener("click", () => {
+  airbtn.style.border = "2px solid blue";
+  tttext.classList.toggle("ttvisible");
+});
+const closedbtn = document.querySelector(".closedbtn");
+const main = document.querySelector(".main-body");
+main.addEventListener(
+  "click",
+  (event) => {
+    console.log(event.target);
+    if (event.target !== airbtn) {
+      airbtn.style.border = "none";
+    }
+  },
+  true
+);
 
-const loc=document.querySelector(".location span");
-const temp=document.querySelector(".thermo-value");
-const w=document.querySelector(".wind-value");
-const hum=document.querySelector(".humid-value");
-const dew=document.querySelector(".dew-value");
-const pres=document.querySelector(".pressure-value");
-const uv=document.querySelector(".uv-value");
-const vis=document.querySelector(".visible-value");
-const moon=document.querySelector(".moon-value");
-const t2=document.querySelector(".t2");
-const feel=document.querySelector(".temp span")
-const wd=document.querySelector(".weather-descp");
-const rise=document.querySelector(".rise span");
-const set=document.querySelector(".set span");
-const time=document.querySelector(".time span");
+const loc = document.querySelector(".location span");
+const temp = document.querySelector(".thermo-value");
+const w = document.querySelector(".wind-value");
+const hum = document.querySelector(".humid-value");
+const dew = document.querySelector(".dew-value");
+const pres = document.querySelector(".pressure-value");
+const uv = document.querySelector(".uv-value");
+const vis = document.querySelector(".visible-value");
+const moon = document.querySelector(".moon-value");
+const t2 = document.querySelector(".t2");
+const feel = document.querySelector(".temp span");
+const wd = document.querySelector(".weather-descp");
+const rise = document.querySelector(".rise span");
+const set = document.querySelector(".set span");
+const time = document.querySelector(".time span");
 
-async function fetchData(){
-  const response1=await fetch("https://api.openweathermap.org/data/2.5/weather?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1");
-  const data1=await response1.json();
-  w.textContent=data1.wind.speed + "km/h"
-  hum.textContent=data1.main.humidity + "%";
-  pres.textContent=data1.main.pressure + "mb";
-  vis.textContent=data1.visibility + "km";
-  let m1=Math.floor((data1.main.temp_max)-273)+"°";
-  let m2=Math.floor((data1.main.temp_min)-273)+"°";
-  let tm1m2=m1+"/"+m2;
-  temp.textContent=tm1m2;
-  t2.textContent=Math.floor(data1.main.feels_like-273)+"°";
-  feel.textContent=Math.floor(data1.main.feels_like-273)+"°";
-  loc.textContent=data1.name;
-  wd.textContent=`Weather Today in ${data1.name}`;
-  const now=new Date();
-  let today=now.toString().split(" ");
-  time.textContent=`As of ${today[4]} IST`;
-  const a=new Date(data1.sys.sunrise);
-  let s1=a.toString().split(" ");
-  rise.textContent=s1[4].slice(0,s1.length-4);
-  const b=new Date(data1.sys.sunset);
-  let s2=b.toString().split(" ");
-  set.textContent=s2[4].slice(0,s2.length-4);
+async function fetchData() {
+  const response1 = await fetch(
+    "https://api.openweathermap.org/data/2.5/weather?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1"
+  );
+  const data1 = await response1.json();
+  w.textContent = data1.wind.speed + "km/h";
+  hum.textContent = data1.main.humidity + "%";
+  pres.textContent = data1.main.pressure + "mb";
+  vis.textContent = data1.visibility + "km";
+  let m1 = Math.floor(data1.main.temp_max - 273) + "°";
+  let m2 = Math.floor(data1.main.temp_min - 273) + "°";
+  let tm1m2 = m1 + "/" + m2;
+  temp.textContent = tm1m2;
+  t2.textContent = Math.floor(data1.main.feels_like - 273) + "°";
+  feel.textContent = Math.floor(data1.main.feels_like - 273) + "°";
+  loc.textContent = data1.name;
+  wd.textContent = `Weather Today in ${data1.name}`;
+  const now = new Date();
+  let today = now.toString().split(" ");
+  time.textContent = `As of ${today[4]} IST`;
+  const a = new Date(data1.sys.sunrise);
+  let s1 = a.toString().split(" ");
+  rise.textContent = s1[4].slice(0, s1.length - 4);
+  const b = new Date(data1.sys.sunset);
+  let s2 = b.toString().split(" ");
+  set.textContent = s2[4].slice(0, s2.length - 4);
 }
 fetchData();
 
-const mt=document.querySelector(".morning-temp");
-const at=document.querySelector(".afternoon-temp");
-const et=document.querySelector(".evening-temp");
-const ot=document.querySelector(".overnight-temp");
+const mt = document.querySelector(".morning-temp");
+const at = document.querySelector(".afternoon-temp");
+const et = document.querySelector(".evening-temp");
+const ot = document.querySelector(".overnight-temp");
 
-const h0=document.querySelector(".now-temp");
-const h1=document.querySelector(".hour1-temp");
-const h2=document.querySelector(".hour2-temp");
-const h3=document.querySelector(".hour3-temp");
-const h4=document.querySelector(".hour4-temp");
+const h0 = document.querySelector(".now-temp");
+const h1 = document.querySelector(".hour1-temp");
+const h2 = document.querySelector(".hour2-temp");
+const h3 = document.querySelector(".hour3-temp");
+const h4 = document.querySelector(".hour4-temp");
 
-const tm1=document.querySelector(".hour1-time");
-const tm2=document.querySelector(".hour2-time");
-const tm3=document.querySelector(".hour3-time");
-const tm4=document.querySelector(".hour4-time");
-const tm=[tm1,tm2,tm3,tm4];
+const tm1 = document.querySelector(".hour1-time");
+const tm2 = document.querySelector(".hour2-time");
+const tm3 = document.querySelector(".hour3-time");
+const tm4 = document.querySelector(".hour4-time");
+const tm = [tm1, tm2, tm3, tm4];
 
-const tmp1=document.querySelector(".today-temp");
-const tmp2=document.querySelector(".date1-temp");
-const tmp3=document.querySelector(".date2-temp");
-const tmp4=document.querySelector(".date3-temp");
-const tmp5=document.querySelector(".date4-temp");
-const tmp=[tmp1,tmp2,tmp3,tmp4,tmp5];
+const tmp1 = document.querySelector(".today-temp");
+const tmp2 = document.querySelector(".date1-temp");
+const tmp3 = document.querySelector(".date2-temp");
+const tmp4 = document.querySelector(".date3-temp");
+const tmp5 = document.querySelector(".date4-temp");
+const tmp = [tmp1, tmp2, tmp3, tmp4, tmp5];
 
-const d1=document.querySelector(".date1");
-const d2=document.querySelector(".date2");
-const d3=document.querySelector(".date3");
-const d4=document.querySelector(".date4");
-const da=[d1,d2,d3,d4];
+const d1 = document.querySelector(".date1");
+const d2 = document.querySelector(".date2");
+const d3 = document.querySelector(".date3");
+const d4 = document.querySelector(".date4");
+const da = [d1, d2, d3, d4];
 
-let maximum=0;
-let minimum=0;
+let maximum = 0;
+let minimum = 0;
 
-async function getData(){
-  const response1=await fetch("https://api.openweathermap.org/data/2.5/weather?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1");
-  const data1=await response1.json();
+async function getData() {
+  const response1 = await fetch(
+    "https://api.openweathermap.org/data/2.5/weather?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1"
+  );
+  const data1 = await response1.json();
 
-  const response2=await fetch("https://api.openweathermap.org/data/2.5/forecast?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1");
-  const data2=await response2.json();
-    let k=1;
+  const response2 = await fetch(
+    "https://api.openweathermap.org/data/2.5/forecast?lat=11.6&lon=76.26&appid=53557a370d9be13f0e8c7466e7f33ee1"
+  );
+  const data2 = await response2.json();
+  let k = 1;
 
-  for(let i=0;i<=39;i++){
-        let num=data2.list[i].dt_txt;
-       let str=num.toString().split(" ");
-       let dstr=str[0];
-       let d1=dstr.split("-");
-       let rdate=d1[2];
-       let taken=str[1];
-       let t=taken.split(":");
-       let ht=parseInt(t[0]);
-       let today=new Date();
-       let ttime=today.getHours();
-       let td=today.toString().split(" ");
-       let todaydate=td[2];
-       h0.textContent=Math.floor(data1.main.temp-273)+"°";
-      if(rdate===todaydate){
-        if(ht>=6 && ht < 12){
-          let ta=Math.floor(data2.list[i].main.temp-273) + "°";
-          mt.textContent=ta;
-        }
-            else if(ht>=12 && ht< 18){
-          let tb=Math.floor(data2.list[i].main.temp-273) + "°";
-          at.textContent=tb;
-        }
-        else if(ht>=18 && ht< 24){
-          let tc=Math.floor(data2.list[i].main.temp-273) + "°";
-          et.textContent=tc;
-        }
-        else if(ht>=0 && ht< 6){
-          let td=Math.floor(data2.list[i].main.temp-273) + "°";
-          ot.textContent=td;
-        }
-         // hourly forecast
-          if(k<=4){
-            let kt=Math.floor(data2.list[i].main.temp-273)+"°";
-            if(k===1){
-              h2.textContent=kt;
-            }
-            else if(k===2){
-              h2.textContent=kt;
-            }
-            else if(k===3){
-              h3.textContent=kt;
-            }
-            else if(k===4){
-              h4.textContent=kt;
-            }
-            k++;
-          }
-          if(Number(ttime)>=12 && Number(ttime)<15){
-            tm1.textContent="15:00"
-          }
-          else if(Number(ttime)>=15 && Number(ttime)<18){
-          tm1.textContent="18:00"
-        }
-        else if(Number(ttime)>=18 && Number(ttime)<21){
-          tm1.textContent="21:00";
-        } 
-        else if(Number(ttime)>=21 && Number(ttime)<24){
-          tm1.textContent="00:00";
-        } 
-        else if(Number(ttime)>=0 && Number(ttime)<3){
-          tm1.textContent="03:00";
-        } 
-        else if(Number(ttime)>=3 && Number(ttime)<6){
-          tm1.textContent="06:00";
-        }
-        else if(Number(ttime)>=6 && Number(ttime)<9){
-          tm1.textContent="09:00";
-        } 
-        else if(Number(ttime)>=9 && Number(ttime)<12){
-          tm1.textContent="12:00";
-        } 
-        let hour=(tm1.textContent);
-          let splithour=hour.split(":");
-          let firstsplit=splithour[0];
-          let numhour=Number(firstsplit);
-          let attach=":00"
-
-        for(let z=1;z<4;z++){
-        let numberh=(numhour+3).toString();
-        tm[z].textContent=(numberh+attach);
-          if(numhour<=24){
-           numhour+=3;
-        }
-        else{
-          numhour=3;
-        }
-       }
+  for (let i = 0; i <= 39; i++) {
+    let num = data2.list[i].dt_txt;
+    let str = num.toString().split(" ");
+    let dstr = str[0];
+    let d1 = dstr.split("-");
+    let rdate = d1[2];
+    let taken = str[1];
+    let t = taken.split(":");
+    let ht = parseInt(t[0]);
+    let today = new Date();
+    let ttime = today.getHours();
+    let td = today.toString().split(" ");
+    let todaydate = td[2];
+    h0.textContent = Math.floor(data1.main.temp - 273) + "°";
+    if (rdate === todaydate) {
+      if (ht >= 6 && ht < 12) {
+        let ta = Math.floor(data2.list[i].main.temp - 273) + "°";
+        mt.textContent = ta;
+      } else if (ht >= 12 && ht < 18) {
+        let tb = Math.floor(data2.list[i].main.temp - 273) + "°";
+        at.textContent = tb;
+      } else if (ht >= 18 && ht < 24) {
+        let tc = Math.floor(data2.list[i].main.temp - 273) + "°";
+        et.textContent = tc;
+      } else if (ht >= 0 && ht < 6) {
+        let td = Math.floor(data2.list[i].main.temp - 273) + "°";
+        ot.textContent = td;
       }
+      // hourly forecast
+      if (k <= 4) {
+        let kt = Math.floor(data2.list[i].main.temp - 273) + "°";
+        if (k === 1) {
+          h2.textContent = kt;
+        } else if (k === 2) {
+          h2.textContent = kt;
+        } else if (k === 3) {
+          h3.textContent = kt;
+        } else if (k === 4) {
+          h4.textContent = kt;
+        }
+        k++;
+      }
+      if (Number(ttime) >= 12 && Number(ttime) < 15) {
+        tm1.textContent = "15:00";
+      } else if (Number(ttime) >= 15 && Number(ttime) < 18) {
+        tm1.textContent = "18:00";
+      } else if (Number(ttime) >= 18 && Number(ttime) < 21) {
+        tm1.textContent = "21:00";
+      } else if (Number(ttime) >= 21 && Number(ttime) < 24) {
+        tm1.textContent = "00:00";
+      } else if (Number(ttime) >= 0 && Number(ttime) < 3) {
+        tm1.textContent = "03:00";
+      } else if (Number(ttime) >= 3 && Number(ttime) < 6) {
+        tm1.textContent = "06:00";
+      } else if (Number(ttime) >= 6 && Number(ttime) < 9) {
+        tm1.textContent = "09:00";
+      } else if (Number(ttime) >= 9 && Number(ttime) < 12) {
+        tm1.textContent = "12:00";
+      }
+      let hour = tm1.textContent;
+      let splithour = hour.split(":");
+      let firstsplit = splithour[0];
+      let numhour = Number(firstsplit);
+      let attach = ":00";
+
+      for (let z = 1; z < 4; z++) {
+        let numberh = (numhour + 3).toString();
+        tm[z].textContent = numberh + attach;
+        if (numhour <= 24) {
+          numhour += 3;
+        } else {
+          numhour = 3;
+        }
+      }
+    }
+  }
+  // daily forecast
+  for (let j = 0; j <= 4; j++) {
+    for (let i = 0; i <= 39; i++) {
+      let num = data2.list[i].dt_txt;
+      let str = num.toString().split(" ");
+      let dstr = str[0];
+      let d1 = dstr.split("-");
+      let rdate = d1[2];
+      let taken = str[1];
+      let t = taken.split(":");
+      let ht = parseInt(t[0]);
+      let today = new Date();
+      let ttime = today.getHours();
+      let td = today.toString().split(" ");
+      let todaydate = td[2];
+      if (Number(rdate) === Number(todaydate) + j) {
+        maximum += data2.list[i].main.temp_max - 273;
+        let avgmax = Math.floor(maximum / 8) + "°";
+        minimum += data2.list[i].main.temp_min - 273;
+        let avgmin = Math.floor(minimum / 8) + "°";
+        tmp[j].textContent = avgmax + "/" + avgmin;
+        if (j != 4) {
+          let one = new Date(today);
+          one.setDate(today.getDate() + j + 1);
+          let daily = one.toString().split(" ");
+          let dailyarr = [];
+          dailyarr.push(daily[0]);
+          dailyarr.push(daily[2]);
+          let dailystr = dailyarr.toString().replace(",", " ");
+          da[j].textContent = dailystr;
+        }
+      }
+    }
+  }
 }
-               // daily forecast
-        for(let j=0;j<=4;j++){
-          for(let i=0;i<=39;i++){
-             let num=data2.list[i].dt_txt;
-              let str=num.toString().split(" ");
-              let dstr=str[0];
-              let d1=dstr.split("-");
-              let rdate=d1[2];
-              let taken=str[1];
-              let t=taken.split(":");
-              let ht=parseInt(t[0]);
-              let today=new Date();
-              let ttime=today.getHours();
-              let td=today.toString().split(" ");
-              let todaydate=td[2];
-              if(Number(rdate)===Number(todaydate)+j){
-              maximum+=data2.list[i].main.temp_max-273;
-              let avgmax=Math.floor(maximum/8)+ "°";
-              minimum+=data2.list[i].main.temp_min-273;
-              let avgmin=Math.floor(minimum/8)+ "°";
-              tmp[j].textContent=avgmax+"/"+avgmin;
-              if(j!=4){
-                let one=new Date(today);
-              one.setDate(today.getDate()+j+1);
-              let daily=one.toString().split(" ");
-              let dailyarr=[];
-              dailyarr.push(daily[0]);
-              dailyarr.push(daily[2]);
-              let dailystr=dailyarr.toString().replace(","," ");
-              da[j].textContent=dailystr;
-              }
-      }
-        }
-      }
-}
-getData()
+getData();
