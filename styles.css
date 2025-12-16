@@ -2606,9 +2606,9 @@ body, html{
         padding: 16px;
         box-sizing: border-box;
     }
-    .hourlargeScreen{
+    /* .hourlargeScreen{
         grid-template-columns: minmax(0, 17fr) minmax(0, 8fr);
-    }
+    } */
     .hourweather{
         display: none;
     }
