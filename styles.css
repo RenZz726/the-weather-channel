@@ -1762,12 +1762,18 @@ tr{
     }
 }
 @media screen and (min-width:768px){
-        .air-with-health{
+    .air-with-health{
         display:flex;
         flex-direction:column;
     }
     .main-body{
         padding:0px;
+    }
+    .side-bar{
+        padding:18px 17.5px;
+        display:flex;
+        flex-direction:column;
+        gap:20px;
     }
     .main-without-footer{
         display:flex;
@@ -1783,11 +1789,14 @@ tr{
     }
     .menu svg,.today-icon svg,.hourly-icon svg,.day-icon svg,.monthly-icon svg,.radar-icon svg{
         height:24px;
-        width:22px;
-        padding:12px;
+        width:24px;
+        padding:0px;
     }
     .today-with-content span,.hourly-with-content span,.day-with-content span,.monthly-with-content span,.radar-with-content span{
-        font-size:10px;
+        font-size:10.5px;
+    }
+    .today-with-content,.hourly-with-content,.day-with-content,.monthly-with-content,.radar-with-content{
+        gap:6px;
     }
     .logo svg{
         height:48px;
@@ -1831,8 +1840,8 @@ tr{
         font-weight:600;
     }
     .signin { 
-        padding:10px 14px;
-        padding-top:23px;
+        padding:23px 14px;
+        /* padding-top:23px; */
         border-radius:8px;
         margin-top:5px;
     }
@@ -2032,7 +2041,12 @@ tr{
     }
     .air-with-button h1{
         padding:0px;
-        margin-top:4px;
+        margin:4px;
+        margin-bottom:10px;
+    }
+    .health-activity h1{
+        margin:15px;
+        margin-bottom:10px;
     }
     .progress{
         width:70px;
@@ -2117,19 +2131,27 @@ tr{
     .hide {
   display: none;
 }
+.ho4{
+    display:none;
+}
 
 }
 
 @media screen and (min-width:1440px){
     .today-with-content,.hourly-with-content,.day-with-content,.monthly-with-content,.radar-with-content{
         flex-direction: row;
-        padding-right:150px;
-        gap:20px;
-        /* width:212px;
-        height:24px; */
+        padding-right:140px;
+        gap:10px;
+        align-self:center;
+        font-weight:600;
+        /* width:212px; */
+        /* height:24px; */ 
     }
-    .search-image{
-        left:800px;
+    .monthly-with-content{
+        margin-left:5px;
+    }
+    .radar-with-content{
+        margin-left:-7px;
     }
     .side-bar span{
         font-size:14px;
@@ -2139,11 +2161,11 @@ tr{
         width:24px;
     }
     .side-bar{
-        display:flex;
-        flex-direction:column;
         align-items:center;
-        padding-left:20px;
         height:3350px;
+        font-weight:600;
+        padding-left:15px;
+        gap:23px;
     }
     .main-body{
         margin-left:300px;
@@ -2154,14 +2176,15 @@ tr{
     .allergy-with-contents,.air-quality-with-contents{
     display:flex;
     flex-direction:row;
-    gap:40px;
+    align-items:center;
+    gap:10px;
     }
     .hiding-contents-of-side-bar{
         display:flex;
         flex-direction:column;
         gap:30px;
         padding-top:20px;
-        margin-left:-65px;
+        margin-left:-75px;
     }
     .radar-section img{
         height:400px;
@@ -2177,12 +2200,12 @@ tr{
     .logo1{
         /* display:block; */
         display:flex;
-        margin-left:-240px;
-        margin-top:10px;
+        margin-left:-195px;
+        margin-top:-5px;
     }
    .logo1 svg{
     height:48px;
-    width:48px;
+    width:56px;
    }
    .menu{
     display:none;
@@ -2216,9 +2239,6 @@ margin-right:30px;
 }
 .signin span{
     font-size:18px;
-}
-.search-image{
-    margin-left:-300px;
 }
 .head-drop{
     left:185px;
