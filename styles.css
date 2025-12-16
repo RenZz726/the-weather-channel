@@ -2280,35 +2280,9 @@ body, html{
     height: 100%;
     overflow-x: hidden;
 }
-
-.hourHeaderAddress{
-    /* padding-left: 16px;
-    padding-right: 16px; */
-    width: 100%;
-}
-.houraddress{
-    display: flex;
-    text-align: left;
-    border-radius: 8px;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-    margin: 12px 0;
-    padding:12px;
-}
-.hourLoca{
-    color:#252422 ;
-    font-family: light;
-    font-weight: 500;
-    font-size: 18px;
-}
-.locationImg{
-    width: 16px;
-    margin-right: 8px;
-}
 .hourmainContent{
-    display: block;
     position:relative ;
+    display: flex;
     margin-left: 4px;
 }
 .hourlargeScreen{
@@ -2319,6 +2293,9 @@ body, html{
     grid-template-columns: minmax(0, 1fr) 350px;
     grid-column-gap: 12px; */
     max-width: 1162px;
+}
+.ad-container {
+  width: 400px;
 }
 .hourcontent{
     border-bottom: 1px solid #676767;
@@ -2368,6 +2345,9 @@ body, html{
     gap: 6px;
     flex: 1 1 160px;
 }
+.hoursunny{
+  width: 44px;
+}
 .hourperc{
     padding-right: 15px;
     flex: 0 0 54px;
@@ -2408,7 +2388,7 @@ body, html{
     width: 100%;
     color: rgb(37, 36, 34);
     font-size: 16px;
-    height: 30px;
+
 }
 .hoursummaryContent .times{
     flex: 0 0 80px;
@@ -2424,13 +2404,12 @@ body, html{
     height: auto;
 }
 .hoursubtract, .houradd{
+    width: 18px;
+    height: 18px;
     margin-left: 6px;
 }
 .hoursubtract{
     display: none;
-}
-.hoursummaryContents .houradd{
-    display:block;
 }
 .hourdayPartDetails{
     margin-top: 10px;
@@ -2442,6 +2421,7 @@ body, html{
     display: none;
 }
 .hourweather{
+    display: none;
     font-size: 0.875rem;
     margin: 0 0 14px;
     margin-top: 16px;
@@ -2509,7 +2489,7 @@ body, html{
     z-index: 1;
 }
 .active{
-    border: 2px solid;
+    border: 2px solid #eb8532;
     font-weight: 700;
 }
 .hidden{
@@ -2544,7 +2524,7 @@ body, html{
     color: #fff;
     font-size: 13px;
     width: 50px;
-    height: 13px;
+    height: 30px;
     border-radius: 6px;
     padding: 8px 12px;
     text-align: center;
@@ -2631,6 +2611,9 @@ body, html{
     }
     .hourweather{
         display: none;
+    }
+    .ad-container {
+      display: none;
     }
 }
 @media (max-width:425px){

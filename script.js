@@ -401,7 +401,7 @@ const hoursummary = document.querySelector(".hoursummary");
 const hourdayPartDetails = document.querySelector(".hourdayPartDetails");
 
 const API_KEY = "e687396580364dc882344618250512";
-const LOCATION = "palakkad";
+const LOCATION = "Rajpath Area";
 
 const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${LOCATION}&days=3`;
 
@@ -484,7 +484,7 @@ fetch(url)
           </svg>
           <span>${hrs.wind_dir} ${Math.round(hrs.wind_kph)}</span>
         </div>
-          <svg width = '18' class='houradd' name="add"  fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+          <svg width = '18' height = '18' class='houradd' name="add"  fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
           <title>Add</title>
           <path d="M10.625 9.875V5.5h-1.25v4.375H5v1.25h4.375V15.5h1.25v-4.375H15v-1.25h-4.375Z" fill="currentColor"></path>
         </svg>
@@ -516,9 +516,7 @@ fetch(url)
                       </svg>
                       <div class="hourfield">
                         <span class="hourfeelsLike">Wind</span>
-                        <p class="hourtempValue">${hrs.wind_dir} ${Math.round(
-          hrs.wind_kph
-        )}</p>
+                        <p class="hourtempValue">${hrs.wind_dir} ${Math.round(hrs.wind_kph)}</p>
                       </div>
                     </li>
                     <li class="hourlists none">
