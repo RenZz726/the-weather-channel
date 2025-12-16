@@ -1906,116 +1906,6 @@ tr {
     left: 210px;
   }
 }
-
-  @font-face{
-    font-family: 'bold';
-    src: url(fonts/inter-v19-latin-700.woff2);
-}
-@font-face{
-    font-family: 'light';
-    src: url(fonts/inter-v19-latin-500.woff2);
-}
-@font-face{
-    font-family: 'medium';
-    src: url(fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2);
-}
-body, html{
-    /* width: 100%; */
-    height: 100%;
-    overflow-x: hidden;
-}
-.hourmainContent{
-    position:relative ;
-    display: flex;
-    margin-left: 4px;
-}
-.hourlargeScreen{
-    display: block;
-    margin: 12px auto;
-    max-width: 80%;
-    /* display: grid;
-    grid-template-columns: minmax(0, 1fr) 350px;
-    grid-column-gap: 12px; */
-    max-width: 1162px;
-}
-.ad-container {
-  width: 400px;
-}
-.hourcontent{
-    border-bottom: 1px solid #676767;
-}
-.hourlocationTitle{
-    font-size: 1.5rem;
-    line-height: 1.08em;
-    font-family: bold;
-    margin: 0px;
-    padding: 0px;
-}
-.hourbar{
-    font-family: medium;
-    font-size: 1rem;
-    padding-left: 4px;
-    line-height: 1.08rem;
-    font-weight: 400;
-}
-.hourplace{
-    margin-left: 4px;
-    font-family:medium ;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.08rem;
-}
-.hourtimes{
-    padding: 0 0 16px;
-    padding-right: 6px;
-    font-family: light;
-    font-weight: 400;
-    /* flex: 0 0 80px; */
-    opacity: 0.65;
-    font-size: 14px;
-}
-.hourtime{
-    flex:0 0 50px;
-    font-weight: 500px;
-    font-size: 14px;
-}
-.hourtemp{
-    font-family: bold;
-    flex: 0 .5 94px;
-}
-.hoursun{
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex: 1 1 160px;
-}
-.hoursunny{
-  width: 44px;
-}
-.hourperc{
-    padding-right: 15px;
-    flex: 0 0 54px;
-    justify-content: flex-end;
-    display: flex;
-}
-.hourwind{
-    padding-left: 13px;
-    font-size: 1rem;
-    flex:0 0 145px
-}
-.hourdate{
-    font-family: bold;
-    padding: 16px 0;
-    font-weight: 600;
-    line-height: 1;
-    border-bottom: 1px solid #DEDEDE;
-    border-top: 1px solid #DEDEDE;
-    margin: 0;
-    font-size: 1rem;
-}
-.hoursummary{
-    padding: 4px 0;
-    font-family: light;
 @media screen and (min-width: 768px) {
   .air-with-health {
     display: flex;
@@ -2033,56 +1923,6 @@ body, html{
   .main-without-footer {
     display: flex;
     flex-direction: row;
-    font-weight: 500;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    color: rgb(37, 36, 34);
-    font-size: 16px;
-
-}
-.hoursummaryContent .times{
-    flex: 0 0 80px;
-}
-.hourrain-drop{
-    margin-right: 3px;
-    width: 17px;
-}
-.hourarrow{
-    margin-right: -2px;
-    color: #8D8D8D;
-    width: 17px;
-    height: auto;
-}
-.hoursubtract, .houradd{
-    width: 18px;
-    height: 18px;
-    margin-left: 6px;
-}
-.hoursubtract{
-    display: none;
-}
-.hourdayPartDetails{
-    margin-top: 10px;
-    background:#e8e8e8 ;
-    margin-bottom: 16px;
-    border-radius: 16px;
-    padding: 16px 24px;
-    list-style: none;
-    display: none;
-}
-.hourweather{
-    display: none;
-    font-size: 0.875rem;
-    margin: 0 0 14px;
-    margin-top: 16px;
-}
-.hourdata{
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-    padding-left: 0;
     gap: 20px;
     padding-left: 40px;
   }
@@ -2911,9 +2751,6 @@ html {
   border: 2px solid;
   font-weight: 700;
 }
-.active{
-    border: 2px solid #eb8532;
-    font-weight: 700;
 .hidden {
   display: none;
 }
@@ -2938,24 +2775,6 @@ html {
   max-width: 788px;
   /* margin:0 auto; */
 }
-.hourRadarmap{
-    position: relative;
-    width: 100%;
-    max-width: 788px;
-    /* margin:0 auto; */
-}
-.hourNow{
-    position: absolute;
-    top: 3%;
-    left: 3%;
-    background: #252422cc;
-    color: #fff;
-    font-size: 13px;
-    width: 50px;
-    height: 30px;
-    border-radius: 6px;
-    padding: 8px 12px;
-    text-align: center;
 .hourNow {
   position: absolute;
   top: 3%;
@@ -3036,50 +2855,6 @@ html {
     display: block;
   }
 }
-@media (min-width:1024px){
-    .hourlist, .hourlists{
-        width: 33.33%;
-    }
-    .none{
-        border: none;
-        margin: 0;
-        padding: 0;
-    }
-    .hourHeaderAddress{
-        display: none;
-    }
-    .hourweather{
-        display: block;
-    }
-}
-@media (max-width:768px){
-    .hourlist, .hourlists{
-        width: 50%;
-    }
-    .hourdayPartDetails{
-        width: 66vw;
-        max-width: 100vw;
-        margin: 0;
-        padding: 16px;
-        box-sizing: border-box;
-    }
-    .hourweather{
-        display: none;
-    }
-    .ad-container {
-      display: none;
-    }
-}
-@media (max-width:425px){
-    .hourcontent, .hoursummaryContent, .hourtableDetails{
-        width: 100vw
-    }
-    .hourads{
-        display: none;
-    }
-    .hourlargeScreen{
-        display: block;
-    }
 @media (max-width: 768px) {
   .hourlist,
   .hourlists {
@@ -3091,6 +2866,9 @@ html {
     margin: 0;
     padding: 16px;
     box-sizing: border-box;
+  }
+  .hourlargeScreen {
+    grid-template-columns: minmax(0, 17fr) minmax(0, 8fr);
   }
   .hourweather {
     display: none;
