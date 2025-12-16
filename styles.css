@@ -758,6 +758,9 @@ body{
     position:relative;
 }
 /* side-bar */
+.main-body {
+    margin-left: 73px;
+}
 .side-bar{
     height:975px;
     border-right:1px solid rgba(37, 36, 34, 0.1);
@@ -1902,6 +1905,7 @@ tr{
     }
     .weather{
         font-size:20px;
+        margin-top: -16px;
     }
     .day-night-temp{
         font-size:18px;
