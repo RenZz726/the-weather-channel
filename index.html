@@ -3056,7 +3056,28 @@
           <div class="c">
             <img
               style="width: 35px"
-              src="https://weather.com/monthly/assets/the-weather-company.resource.9f6305c416ac2bdfe238.svg"
+              src="https://weather.com/monthly/assets/the-weather-company.re <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="no_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="no2"
+                          ></text>
+                        </svg>source.9f6305c416ac2bdfe238.svg"
               alt=""
               srcset=""
             />
@@ -3179,144 +3200,275 @@
         </div> -->
         <div class="aircontents">
           <div>
-          <div class="airtitle"><h1><strong>Today's Air Quality</strong> <span class="airsubtit" id="city_name"></span></h1></div>
-          <div class="airsection1">
-            <div class="airflex">
-            <div class="airsection1-left">
-              <div class="airvalue">
-                <svg class="aircirclesvg" viewBox="0 0 102 102">
-                  <circle class="aircir1" cx="51" cy="51" r="48.5"></circle>
-                  <circle class="aircir2" id="aqi_don"cx="51" cy="51" r="48.5"></circle>
-                  <text class="aircir-value airlgcir" x="50%" y="55%" text-anchor="middle" id="aqi">316</text>
-                </svg>
-              </div>
-              <div class="airleft-contents">
-                <span class="airleft-title" id="aqi_air"></span>
-                <p class="airleft-text" id="air_para"></p>
-              </div>
+            <div class="airtitle">
+              <h1>
+                <strong>Today's Air Quality</strong>
+                <span class="airsubtit" id="city_name"></span>
+              </h1>
             </div>
-            <div class="airsection1-right">
-              <div class="airright-contents">
-                <span class="airright-title">Primary Pollutant:</span>
-                <span class="airright-text">PM2.5 (Particulate matter less than 2.5 microns)</span>
-              </div>
-            </div>
-            </div>
-            <div class="airinfo"><img src="assests/Info.svg"><span>Air Quality Index</span></div>
-          </div>
-          <div class="airsection-2">
-            <h2>All Pollutants</h2>
-            <div class="airsection-2-contents">
-              <div class="airs2-container">
-                <div class="airsection-2-list">
-                  <div class="airsection-2-flx">
-                    <div>
-                      <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
-                  <circle class="aircir1 aircirsmall" cx="27" cy="27" r="24.5"></circle>
-                  <circle class="aircir2 aircirsmall"  id="co_don" cx="27" cy="27" r="24.5"></circle>
-                  <text class="aircir-value" x="50%" y="55%" text-anchor="middle" id="co"></text>
-                </svg>
-                    </div>
-                    <div class="airsection-2-text">
-                      <span class="airs2">CO (Carbon Monoxide)</span>
-                      <span class="airs2 airtext1" id="co_status"></span>
-                      <span class="airs2 airtext2" id="co_mg"></span>
-                    </div>
+            <div class="airsection1">
+              <div class="airflex">
+                <div class="airsection1-left">
+                  <div class="airvalue">
+                    <svg class="aircirclesvg" viewBox="0 0 102 102">
+                      <circle class="aircir1" cx="51" cy="51" r="48.5"></circle>
+                      <circle
+                        class="aircir2"
+                        id="aqi_don"
+                        cx="51"
+                        cy="51"
+                        r="48.5"
+                      ></circle>
+                      <text
+                        class="aircir-value airlgcir"
+                        x="50%"
+                        y="55%"
+                        text-anchor="middle"
+                        id="aqi"
+                      >
+                        
+                      </text>
+                    </svg>
+                  </div>
+                  <div class="airleft-contents">
+                    <span class="airleft-title" id="aqi_air"></span>
+                    <p class="airleft-text" id="air_para"></p>
                   </div>
                 </div>
-                 <div class="airsection-2-list">
-                  <div class="airsection-2-flx">
-                    <div>
-                      <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
-                  <circle class="aircir1 aircirsmall" cx="27" cy="27" r="24.5"></circle>
-                  <circle class="aircir2  aircirsmall"id="no_don" cx="27" cy="27" r="24.5"></circle>     
-                  <text class="aircir-value" x="50%" y="55%" text-anchor="middle" id="no2"></text>
-                </svg>
-                    </div>
-                    <div class="airsection-2-text">
-                      <span class="airs2">NO2 (Nitrogen Dioxide)</span>
-                      <span class="airs2 airtext1" id="no_status"></span>
-                      <span class="airs2 airtext2" id="no2_mg"></span>
-                    </div>
-                  </div>
-                </div>
-                 <div class="airsection-2-list">
-                  <div class="airsection-2-flx">
-                    <div>
-                      <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
-                  <circle class="aircir1 aircirsmall" cx="27" cy="27" r="24.5"></circle>
-                  <circle class="aircir2 aircirsmall"  id="o3_don" cx="27" cy="27" r="24.5"></circle>
-                  <text class="aircir-value" x="50%" y="55%" text-anchor="middle" id="o3"></text>
-                </svg>
-                    </div>
-                    <div class="airsection-2-text">
-                      <span class="airs2">O3 (Ozone)</span>
-                      <span class="airs2 airtext1" id="o3_status"></span>
-                      <span class="airs2 airtext2" id="o3_mg"></span>
-                    </div>
-                  </div>
-                </div>
-                 <div class="airsection-2-list">
-                  <div class="airsection-2-flx">
-                    <div>
-                      <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
-                  <circle class="aircir1 aircirsmall" cx="27" cy="27" r="24.5"></circle>
-                  <circle class="aircir2 aircirsmall" id="pm10_don" cx="27" cy="27" r="24.5"></circle>
-                  <text class="aircir-value" x="50%" y="55%" text-anchor="middle " id="pm10"></text>
-                </svg>
-                    </div>
-                    <div class="airsection-2-text">
-                      <span class="airs2">PM10 (Particulate matter less than 10 microns)</span>
-                      <span class="airs2 airtext1" id="pm10_status"></span>
-                      <span class="airs2 airtext2" id="pm10_mg"></span>
-                    </div>
-                  </div>
-                </div>
-                 <div class="airsection-2-list">
-                  <div class="airsection-2-flx">
-                    <div>
-                      <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
-                  <circle class="aircir1 aircirsmall" cx="27" cy="27" r="24.5"></circle>
-                  <circle class="aircir2 aircirsmall"  id="pm25_don" cx="27" cy="27" r="24.5"></circle>
-                  <text class="aircir-value" x="50%" y="55%" text-anchor="middle" id="pm25"></text>
-                </svg>
-                    </div>
-                    <div class="airsection-2-text">
-                      <span class="airs2">PM2.5 (Particulate matter less than 2.5 microns)</span>
-                      <span class="airs2 airtext1" id="pm25_status"></span>
-                      <span class="airs2 airtext2" id="pm25_mg"></span>
-                    </div>
-                  </div>
-                </div>
-                 <div class="airsection-2-list ">
-                  <div class="airsection-2-flx">
-                    <div>
-                      <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
-                  <circle class="aircir1 aircirsmall" cx="27" cy="27" r="24.5"></circle>
-                  <circle class="aircir2 aircirsmall" id="so2_don" cx="27" cy="27" r="24.5"></circle>
-                  <text class="aircir-value" x="50%" y="55%" text-anchor="middle" id="so2"></text>
-                </svg>
-                    </div>
-                    <div class="airsection-2-text">
-                      <span class="airs2">SO2 (Sulphur Dioxide)</span>
-                      <span class="airs2 airtext1" id="so_status"></span>
-                      <span class="airs2 airtext2" id="so2_mg"></span>
-                    </div>
+                <div class="airsection1-right">
+                  <div class="airright-contents">
+                    <span class="airright-title" id="Primary_name"></span>
+                    <span class="airright-text" id="primary_desc"></span>
                   </div>
                 </div>
               </div>
-              <div class="airinfo"><img src="assests/Info.svg"><span>Air Quality Index</span></div>
+              <div class="airinfo">
+                <img src="assests/Info.svg" /><span>Air Quality Index</span>
+              </div>
             </div>
-          </div>
+            <div class="airsection-2">
+              <h2>All Pollutants</h2>
+              <div class="airsection-2-contents">
+                <div class="airs2-container">
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="co_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="co"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2">CO (Carbon Monoxide)</span>
+                        <span class="airs2 airtext1" id="co_status"></span>
+                        <span class="airs2 airtext2" id="co_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="no_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="no2"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2">NO2 (Nitrogen Dioxide)</span>
+                        <span class="airs2 airtext1" id="no_status"></span>
+                        <span class="airs2 airtext2" id="no2_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="o3_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="o3"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2">O3 (Ozone)</span>
+                        <span class="airs2 airtext1" id="o3_status"></span>
+                        <span class="airs2 airtext2" id="o3_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="pm10_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle "
+                            id="pm10"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2"
+                          >PM10 (Particulate matter less than 10 microns)</span
+                        >
+                        <span class="airs2 airtext1" id="pm10_status"></span>
+                        <span class="airs2 airtext2" id="pm10_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="pm25_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="pm25"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2"
+                          >PM2.5 (Particulate matter less than 2.5
+                          microns)</span
+                        >
+                        <span class="airs2 airtext1" id="pm25_status"></span>
+                        <span class="airs2 airtext2" id="pm25_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="so2_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="so2"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2">SO2 (Sulphur Dioxide)</span>
+                        <span class="airs2 airtext1" id="so_status"></span>
+                        <span class="airs2 airtext2" id="so2_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="airinfo">
+                  <img src="assests/Info.svg" /><span>Air Quality Index</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="airside-ad">
-          <img src="https://tpc.googlesyndication.com/simgad/13262849628625774337?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qklV5eNK18tnIQ7p3K_IBx-NE7pXg">
+          <img
+            src="https://tpc.googlesyndication.com/simgad/13262849628625774337?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qklV5eNK18tnIQ7p3K_IBx-NE7pXg"
+          />
         </div>
       </div>
-      
     </section>
-<script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
   <script src="script.js"></script>
 </html>
