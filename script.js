@@ -14,26 +14,35 @@ const monthlyButton = document.querySelector(".monthly-with-content");
 
 const radarButton = document.querySelector(".radar-with-content");
 const radarSection = document.querySelector(".radar");
-const radarFooterSection = document.querySelector(".radar-footer");
+
+const allergySection = document.querySelector('.allergy-tracker')
+const allergyButton = document.querySelector('.allergy-with-contents')
 
 hourlySection.classList.add("hide");
 tenDaySection.classList.add("hide");
 monthlySection.classList.add("hide");
 radarSection.classList.add("hide");
+allergySection.classList.add('hide')
 
 todayButton.addEventListener("click", () => {
   mainBody.classList.remove("hide");
   hourlySection.classList.add("hide");
+  tenDaySection.classList.add('hide');
   monthlySection.classList.add("hide");
   radarSection.classList.add("hide");
+  allergySection.classList.add('hide');
+
 });
 
 hourlyButton.addEventListener("click", () => {
   mainBody.classList.add("hide");
   monthlySection.classList.add("hide");
+  tenDaySection.classList.add('hide');
   radarSection.classList.add("hide");
   hourlySection.classList.remove("hide");
   footerSection[1].classList.remove("hide");
+  allergySection.classList.add('hide');
+
 });
 
 tenDayButton.addEventListener("click", () => {
@@ -42,24 +51,43 @@ tenDayButton.addEventListener("click", () => {
   monthlySection.classList.add("hide");
   radarSection.classList.add("hide");
   tenDaySection.classList.remove('hide');
+  allergySection.classList.add('hide');
+
 });
 
 monthlyButton.addEventListener("click", () => {
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
   radarSection.classList.add("hide");
+  tenDaySection.classList.add('hide');
   monthlySection.classList.remove("hide");
-  footerSection[1].classList.remove("hide");
+  footerSection[1].classList.remove("hide");  
+  allergySection.classList.add('hide');
+
 });
 
 radarButton.addEventListener("click", () => {
   adBlock.classList.add("hide");
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
+  tenDaySection.classList.add('hide');
   monthlySection.classList.add("hide");
   footerSection[1].classList.add("hide");
   radarSection.classList.remove("hide");
+    allergySection.classList.add('hide');
+
 });
+
+allergyButton.addEventListener('click', ()=> {
+    adBlock.classList.add("hide");
+    mainBody.classList.add('hide');
+    hourlySection.classList.add("hide");
+    tenDaySection.classList.add('hide');
+    monthlySection.classList.add("hide");
+    radarSection.classList.add('hide');
+    footerSection[1].classList.remove("hide");
+    allergySection.classList.remove('hide');
+})
 
 let calendar_previous = document.querySelector(".calendar-previous");
 let calendar_next = document.querySelector(".calendar-next");
