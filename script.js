@@ -23,6 +23,7 @@ hourlySection.classList.add("hide");
 monthlySection.classList.add("hide");
 radarSection.classList.add("hide");
 })
+
 hourlyButton.addEventListener("click", () => {
   mainBody.classList.add("hide");
   monthlySection.classList.add("hide");
@@ -47,6 +48,49 @@ radarButton.addEventListener("click", () => {
   footerSection[1].classList.add("hide");
   radarSection.classList.remove("hide");
 });
+
+// side-pop-section
+const ti=document.querySelector(".ticon");
+const hi=document.querySelector(".hicon");
+const di=document.querySelector(".dicon");
+const mi=document.querySelector(".micon");
+const ri=document.querySelector(".ricon");
+const ai=document.querySelector(".all");
+const aqi=document.querySelector(".aq");
+
+ti.addEventListener('click',()=>{
+mainBody.classList.remove('hide')
+hourlySection.classList.add("hide");
+monthlySection.classList.add("hide");
+radarSection.classList.add("hide");
+})
+
+
+hi.addEventListener("click", () => {
+  mainBody.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  hourlySection.classList.remove("hide");
+  footerSection[1].classList.remove("hide");
+});
+
+mi.addEventListener("click", () => {
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  monthlySection.classList.remove("hide");
+  footerSection[1].classList.remove("hide");
+});
+
+ri.addEventListener("click", () => {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  footerSection[1].classList.add("hide");
+  radarSection.classList.remove("hide");
+});
+
 
 let calendar_previous = document.querySelector(".calendar-previous");
 let calendar_next = document.querySelector(".calendar-next");
@@ -994,3 +1038,16 @@ async function getData() {
   }
 }
 getData();
+
+const menubtn=document.querySelector(".menu");
+const cbtn=document.querySelector(".clsbtn");
+const spop=document.querySelector(".side-pop");
+const sso=document.querySelector(".side-side-opaque");
+menubtn.addEventListener("click",()=>{
+  spop.classList.remove("hide");
+  sso.classList.remove("hide");
+})
+cbtn.addEventListener("click",()=>{
+  spop.classList.add("hide");
+  sso.classList.add("hide");
+})
