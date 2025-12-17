@@ -1,4 +1,7 @@
 @media screen and (max-width : 1024px){
+    .mainAd{
+        display: none;
+    }
     .location{
         display: block;
         padding: 0 16px;
@@ -19,11 +22,11 @@
     .location-img{
         margin-right: 8px;
     }
+    .marginBar{
+        margin: 12px  auto 0 auto;
+    }
     .mainBar{
         display: block;
-        padding: 0 16px 21px;
-        /* margin: auto; */
-        /* max-width: 80%; */
     }
     .title h1{
         font-size: 20px;
@@ -68,7 +71,6 @@
         margin: 0 6px 0 8px;
     }
     .sun-img, .moon-img{
-        /* width: 24px; */
         margin: auto;
         padding: 0;
     }
@@ -90,9 +92,13 @@
         margin-right: 1px;
     }
 }
-
-/* @media screen and (min-width: 1024) {
-    .mainBar{
-        margin: auto;
+@media screen and (min-width: 481px){
+    .marginBar{
+        margin: 12px auto 0 auto; 
     }
-} */
+}
+@media screen and (min-width: 1241px) {
+    .Radar-img{
+        height: 400px;
+    }
+}
