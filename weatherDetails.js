@@ -2,7 +2,7 @@ export function weatherDetails(id, obj,data){
     const days = data.forecast.forecastday
     const d = days[id]
     const sunset = d.astro.sunset.split(' ')[0]
-    const moonrise = d.astro.moonrise.split(' ')[0]
+    const moonrise = d.astro.moonset.split(' ')[0]
 
     const cardsContent = document.createElement('div')
     cardsContent.id = `${id}-card`
@@ -158,7 +158,7 @@ export function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Moonrise</span>
-                        <span class="r2">${d.astro.moonrise.split(' ')[1] === 'PM' ? Number(moonrise.split(':')[0]) + 12 + ':' + moonrise.split(':')[1]: d.astro.moonrise.split(' ')[0]}</span>
+                        <span class="r2">${d.astro.moonrise.split(' ')[0]}</span>
                     </div>
                 </li>
                 <li>
@@ -168,7 +168,7 @@ export function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Moonset</span>
-                        <span class="r2">${d.astro.moonset.split(' ')[0]}</span>
+                        <span class="r2">${ d.astro.moonset.split(' ')[1] === 'PM' ? Number(moonrise.split(':')[0]) + 12 + ':' + moonrise.split(':')[1] : d.astro.moonrise.split(' ')[0]}</span>
                     </div>
                 </li>
 
@@ -193,7 +193,6 @@ export function weatherDetails(id, obj,data){
             cardsContent.querySelector('.day-night-parts').style.display = 'block'
         }
     }
-    console.log(cardsContent.style.width)
     cardsContent.classList.add('cards-content')
     const targetItem = document.getElementById(`cls-${id}`)
     targetItem.insertAdjacentElement('afterend',cardsContent)

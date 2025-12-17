@@ -23,13 +23,11 @@ body{
     max-width: 1162px;
     width: 100%;
     margin: 0 auto;
-    /* background: rgba(255, 0, 0, 0.1); */
 }
 .mainBar{
     display: grid;
     grid-template-columns: minmax(0, 1fr) 350px;
     grid-column-gap: 12px;
-    /*max-width: 1162px;  /* 278 px balance*/
     padding: 0 16px;
     
 }
