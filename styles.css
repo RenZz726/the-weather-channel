@@ -31,6 +31,2909 @@
 .allergycontent{
     grid-column: span 12;
     width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .add1 {
+  width: 100%;
+  height: 200px;
+  background-color: rgb(190, 190, 190);
+} */
+.monthly {
+  padding: 10px 20px 0 20px;
+}
+
+.monthly-con {
+  width: 100%;
+  display: flex;
+}
+
+.monthly-content {
+  width: 100%;
+  /* height: 300px; */
+  background-color: rgb(255, 255, 255);
+}
+
+.monthly-side-content {
+  width: 100%;
+  height: 850px;
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+
+.monthly-side-content .side-data {
+  /* width: 100%; */
+  background-color: rgb(255, 255, 255);
+  height: 650px;
+  border-top: 1px solid rgb(204, 204, 204);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  /* border: 1px solid black; */
+  padding: 30px;
+}
+
+.monthly-side-head {
+  padding: 10px 0 0 10px;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.monthly-side-content .side-data .table1 {
+  width: 100%;
+  padding-top: 10px;
+  border-spacing: 25px 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.monthly-side-content .side-data .table2 {
+  width: 100%;
+  border-spacing: 25px 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.monthly-side-content .side-data .table3 {
+  width: 100%;
+  border-spacing: 25px 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.monthly-side-head1 {
+  padding: 15px 0 10px 10px;
+  font-size: 17px;
+  font-weight: 600;
+  border-top: 1px solid rgb(204, 204, 204);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.monthly-content-head {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 25px 0 0 50px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.monthly-content-head span {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.monthly .part1 {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 40px 0 40px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.monthly .part1 .section1 {
+  align-self: anchor-center;
+}
+.monthly .part1 .section1 button {
+  background-color: white;
+}
+.monthly .part1 .section2 {
+  display: flex;
+  gap: 15px;
+}
+
+.monthly .part1 .section3 {
+  align-self: anchor-center;
+}
+
+.monthly .part1 .section3 button {
+  background-color: white;
+  border: none;
+}
+
+.monthly .part2 {
+  width: 100%;
+}
+
+.monthly .part2 .days {
+  width: 90%;
+  margin: 15px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  /* border-bottom: 1px solid; */
+  border-top: 1px solid rgb(212, 212, 212);
+  padding: 8px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(155, 155, 155);
+}
+
+.monthly .part2 .cards {
+  width: 100%;
+}
+.monthly .part2 .cards .container1 {
+  width: 100%;
+  max-width: 1000px;
+  margin: 2px auto;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.monthly .part2 .cards .card {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(230, 229, 229);
+  position: relative;
+}
+
+.info {
+  align-self: center;
+  padding: 4px;
+}
+
+.num {
+  color: rgb(155, 155, 155);
+}
+
+.dg {
+  color: rgb(95, 90, 90);
+  font-size: 22px;
+}
+.dg1 {
+  color: gray;
+}
+.day {
+  color: rgb(65, 65, 65);
+}
+
+.active {
+  border: 2px solid blue;
+}
+
+/* card */
+
+.monthly-card1 {
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.monthly-card2 {
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.monthly-card1 .c1,
+.monthly-card2 .c2 {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+
+.mcard1 {
+  width: 100%;
+  padding: 10px;
+}
+
+.ncard {
+  background-color: rgb(226, 225, 225);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .monthly-con {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.radar {
+  display: flex;
+}
+.radar .main {
+  flex: 1;
+}
+.radar .main-container {
+  display: flex;
+}
+.radar .map {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+.radar #map {
+  height: 82vh;
+}
+.radar .weather-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 15px;
+  width: 569.94px;
+  margin: 0 auto;
+}
+.radar .weather {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 15px 0px 0px;
+}
+.radar .weather img {
+  margin: 0px 8px 0px 0px;
+}
+.radar .weather span {
+  margin: 0px 8px 0px 0px;
+  white-space: nowrap;
+  font-size: 13px;
+}
+.radar .map-head p {
+  color: #6f7585;
+  padding: 6px 0px 0px;
+  text-align: center;
+  font-size: 14px;
+}
+.radar .rain {
+  width: 64px;
+  height: 10px;
+}
+.radar .freezing-rain {
+  width: 64px;
+  height: 10px;
+}
+.radar .mix {
+  width: 64px;
+  height: 10px;
+}
+.radar .snow {
+  width: 64px;
+  height: 10px;
+}
+.leaflet-touch .leaflet-bar {
+  border: none;
+  background-clip: padding-box;
+}
+.leaflet-touch .leaflet-bar a:first-child {
+  border-radius: 25px 25px 0 0;
+}
+.leaflet-touch .leaflet-bar a:last-child {
+  border-radius: 0 0 25px 25px;
+}
+.leaflet-control-zoom-in {
+  position: absolute;
+  background: white;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  color: #444;
+  cursor: pointer;
+  top: 87px;
+  left: 12px;
+}
+.leaflet-control-zoom-out {
+  position: absolute;
+  background: white;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  color: #444;
+  cursor: pointer;
+  top: 140px;
+  left: 12px;
+}
+.leaflet-touch .leaflet-bar a {
+  width: 52px;
+  height: 52px;
+  line-height: 54px;
+}
+.leaflet-control-zoom a:hover {
+  background: #f0f0f0;
+}
+.radar .loc {
+  position: absolute;
+  top: 80px;
+  color: blue;
+  background-color: #fff;
+  width: 52px;
+  height: 52px;
+  z-index: 999;
+  padding: 16px;
+  left: 21px;
+  border-radius: 50%;
+}
+.radar .map .expand {
+  position: absolute;
+  top: 269px;
+  background-color: #fff;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  left: 23px;
+  border-radius: 50%;
+}
+.radar .map svg path {
+  fill: black;
+}
+.radar .map .loc path {
+  fill: black;
+}
+.radar .map .loc path:hover {
+  fill: blue;
+}
+.radar .weather-condition-pop-up {
+  position: absolute;
+  z-index: 999;
+  bottom: 5px;
+  right: 22px;
+  width: 341px;
+  transition: 0.2s ease-in;
+}
+.radar .weather-condition-pop-up .notification {
+  background-color: #fefefe;
+  position: absolute;
+  padding: 16px;
+  margin: 0px 0px 16px;
+  border-radius: 12px;
+  bottom: 300px;
+  transition: 0.3s ease-in;
+  z-index: 999;
+}
+.radar .weather-condition-pop-up .notification.hide {
+  display: none;
+}
+.radar .weather-timeline {
+  border-radius: 12px;
+  background-color: #fff;
+  z-index: 1000;
+  transition: 0.2s height ease-out;
+}
+.radar .weather-condition-pop-up .address {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  padding: 0px 0px 16px;
+}
+.radar .weather-condition-pop-up span {
+  font-size: 14px;
+}
+.radar .weather-condition-pop-up .address span {
+  font-size: 20px;
+}
+.radar .weather-condition-pop-up .address img {
+  color: blue;
+}
+.radar .weather-timeline {
+  display: flex;
+  flex-direction: column;
+  padding: 19px 0 0;
+}
+.radar .weather-timeline span {
+  font-size: 16px;
+  font-weight: bold;
+}
+.radar .weather-timeline .range {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 0;
+  padding: 20px 16px;
+}
+.radar .weather-timeline .range-wrapper {
+  flex: 1;
+}
+.radar .weather-timeline .features {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgb(179, 179, 179);
+  padding: 0 0 4px;
+}
+.radar .weather-timeline .features .feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 13px;
+  color: #000;
+  font-weight: lighter;
+}
+.radar .weather-timeline .features .feature-item span {
+  font-weight: lighter;
+  font-size: 13px;
+}
+.radar .weather-timeline .hide-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0 24px;
+}
+.radar .weather-timeline .hide-menubutton {
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+}
+.radar .range .play {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+.radar .range .pause {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 10px;
+  display: none;
+}
+.radar .features svg {
+  width: 53px;
+  height: 52px;
+  padding: 16px;
+  background-color: rgb(244, 241, 241);
+  border-radius: 50%;
+}
+.radar .weather-timeline .features img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+}
+.radar .weather-timeline .ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #666;
+}
+.radar .weather-timeline .range-field {
+  accent-color: black;
+}
+.radar .weather-timeline .featureHighlighted {
+  border: 2px solid blue;
+}
+.radar .show-menu {
+  position: absolute;
+  bottom: 108px;
+  right: 485px;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border: 2px solid blue;
+  background-color: #fff;
+  border-radius: 30px;
+  gap: 9px;
+}
+.radar .map .weather-condition-pop-up.hide {
+  bottom: -90px;
+}
+.radar .show-menu img {
+  rotate: 180deg;
+}
+.radar .show-menuBtn {
+  border: none;
+  background-color: transparent;
+  color: blue;
+  font-weight: bold;
+  font-size: 14px;
+}
+.radar .loader {
+  position: absolute;
+  top: 50px;
+  height: 10px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 600;
+  border-top: 1px solid rgb(233, 233, 233);
+  border-bottom: 1px solid rgb(233, 233, 233);
+}
+.radar .loading {
+  background-color: rgb(27, 18, 80);
+  max-width: 57%;
+  width: 0%;
+  transition: 0.3s width ease;
+  height: 100%;
+}
+.radar .weather-cloud {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 14px;
+}
+.radar .weather-temperatures {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.radar .temperature-values {
+  font-size: 12px;
+  display: flex;
+  gap: 12px;
+}
+.radar .weather-map {
+  display: none;
+}
+.radar .map-options .head {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 16px;
+}
+
+.radar .map-options ul {
+  list-style-type: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+.radar .map-options .map-options-layers {
+  padding: 10px 0;
+  margin: 0 10px 0 32px;
+  border-bottom: 2px solid black;
+}
+.radar .map-options .map-options-speciality {
+  padding: 10px 0;
+  margin: 0 32px 0 10px;
+}
+.radar .map-options p {
+  padding: 16px;
+}
+.radar .autoplay-toogle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid rgb(205, 205, 205);
+}
+.radar .map-options .toogle-button {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(154, 154, 154);
+}
+.radar .map-options .toogle-button .btn {
+  background-color: #fff;
+  width: 30px;
+  height: 26px;
+  border-radius: 5px;
+  transform: translateX(2px);
+  transition: 0.7s ease;
+}
+.radar .map-options .toogle-button .btn.toogled {
+  transform: translateX(28px);
+}
+.radar .autoplay-toogle span {
+  font-size: 16px;
+  font-weight: 200;
+}
+.radar .map-options .map-option-stylings {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+}
+.radar .map-options .map-option-text {
+  display: flex;
+  flex-direction: column;
+}
+.radar .map-options .sub {
+  font-size: 13px;
+  color: grey;
+  font-weight: lighter;
+}
+.radar .map-options .close-map-options {
+  background-color: blue;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  top: -76px;
+  right: 2px;
+}
+.radar .map-options .close-map-options img {
+  padding: 18px 20px;
+  width: 56px;
+  height: 55px;
+}
+.radar .speciality-maps p {
+  font-size: 15px;
+  letter-spacing: -0.09px;
+  line-height: 1.14;
+}
+.radar .speciality-maps .speciality-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px;
+}
+.radar .speciality-maps .speciality-contents {
+  display: flex;
+  flex-direction: column;
+}
+.radar .speciality-maps .speciality-contents .title {
+  background-color: #da291c;
+  border-radius: 3px;
+  margin-top: 7px;
+  padding: 2px 4px;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: -0.06px;
+  line-height: 1.2;
+  width: 140px;
+}
+.radar .speciality-maps .speciality-contents .head {
+  font-size: 16px;
+  padding: 0;
+}
+.radar .speciality-maps .speciality-contents .contents {
+  font-size: 13px;
+  color: #6f7585;
+  font-weight: 100;
+}
+.radar .speciality-maps .speciality-contents .ex {
+  font-size: 13px;
+  color: #6f7585;
+  font-weight: 100;
+  margin-top: 6px;
+}
+.radar .speciality-maps .speciality-item svg {
+  background-color: rgb(186, 183, 183);
+  border-radius: 50%;
+  padding: 16px;
+  /* height: 60px; */
+}
+.radar-footer {
+  max-height: 500px;
+}
+.radar .footer {
+  width: 100%;
+}
+.radar .footer .part1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 6px;
+}
+.radar .footer .medias {
+  display: flex;
+  gap: 10px;
+  margin-left: 10px;
+}
+.radar .footer .medias svg {
+  display: flex;
+  width: 43px;
+  background-color: rgb(232, 231, 231);
+  padding: 10px;
+  border-radius: 50%;
+}
+.radar .social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.radar .company {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 26px;
+  gap: 22px;
+}
+
+/* .radar .cwu {
+  color: rgb(43, 43, 43);
+  font-size: 18px;
+body{
+    margin:0px;
+    padding:0px;
+    min-width:100%;
+}
+.part-body{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+}
+.main-body{
+    width:100%;
+    padding-right:10px;
+    margin-left:35px;
+    position:relative;
+}
+/* side-bar */
+.main-body {
+  margin-left: 73px;
+}
+.side-bar {
+  height: 975px;
+  border-right: 1px solid rgba(37, 36, 34, 0.1);
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  padding: 0px 4.5px;
+  z-index: 500;
+}
+.today-icon,
+.hourly-icon,
+.day-icon,
+.monthly-icon,
+.radar-icon {
+  padding: 4px;
+  padding-bottom: 0px;
+}
+.side-bar span {
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(37, 36, 34);
+  font-size: 4px;
+  line-height: 13px;
+}
+.today-with-content,
+.hourly-with-content,
+.day-with-content,
+.monthly-with-content,
+.radar-with-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu {
+  padding: 6px;
+  padding-bottom: 5px;
+}
+/* sidebar end */
+.main-head {
+  padding: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 0px;
+  border-bottom: 1px solid rgba(37, 36, 34, 0.1);
+}
+#searchbox {
+  position: relative;
+  left: 20px;
+  height: 20px;
+  padding: 0px 65px 0px 6px;
+  background-color: #f2f2f2;
+  border: none;
+  color: rgb(37, 36, 34);
+  border-radius: 5px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 6px;
+  line-height: 18.4px;
+}
+.search-image {
+  /* position:absolute; */
+  left: 190px;
+  z-index: 100;
+}
+.input-box {
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+#in {
+  color: rgb(37, 36, 34);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  line-height: 20.7px;
+  padding: 0px 2px;
+}
+#deg {
+  color: rgb(37, 36, 34);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 7px;
+  font-weight: 700;
+  padding: 0px 1px 0px 2px;
+}
+#or {
+  color: rgb(37, 36, 34);
+}
+.signin {
+  background-color: #252422;
+  border-radius: 3px;
+  padding: 3px 5px;
+  padding-bottom: 0px;
+  line-height: 0px;
+  height: 13px;
+}
+.signin span {
+  color: rgb(255, 255, 255);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 6px;
+  padding: 0px;
+  line-height: 0px;
+}
+.head-drop {
+  display: flex;
+  align-items: center;
+  padding: 1px 6px;
+  position: relative;
+  left: 25px;
+}
+.tabs {
+  position: absolute;
+  margin-top: 20px;
+  width: 100%;
+  margin-left: 0px;
+  background-color: rgb(255, 255, 255);
+  padding-top: 10px;
+  margin-top: 0px;
+}
+.tabs .part1 {
+  width: 100%;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.tabs .part2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+.tabs .part3 {
+  width: 100%;
+}
+.tabs .part3 .country {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+.tabs span {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.tabs p {
+  font-size: 5.3px;
+  color: #747272;
+  /* letter-spacing:0.3px; */
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.countries1,
+.countries2,
+.countries3,
+.countries4,
+.countries5 {
+  display: flex;
+  flex-direction: column;
+  max-height: 150px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  justify-content: space-between;
+  padding: 0px 0px;
+  margin-left: 50px;
+  font-size: 8px;
+  color: #575555;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.countries1 .sec1,
+.countries2 .sec1,
+.countries3 .sec1,
+.countries4 .sec1,
+.countries5 .sec1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.countries1 .sec2,
+.countries2 .sec2,
+.countries3 .sec2,
+.countries4 .sec2,
+.countries5 .sec2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.countries1 .sec3,
+.countries2 .sec3,
+.countries3 .sec3,
+.countries4 .sec3,
+.countries5 .sec3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hide {
+  display: none;
+}
+.globe {
+  padding: 0px 0px 0px 10px;
+}
+.path span {
+  font-size: 7px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 15px;
+  color: rgb(37, 36, 34);
+}
+.path {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  border-right: 1px solid rgba(37, 36, 34, 0.1);
+  padding-right: 5px;
+  min-width: 160px;
+}
+.blank span {
+  display: none;
+}
+.path-blank {
+  display: flex;
+  flex-direction: row;
+}
+.adv1 {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(236, 233, 233);
+  margin-bottom: 5px;
+}
+.screen1 {
+  background-image: url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Sunny-day_4.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70");
+  width: 100%;
+  border-radius: 8px;
+}
+.s1-sub1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.location span {
+  white-space: nowrap;
+  font-size: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-shadow: rgba(23, 36, 50, 0.5) 0px 0px 5px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  padding: 0px 8px;
+}
+.time span {
+  white-space: nowrap;
+  font-size: 8px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-shadow: rgba(23, 36, 50, 0.5) 0px 0px 5px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  padding: 0px 8px;
+}
+.s1-sub1 span {
+  text-shadow: rgba(23, 36, 50, 0.5) 0px 0px 5px;
+}
+.s1-sub2 {
+  background-image: url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Su…p=16:9&width=800&format=pjpg&auto=webp&quality=70");
+  background-repeat: no-repeat;
+  height: 53px;
+}
+.temp span {
+  font-size: 22px;
+  font-weight: 500;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(255, 255, 255);
+}
+.temp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+}
+.climate {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.weather,
+.day-night-temp {
+  font-size: 8px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  margin-top: -5px;
+  padding-top: 3px;
+}
+.weather-descp {
+  font-size: 9px;
+  font-weight: 600;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(37, 36, 34);
+}
+.temp-feel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.t1 {
+  font-size: 10px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(37, 36, 34);
+}
+.t2 {
+  font-size: 20px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(37, 36, 34);
+}
+.temp-view {
+  display: flex;
+  flex-direction: row;
+}
+.display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.therm,
+.winds,
+.windy,
+.humid,
+.dew,
+.pressure,
+.stress,
+.uv-image,
+.visible,
+.moon {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.thermo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2px;
+}
+.wind1,
+.humidity,
+.dewpoint,
+.pressures,
+.uv-index,
+.visibility,
+.moon-phase {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2px;
+  border-top: 1px solid rgb(236, 233, 233);
+}
+.temp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  row-gap: 5px;
+  padding: 10px;
+}
+.temp-grid span {
+  font-size: 8px;
+  white-space: nowrap;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(37, 36, 34);
+}
+.thermo-value,
+.wind-value,
+.humid-value,
+.dew-value,
+.pressure-value,
+.uv-value,
+.visible-value,
+.moon-value {
+  font-size: 8px;
+  color: rgb(37, 36, 34);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.daily-afternoon,
+.daily-evening,
+.daily-overnight {
+  border-top: 1px solid rgb(236, 233, 233);
+}
+.morning-icon-with-text,
+.rain-icon-with-value1,
+.afternoon-icon-with-text,
+.rain-icon-with-value2,
+.evening-icon-with-text,
+.rain-icon-with-value3,
+.overnight-icon-with-text,
+.rain-icon-with-value4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.daily-climate span {
+  font-size: 9px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(37, 36, 34);
+}
+.daily-climate {
+  font-size: 9px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: rgb(37, 36, 34);
+  border-spacing: 15px;
+  width: 100%;
+}
+.next-48-hours1,
+.next-48-hours2,
+.next-10-days {
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: white;
+  font-size: 6px;
+  border: 1px solid rgb(37, 36, 34);
+  background-color: rgb(37, 36, 34);
+  width: fit-content;
+  padding: 5px;
+  border-radius: 3px;
+  display: flex;
+  justify-self: right;
+}
+.daily-climate-with-button {
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+.now-weather-with-text,
+.rain-drop-with-now-percent0,
+.hour1-weather-with-text,
+.rain-drop-with-hour1-percent,
+.hour2-weather-with-text,
+.rain-drop-with-hour2-percent,
+.hour3-weather-with-text,
+.rain-drop-with-hour3-percent,
+.hour4-weather-with-text,
+.rain-drop-with-hour4-percent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+.hour1-status,
+.hour2-status,
+.hour3-status,
+.hour4-status {
+  border-top: 1px solid rgb(236, 233, 233);
+}
+.hourly-forecast h1 {
+  font-size: 9px;
+  padding-bottom: 10px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.hours-status {
+  width: 100%;
+  padding: 10px;
+  font-size: 9px;
+  border-spacing: 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.hours-status span {
+  font-size: 6.5px;
+}
+.hourly-forecast {
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+.daily-table {
+  border-spacing: 10px;
+  font-size: 6px;
+  width: 100%;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.date0-icon-with-text,
+.rainfall0-with-value,
+.date1-icon-with-text,
+.rainfall1-with-value,
+.date2-icon-with-text,
+.rainfall2-with-value,
+.date3-icon-with-text,
+.rainfall3-with-value,
+.date4-icon-with-text,
+.rainfall4-with-value {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0px;
+}
+.date1-cast,
+.date2-cast,
+.date3-cast,
+.date4-cast {
+  border-top: 1px solid rgb(236, 233, 233);
+}
+.daily-forecast h1 {
+  font-size: 9px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.daily-forecast {
+  padding: 10px;
+  padding-right: 0px;
+  padding-bottom: 5px;
+}
+table {
+  border-collapse: collapse;
+}
+tr {
+  height: 35px;
+}
+.radar-section img {
+  width: 100%;
+  height: 280px;
+}
+.radar-section {
+  padding: 5px;
+  max-height: 335px;
+}
+.radar-section h1 {
+  font-size: 20px;
+  color: rgb(37, 36, 34);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.pin {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(23, 98, 160);
+  border-radius: 10px;
+  display: flex;
+  justify-self: center;
+}
+.pin-round {
+  background-color: lightgrey;
+  width: 40px;
+  height: 29px;
+  padding-top: 12px;
+  border-radius: 75px;
+  position: relative;
+  left: 140px;
+  bottom: 160px;
+}
+.details {
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-self: right;
+  border: 1px solid #252422;
+  background-color: #252422;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  width: fit-content;
+  color: white;
+}
+.air-value {
+  color: rgb(37, 36, 34);
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.air-index-text p {
+  max-width: 220px;
+  color: rgb(111, 117, 133);
+  font-size: 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.air-with-button h1 {
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 20px;
+  padding: 10px;
+}
+.air-icon {
+  font-size: 27px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.progress {
+  width: 100px;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  z-index: 2;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(43, 43, 43);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 35px;
+  left: -26px;
+  /* margin-left: -60px; */
+  opacity: 0;
+  /* transform:rotate(180deg); */
+  transition: opacity 0.3s;
+  padding-right: 32px;
+  padding-bottom: 25px;
+  border: 2px solid rgb(207, 202, 202);
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.ttvisible {
+  visibility: visible;
+  opacity: 1;
+}
+.levels,
+.sources {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+#p1 {
+  margin-bottom: 15px;
+}
+.levels-with-source {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 0px 10px;
+}
+.l1,
+.l2 {
+  white-space: nowrap;
+}
+.tooltiptext h2 {
+  margin: 0px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.tooltiptext p {
+  margin: 0px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  line-height: 15px;
+}
+.tooltiptext span {
+  margin: 0px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+}
+.closebtn {
+  display: flex;
+  justify-self: right;
+  margin-right: -30px;
+}
+.air-quality-index {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+.air-button span {
+  color: rgb(43, 43, 43);
+  font-size: 12px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.air-button {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(236, 233, 233);
+  width: fit-content;
+}
+.air-with-button {
+  padding-bottom: 5px;
+}
+.adv2,
+.adv3 {
+  height: 400px;
+  background-color: rgb(236, 233, 233);
+  padding-bottom: 25px;
+}
+.health-with-text-arrow span {
+  color: rgb(43, 43, 43);
+  font-size: 19px;
+  max-width: 170px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.health-icon {
+  padding: 10px 14px 0px 14px;
+  border: 5px solid rgb(236, 233, 233);
+  border-radius: 80px;
+  width: fit-content;
+}
+.health-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+.health-with-text-arrow {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.pollen-remark {
+  display: flex;
+  justify-self: right;
+  font-size: 15px;
+  color: rgb(111, 117, 133);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  padding-right: 45px;
+}
+.health-activity h1 {
+  font-size: 20px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.health-activity {
+  padding-bottom: 20px;
+}
+/* footer */
+.footer {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+.footer .part1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15px;
+}
+.social {
+  display: flex;
+  gap: 2px;
+}
+.company {
+  display: flex;
+  gap: 10px;
+}
+.fb,
+.x,
+.insta,
+.yt {
+  display: flex;
+  justify-self: center;
+  padding: 5px 5px;
+  border-radius: 70px;
+  background-color: rgb(236, 236, 236);
+}
+.cwu {
+  color: rgb(43, 43, 43);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 27px;
+}
+*/ .radar .footer .part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 24px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.radar .footer .part2 .p1 {
+  color: rgb(43, 43, 43);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 21px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.radar .footer .part2 .p2 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.radar .footer .part2 .p3 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.radar .footer .part2 .p4 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  padding: 12px 28px;
+}
+.radar .footer .part2 .p5 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+}
+
+.radar .footer .part2 .p6 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+  padding: 4px 28px;
+}
+
+.radar .footer .part2 .p7 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+
+.radar .footer .part2 .p8 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+.allergy-with-contents,
+.air-quality-with-contents,
+.logo1,
+.part2-adv {
+  display: none;
+}
+.display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.arc-with-temp {
+  display: flex;
+  flex-direction: column;
+}
+.temp-view span {
+  font-size: 12px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial;
+}
+.temp-view {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.health-with-text-arrow span {
+  color: rgb(43, 43, 43);
+  font-size: 19px;
+  max-width: 170px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.health-icon {
+  padding: 10px 14px 0px 14px;
+  border: 5px solid rgb(236, 233, 233);
+  border-radius: 80px;
+  width: fit-content;
+}
+.health-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+.health-with-text-arrow {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.pollen-remark {
+  display: flex;
+  justify-self: right;
+  font-size: 15px;
+  color: rgb(111, 117, 133);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  padding-right: 45px;
+}
+.health-activity h1 {
+  font-size: 20px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.health-activity {
+  padding-bottom: 20px;
+}
+/* footer */
+.footer {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+.footer .part1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15px;
+}
+.social {
+  display: flex;
+  gap: 2px;
+}
+.company {
+  display: flex;
+  gap: 10px;
+}
+.fb,
+.x,
+.insta,
+.yt {
+  display: flex;
+  justify-self: center;
+  padding: 5px 5px;
+  border-radius: 70px;
+  background-color: rgb(236, 236, 236);
+}
+.cwu {
+  color: rgb(43, 43, 43);
+  font-size: 13px;
+  font-weight: 700;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 27px;
+}
+.footer .part2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 50px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.footer .part2 .p1 {
+  color: rgb(43, 43, 43);
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  line-height: 21px;
+  white-space: nowrap;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.footer .part2 .p2 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  /* gap: 5px; */
+  justify-content: center;
+}
+.one,
+.two {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.footer .part2 .p2 div {
+  white-space: nowrap;
+}
+.footer .part2 .p3 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.footer .part2 .p4 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.footer .part2 .p5 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+}
+.footer .part2 .p6 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.footer .part2 .p7 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.footer .part2 .p8 {
+  color: rgb(43, 43, 43);
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: center;
+}
+.hide {
+  display: none;
+}
+.allergy-with-contents,
+.air-quality-with-contents,
+.logo1,
+.part2-adv {
+  display: none;
+}
+.display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.arc-with-temp {
+  display: flex;
+  flex-direction: column;
+}
+.temp-view span {
+  font-size: 12px;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial;
+}
+.temp-view {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+@media screen and (min-width: 425px) {
+  .search-image {
+    left: 210px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .air-with-health {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-body {
+    padding: 0px;
+  }
+  .side-bar {
+    padding: 18px 17.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .main-without-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 40px;
+  }
+  .part2-of-main-body {
+    min-width: 338px;
+  }
+  .adv2 {
+    display: none;
+  }
+  .menu svg,
+  .today-icon svg,
+  .hourly-icon svg,
+  .day-icon svg,
+  .monthly-icon svg,
+  .radar-icon svg {
+    height: 24px;
+    width: 24px;
+    padding: 0px;
+  }
+  .today-with-content span,
+  .hourly-with-content span,
+  .day-with-content span,
+  .monthly-with-content span,
+  .radar-with-content span {
+    font-size: 10.5px;
+  }
+  .today-with-content,
+  .hourly-with-content,
+  .day-with-content,
+  .monthly-with-content,
+  .radar-with-content {
+    gap: 6px;
+  }
+  .logo svg {
+    height: 48px;
+    width: 48px;
+    margin-left: 35px;
+  }
+  #searchbox {
+    font-size: 16px;
+    height: 48px;
+    min-width: 280px;
+    padding-left: 15px;
+    border-radius: 8px;
+    padding-right: 50px;
+    margin-left: -30px;
+  }
+  .search-image {
+    left: 420px;
+  }
+  .search-image svg {
+    height: 20px;
+    width: 48px;
+  }
+  .main-head {
+    padding: 10px;
+  }
+  .globe svg {
+    height: 33px;
+    width: 23px;
+    padding: 0px 4px;
+  }
+  #in,
+  #deg {
+    font-size: 18px;
+    padding: 0px 4px;
+  }
+  .down svg {
+    height: 20px;
+    width: 20px;
+  }
+  .signin span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .signin {
+    padding: 23px 14px;
+    /* padding-top:23px; */
+    border-radius: 8px;
+    margin-top: 5px;
+  }
+  .head-drop {
+    margin-left: -30px;
+  }
+  .path span {
+    font-size: 16px;
+  }
+  .path {
+    gap: 10px;
+    align-items: center;
+    padding: 15px;
+  }
+  .star-icon svg {
+    height: 18px;
+    width: 18px;
+  }
+  .adv1 {
+    height: 110px;
+  }
+  .temp-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .weather-descp {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .location span {
+    font-size: 18px;
+    padding: 0px;
+    white-space: normal;
+    line-height: 25px;
+  }
+  .time span {
+    font-size: 14px;
+    white-space: normal;
+    line-height: 20px;
+  }
+  .s1-sub1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 15px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .temp span {
+    font-size: 80px;
+  }
+  .s1-sub2 {
+    padding-bottom: 120px;
+  }
+  .sun-icon svg {
+    height: 100px;
+    width: 100px;
+  }
+  .weather {
+    font-size: 20px;
+    margin-top: -16px;
+  }
+  .day-night-temp {
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  .screen1 {
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  .t1 {
+    font-size: 16px;
+  }
+  .t2 {
+    font-size: 40px;
+  }
+  .display {
+    padding: 0px 15px;
+  }
+  .therm svg,
+  .winds svg,
+  .humid svg,
+  .dew svg,
+  .pressure svg,
+  .uv-image svg,
+  .visible svg,
+  .moon-phase svg {
+    height: 24px;
+    width: 25.19px;
+  }
+  .temp-grid span {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+  }
+  .temp-grid {
+    padding: 20px 20px;
+  }
+  .thermo-value,
+  .wind-value,
+  .humid-value,
+  .dew-value,
+  .pressure-value,
+  .uv-value,
+  .visible-value,
+  .moon-value {
+    font-size: 16px;
+  }
+  .thermo,
+  .wind1,
+  .humidity,
+  .dewpoint,
+  .pressures,
+  .uv-index,
+  .visibility,
+  .moon-phase {
+    padding: 10px 16px;
+  }
+  td {
+    font-size: 14px;
+  }
+  .daily-climate span,
+  .hours-status span,
+  .daily-forecast span {
+    font-size: 16px;
+  }
+  .morning-temp,
+  .afternoon-temp,
+  .evening-temp,
+  .overnight-temp {
+    font-size: 18px;
+  }
+  .daily-climate svg,
+  .hours-status svg,
+  .daily-forecast svg {
+    height: 35px;
+    width: 35px;
+  }
+  .rain-icon svg {
+    height: 6.75px;
+    width: 9.37px;
+  }
+  .next-48-hours1,
+  .next-48-hours2,
+  .next-10-days {
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    margin: 10px;
+  }
+  .hourly-forecast h1,
+  .daily-forecast h1 {
+    font-size: 20px;
+    padding-top: 5px;
+  }
+  .cwu {
+    font-size: 18px;
+  }
+  .fb svg,
+  .x svg,
+  .insta svg,
+  .yt svg {
+    height: 23px;
+    width: 23px;
+    padding: 5px;
+  }
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .social {
+    gap: 10px;
+  }
+  .footer .part2 .p1 {
+    font-size: 14px;
+    justify-content: left;
+  }
+  .footer .part2 .p2 {
+    font-size: 14px;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 0px;
+  }
+  .footer .part2 .p3 {
+    justify-content: left;
+    padding-left: 10px;
+  }
+  .footer .part2 .p4 {
+    text-align: left;
+    font-size: 14px;
+    color: rgb(104, 103, 103);
+  }
+  .footer .part2 .p5 {
+    text-align: left;
+    font-size: 14px;
+  }
+  .footer .part2 .p6,
+  .footer .part2 .p7,
+  .footer .part2 .p8 {
+    text-align: left;
+    font-size: 14px;
+    color: rgb(104, 103, 103);
+  }
+  .footer {
+    padding-bottom: 10px;
+  }
+
+  .air-value {
+    margin-bottom: 0px;
+  }
+  .air-index-text p {
+    margin-top: 2px;
+  }
+  .health-text span {
+    font-size: 18px;
+    max-width: 185px;
+  }
+  .health-with-text-arrow {
+    margin-left: 20px;
+  }
+  .health-text {
+    gap: 20px;
+  }
+  .health-icon {
+    padding: 7px 8px;
+  }
+  .pollen-remark {
+    margin: 0px;
+    justify-self: left;
+    padding-left: 76px;
+  }
+  .ho1 {
+    display: none;
+  }
+  .air-with-button h1 {
+    padding: 0px;
+    margin: 4px;
+    margin-bottom: 10px;
+  }
+  .health-activity h1 {
+    margin: 15px;
+    margin-bottom: 10px;
+  }
+  .progress {
+    width: 70px;
+  }
+  .air-quality-index {
+    margin-left: 20px;
+  }
+  .tabs span {
+    font-size: 16px;
+  }
+  .tabs p {
+    font-size: 12px;
+  }
+  .tabs .part3 .country {
+    margin: 18px 45px;
+    padding: 5px 0px;
+  }
+  .countries1 a,
+  .countries2 a,
+  .countries3 a,
+  .countries4 a,
+  .countries5 a {
+    font-size: 17px;
+    padding: 3px 0px;
+  }
+  .countries1,
+  .countries2,
+  .countries3,
+  .countries4,
+  .countries5 {
+    gap: 10px;
+    max-height: 810px;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .temp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .part2-of-main-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-image {
+    left: 505px;
+  }
+  .t2 {
+    font-size: 60px;
+  }
+  td {
+    font-size: 18px;
+  }
+  .morning-temp,
+  .afternoon-temp,
+  .evening-temp,
+  .overnight-temp,
+  .now-temp,
+  .hour1-temp,
+  .hour2-temp,
+  .hour3-temp,
+  .hour4-temp,
+  .today-temp,
+  .date1-temp,
+  .date2-temp,
+  .date3-temp,
+  .date4-temp {
+    font-size: 36px;
+  }
+  .morning-icon-with-text svg,
+  .afternoon-icon-with-text svg,
+  .evening-icon-with-text svg,
+  .overnight-icon-with-text svg,
+  .now-weather-with-text svg,
+  .hour1-weather-with-text svg,
+  .hour2-weather-with-text svg,
+  .hour3-weather-with-text svg,
+  .hour4-weather-with-text svg,
+  .date0-icon-with-text svg,
+  .date1-icon-with-text svg,
+  .date2-icon-with-text svg,
+  .date3-icon-with-text svg,
+  .date4-icon-with-text svg {
+    height: 55px;
+    width: 55px;
+  }
+  .rain-icon svg {
+    height: 18px;
+    width: 27px;
+  }
+  .now-time,
+  .hour1-time,
+  .hour2-time,
+  .hour3-time,
+  .hour4-time {
+    font-size: 18px;
+  }
+  .footer .part2 .p1,
+  .footer .part2 .p2,
+  .footer .part2 .p3 {
+    justify-content: center;
+  }
+  .footer .part2 .p4,
+  .footer .part2 .p5,
+  .footer .part2 .p6,
+  .footer .part2 .p7,
+  .footer .part2 .p8 {
+    text-align: center;
+  }
+  .hide {
+    display: none;
+  }
+  .ho4 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .today-with-content,
+  .hourly-with-content,
+  .day-with-content,
+  .monthly-with-content,
+  .radar-with-content {
+    flex-direction: row;
+    padding-right: 140px;
+    gap: 10px;
+    align-self: center;
+    font-weight: 600;
+    /* width:212px; */
+    /* height:24px; */
+  }
+  .monthly-with-content {
+    margin-left: 5px;
+  }
+  .radar-with-content {
+    margin-left: -7px;
+  }
+  .side-bar span {
+    font-size: 14px;
+  }
+  .side-bar svg {
+    height: 24px;
+    width: 24px;
+  }
+  .side-bar {
+    align-items: center;
+    height: 3350px;
+    font-weight: 600;
+    padding-left: 15px;
+    gap: 23px;
+  }
+  .main-body {
+    margin-left: 300px;
+  }
+  .adv1 {
+    height: 280px;
+  }
+  .allergy-with-contents,
+  .air-quality-with-contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+  .hiding-contents-of-side-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 20px;
+    margin-left: -75px;
+  }
+  .radar-section img {
+    height: 400px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+  }
+  .footer {
+    margin-top: 200px;
+  }
+  .logo svg {
+    display: none;
+  }
+  .logo1 {
+    /* display:block; */
+    display: flex;
+    margin-left: -195px;
+    margin-top: -5px;
+  }
+  .logo1 svg {
+    height: 48px;
+    width: 56px;
+  }
+  .menu {
+    display: none;
+  }
+
+  .hide {
+    display: none;
+  }
+  .countries1,
+  .countries2,
+  .countries3,
+  .countries4,
+  .countries5 {
+    flex-direction: row;
+    margin-right: 30px;
+  }
+  .tabs span {
+    font-size: 19px;
+  }
+  .daily-climate-with-button,
+  .hourly-forecast,
+  .daily-forecast {
+    margin-left: 25px;
+  }
+  .footer .part1 {
+    justify-content: space-between;
+  }
+  .company {
+    margin-right: 30px;
+  }
+  .social {
+    margin-left: 20px;
+  }
+  .signin span {
+    font-size: 18px;
+  }
+  .head-drop {
+    left: 185px;
+  }
+  .daily-climate tr,
+  .hours-status tr,
+  .daily-table tr {
+    line-height: 40px;
+  }
+  .daily-climate td,
+  .hours-status td,
+  .daily-table td {
+    border-collapse: collapse;
+    border-spacing: 20px 0px;
+    padding: 0px 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .cards {
+    margin: 0;
+  }
+}
+
+@font-face {
+  font-family: "bold";
+  src: url(fonts/inter-v19-latin-700.woff2);
+}
+@font-face {
+  font-family: "light";
+  src: url(fonts/inter-v19-latin-500.woff2);
+}
+@font-face {
+  font-family: "medium";
+  src: url(fonts/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2);
+}
+body,
+html {
+  /* width: 100%; */
+  height: 100%;
+  overflow-x: hidden;
+}
+.hourmainContent{
+    position:relative ;
+    display: flex;
+    margin-left: 4px;
+}
+.hourlargeScreen {
+  display: block;
+  margin: 12px auto;
+  max-width: 80%;
+  /* display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    grid-column-gap: 12px; */
+  max-width: 1162px;
+}
+.ad-container{
+  width: 400px;
+}
+.hourcontent {
+  border-bottom: 1px solid #676767;
+}
+.hourlocationTitle {
+  font-size: 1.5rem;
+  line-height: 1.08em;
+  font-family: bold;
+  margin: 0px;
+  padding: 0px;
+}
+.hourbar {
+  font-family: medium;
+  font-size: 1rem;
+  padding-left: 4px;
+  line-height: 1.08rem;
+  font-weight: 400;
+}
+.hourplace {
+  margin-left: 4px;
+  font-family: medium;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.08rem;
+}
+.hourtimes {
+  padding: 0 0 16px;
+  padding-right: 6px;
+  font-family: light;
+  font-weight: 400;
+  /* flex: 0 0 80px; */
+  opacity: 0.65;
+  font-size: 14px;
+}
+.hourtime {
+  flex: 0 0 50px;
+  font-weight: 500px;
+  font-size: 14px;
+}
+.hourtemp {
+  font-family: bold;
+  flex: 0 0.5 94px;
+}
+.hoursun {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 1 160px;
+}
+.hoursunny{
+  width: 44px;
+}
+.hourperc {
+  padding-right: 15px;
+  flex: 0 0 54px;
+  justify-content: flex-end;
+  display: flex;
+}
+.hourwind {
+  padding-left: 13px;
+  font-size: 1rem;
+  flex: 0 0 145px;
+}
+.hourdate {
+  font-family: bold;
+  padding: 16px 0;
+  font-weight: 600;
+  line-height: 1;
+  border-bottom: 1px solid #dedede;
+  border-top: 1px solid #dedede;
+  margin: 0;
+  font-size: 1rem;
+}
+.hoursummary {
+  padding: 4px 0;
+  font-family: light;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  max-width: 100%;
+  justify-content: space-between;
+}
+.hoursummaryContent {
+  padding: 4px 0;
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: rgb(37, 36, 34);
+  font-size: 16px;
+}
+.hoursummaryContent .times {
+  flex: 0 0 80px;
+}
+.hourrain-drop {
+  margin-right: 3px;
+  width: 17px;
+}
+.hourarrow {
+  margin-right: -2px;
+  color: #8d8d8d;
+  width: 17px;
+  height: auto;
+}
+.hoursubtract,
+.houradd {
+  width: 18px;
+  height: 18px;
+  margin-left: 6px;
+}
+.hoursubtract {
+  display: none;
+}
+.hourdayPartDetails {
+  margin-top: 10px;
+  background: #e8e8e8;
+  margin-bottom: 16px;
+  border-radius: 16px;
+  padding: 16px 24px;
+  list-style: none;
+  display: none;
+}
+.hourweather{
+  font-size: 0.875rem;
+  margin: 0 0 14px;
+  margin-top: 16px;
+}
+.hourdata {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  padding-left: 0;
+  display: none;
+  margin-bottom: 16px;
+}
+.hourlist,
+.hourlists {
+  display: flex;
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+  width: 50%;
+  max-width: 901px;
+}
+.hourlists {
+  border-top: 1px solid #dedede;
+  margin: 15px 0 0;
+  padding: 15px 0 0;
+}
+.hourimg {
+  width: 24px;
+  margin-right: 10px;
+}
+.hourfeelsLike {
+  font-family: medium;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.hourtempValue {
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: bold;
+}
+.hourexpandedDetails {
+  padding-top: 4px 0;
+}
+.hourads {
+  border-bottom: 1px solid #676767;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  height: auto;
+  width: 100%;
+  background-color: #f2f2f2;
+  color: #6f7585;
+  font-size: 10px;
+  text-align: center;
+  margin-left: auto;
+}
+.hourads img {
+  width: auto;
+  max-width: 280px;
+}
+.hourads,
+.hourads img,
+.rightads {
+  position: static;
+  max-width: 350px;
+  width: 100%;
+  display: block;
+  z-index: 1;
+}
+.active{
+    border: 2px solid #eb8532;
+    font-weight: 700;
+}
+.hidden {
+  display: none;
+}
+.hourlyRedarSection {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px solid #676767;
+  padding-bottom: 24px;
+  width: 100%;
+}
+.hourlyRedarSection h2 {
+  font-family: medium;
+  display: flex;
+  color: #252422;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+.hourRadarmap {
+  position: relative;
+  width: 100%;
+  max-width: 788px;
+  /* margin:0 auto; */
+}
+.hourNow{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    background: #252422cc;
+    color: #fff;
+    font-size: 13px;
+    width: 50px;
+    height: 30px;
+    border-radius: 6px;
+    padding: 8px 12px;
+    text-align: center;
+}
+.hourMapLogo {
+  position: absolute;
+  right: 0;
+  top: 3%;
+  filter: drop-shadow(0 0 2px black);
+  height: auto;
+  opacity: 0.75;
+  width: 75px;
+}
+.hourmapImg {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.hourDotWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%), -50%;
+  background: #0000004d;
+  border-radius: 50%;
+  padding: 6px;
+  z-index: 10;
+}
+.hourDot {
+  display: block;
+  background: #1b4de4;
+  border: 1px solid#fff;
+  border-radius: 20px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+}
+.hourTenDay {
+  display: flex;
+  justify-content: flex-end;
+}
+.hourTenDayBtn {
+  margin: 0 16px 16px;
+  background-color: #252422;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 16px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+@media (min-width:1024px){
+    .hourlist, .hourlists{
+        width: 33.33%;
+    }
+    .none{
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    .hourHeaderAddress{
+        display: none;
+    }
+    .hourweather{
+        display: block;
+    }
+}
+@media (max-width:768px){
+    .hourlist, .hourlists{
+        width: 50%;
+    }
+    .hourdayPartDetails{
+        width: 66vw;
+        max-width: 100vw;
+        margin: 0;
+        padding: 16px;
+        box-sizing: border-box;
+    }
+    .hourweather{
+        display: none;
+    }
+    .ad-container {
+      display: none;
+    }
+}
+@media (max-width:425px){
+    .hourcontent, .hoursummaryContent, .hourtableDetails{
+        width: 100vw
+    }
+    .hourads{
+        display: none;
+    }
+    .hourlargeScreen{
+        display: block;
+    }
+}
+/* 10DayPageStyles */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.outer{
+    display: flex;
+}
+.sideBar{
+    flex: 0 0 261px;
+    border-right: 1px solid #2524221a;
+}
+.mainAd{
+    height: 268px;
+    padding-bottom: 12px;
+    background-color: #f2f2f2;
+}
+.location{
+    display: none;
+}
+.marginBar{
+    max-width: 1162px;
+    width: 100%;
+    margin: 0 auto;
+}
+.mainBar{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    grid-column-gap: 12px;
+    padding: 0 16px;
+    
+}
+.radar-container{
+    width: auto;
+}
+.content{
     border-bottom: 1px solid #676767;
     margin-bottom: 24px;
     padding-bottom: 24px;
@@ -265,4 +3168,330 @@
     .allergyparaClass{
         width: 90%;
     }
+}
+.title h1{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1.08em;
+    font-weight: 400;
+}
+.title h1 strong{
+    font-weight: 700 !important;
+}
+.place{
+    font-size: 16px;
+    padding-left: 4px;
+}
+.time{
+    padding: 0 0 16px;
+    font-size: 14px;
+    color: #252422;
+    opacity: .65;
+}
+.cards-content{
+    display: none;
+}
+.today{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    padding: 4px 0;
+    cursor: pointer;
+}
+.today h2{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+.subtract-img{
+    margin-left: 6px;
+    width: 18px;
+}
+.day-night-parts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 22px;
+}
+.part-title{
+    margin: 0 0 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #252422;
+}
+.brief{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    padding-bottom: 5px;
+}
+.temp-bar span{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+.sun-img, .moon-img{
+    width: 44px;
+    padding-left: 10px;
+}
+.humidity-wind{
+    margin-left: auto;
+}
+.humidity, .wind{
+    display: flex;
+    font-size: 13px;
+    line-height: 19.5px;
+    overflow-wrap: break-word;
+    padding-top: 5px;
+}
+.rain-drop-img, .wind-img{
+    height: 18px;
+    width: 18px;
+}
+.rain, .windSpeed{
+    padding-left: 6px;
+    font-size: 14px;
+}
+.explanation{
+    padding-right: 34px;
+    margin: 0 0 14px;
+    font-size: 16px;
+    line-height: 1.15;
+    min-height: 32px;
+}
+.measurements{
+    margin-bottom: 16px;
+    background: #e8e8e8;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 24px;
+}
+.day-section2{
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+.night-section2{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.weather{
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    border-radius: 6px;
+    height:  unset !important;
+}
+.weather li{
+    display: flex;
+    flex-grow: 1;
+    list-style: none;
+    align-items: flex-start;
+    width: 50%;
+}
+.weather li:not(:nth-child(-n+2)){
+    border-top: 1px solid #dedede;
+    padding: 15px 0 0;
+    margin: 15px 0 0;
+}
+.icons{
+    margin-right: 10px;
+    width: 24px;
+    color: #252422;
+}
+.details-table{
+    line-height: 1.2;
+    width: calc(100% - 34px);
+}
+.r1{
+    display: block;
+    font-size: 16px;
+    overflow-wrap: break-word;
+}
+.r2{
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+}
+.waxing{
+    display: flex;
+    align-items: center;
+    width: 19.2px !important;
+}
+.eachDayBar{
+    padding: 4px 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.eachDayBar li{
+    padding: 4px 0;
+    list-style: none;
+}
+.eachDay{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+}
+.date{
+    flex: 0 0 80px;
+    padding-right: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+.eachDay-img{
+    display: flex;
+    align-items: center;
+    flex: 1 1 160px;
+    padding-right: 6px;
+    margin: 0;
+    justify-content: flex-start;
+    order: 3;
+}
+.eachDay-txt{
+    padding-left: 13px;
+    word-break: break-word;
+}
+.degrees{
+    display: flex;
+    align-items: center;
+    order: 2;
+    flex: 0 .5 94px;
+    padding: 0 0 0 6px;
+    font-size: 18px;
+    font-weight: 700 !important;
+}
+.night-deg{
+    margin-left: 2px;
+    font-weight: 500;
+}
+.humid{
+    display: flex;
+    align-items: center;
+    order: 4;
+    padding-right: 6px;
+    flex: 0 0 54px;
+}
+.eachDay-rain-drop{
+    margin-right: 3px;   
+}
+.percent{
+    font-size: 16px;
+    font-weight: 500 !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
+}
+.humidity, .wind{
+    display: flex;
+    font-size: 13px;
+    line-height: 19.5px;
+    overflow-wrap: break-word;
+    padding-top: 5px;
+}
+.rain-drop-img, .wind-img{
+    height: 18px;
+    width: 18px;
+}
+.rain, .windSpeed{
+    padding-left: 6px;
+    font-size: 14px;
+}
+.plus-img{
+    margin-left: 6px;
+}
+.radar-container{
+    padding: 0 16px 24px;
+}
+.radar-header{
+    position: relative;
+    padding: 0 0 16px;
+    display: flex;
+    align-items: center;
+    
+}
+.radar-header h2{
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0;
+}
+.TenDayRadar{
+    position: relative;
+    border-bottom: 1px solid #676767;
+    margin-bottom: 24px;
+    max-width: 788px;
+}
+.Radar-img{
+    background-image: url('https://api.weather.com/v2/maps/dynamic?geocode=28.60,77.20&h=320&w=568&lod=9&product=twcRadarHcMosaic&map=light&format=jpg&language=en-IN&apiKey=71f92ea9dd2f4790b92ea9dd2f779061&a=0&region=in');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    opacity: 1;
+    height: 275px;
+    position: relative;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.location-point{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: #0000004d;
+    left: calc(50% - 15px);
+    top: calc(50% - 30px);
+    border-radius: 30px;
+}
+.location-dot{
+    background: #1b4de4;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    height: 12px;
+    width: 12px;
+    cursor: pointer;
+}
+.now-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    left: 3%;
+    top: 5%;
+    background: #252422;
+    border-radius: 6px;
+    padding: 8px 12px !important;
+    color: white;
+    min-width: 50px;
+    width: 74px;
+    height: 29px;
+}
+.map-icon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 3%;
+    top: 5%;
+    z-index: 2;
+    width: 75px;
+    height: auto;
+    filter: drop-shadow(0 0 2px black);
+    opacity: .75px;
+    fill: #fff;
 }
