@@ -477,6 +477,19 @@ const radarSpecialityMaps = document.querySelector(
   ".radar .map-options .speciality-maps"
 );
 
+function strockFill(cirId, aqi, status, max = 500) {
+  const circle = document.getElementById(cirId);
+  if (!circle || aqi === "--") return;
+  const total = 305;
+  const percent = Math.min(aqi / max, 1);
+  const offset = total * (1 - percent);
+  circle.style.strokeDashoffset = offset;
+
+  if (status === "Good") circle.style.stroke = "#01c966";
+  else if (status === "Satisfactory") circle.style.stroke = "#6ae261";
+  else if (status === "Moderate") circle.style.stroke = "#fbff26";
+  else if (status === "Poor") circle.style.stroke = "#ff0000";
+  else circle.style.stroke = "#f70004";
 let popUp = true;
 let play = false;
 const now = Date.now();
@@ -1405,4 +1418,26 @@ async function fetchUrl() {
     console.error("Error in Fetching data");
   }
 }
+let infoBtn = document.querySelectorAll(".air_info_pop");
+let popupContainer = document.querySelectorAll(".air_popup");
+let air_info = document.querySelectorAll(".air_info_pop");
+let closeBtn = document.querySelectorAll(".air_close_btn");
+infoBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    popupContainer[index].style.display = "block";
+    infoBtn[index].style.border = "2px solid #1b4de4";
+  });
+});
+closeBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    popupContainer[index].style.display = "none";
+    infoBtn[index].style.border = "none";
+  });
+});
+window.addEventListener("scroll", () => {
+  popupContainer.forEach((cont, index) => {
+    cont.style.display = "none";
+    infoBtn[index].style.border = "none";
+  });
+});
 fetchUrl();
