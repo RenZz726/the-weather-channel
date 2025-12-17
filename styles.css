@@ -3079,7 +3079,7 @@ body{
     padding-bottom: 12px;
     background-color: #f2f2f2;
 }
-.adv1{
+.adv1, .path-blank{
     display: none;
 }
 .location-ten{
@@ -3444,7 +3444,7 @@ body{
 
 }
 @media screen and (min-width: 1025px){
-    .adv1{
+    .adv1, .path-blank{
         display: block;
     }
     .location-ten{
