@@ -11,7 +11,7 @@ export function weatherDetails(id, obj,data){
     let date = new Date(d.date)
     
     cardsContent.innerHTML = ` 
-        <div class="today" id="${id}-cls">
+        <div class="todayTen" id="${id}-cls">
             <h2 class="cards-date">${id === 0 ? (data.current.is_day === 1 ? 'Today': 'Tonight') : date.toLocaleString('en-US', {weekday: 'short'})+ ' ' + date.getDate()}</h2>
             <svg width="24" name="subtract" class="subtract-img" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                 <path d="M15 9.875H5v1.25h10v-1.25Z" fill="currentColor"></path>
@@ -54,7 +54,7 @@ export function weatherDetails(id, obj,data){
             <p class="explanation">${id === 0 ? data.current.condition.text : obj.dayText}. ${obj.dayTemp >= 20 ? 'High ' + obj.dayTemp + '°C': 'Low ' + obj.dayTemp + '°C'}. Winds ${data.current.wind_dir} at ${d.day.maxwind_kph} km/h.</p>
         </div>
         <div class="day-section2 measurements day-${id}">
-            <ul class="weather">
+            <ul class="weatherDay">
                 <li>
                     <svg width="24" name="humidity" class="drop icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                         <path d="M14.673 9.246 10.53 2.648a.65.65 0 0 0-1.06 0l-4.16 6.63c-.578.932-.9 2-.934 3.097a5.625 5.625 0 1 0 11.25 0 6.29 6.29 0 0 0-.952-3.13ZM10 16.75a4.38 4.38 0 0 1-4.375-4.375 4.986 4.986 0 0 1 .761-2.465l.585-.93 6.296 6.296A4.359 4.359 0 0 1 10 16.75Z" fill="currentColor"></path>
@@ -131,7 +131,7 @@ export function weatherDetails(id, obj,data){
             <p class="explanation">${obj.nightText}. ${obj.nightTemp >= 20 ? 'High ' + obj.nightTemp + '°C': 'Low ' + obj.nightTemp + '°C'}. Winds ${obj.nightDir} at ${obj.nightWind} km/h.</p>
         </div>
         <div class="night-section2 measurements">
-            <ul class="weather">
+            <ul class="weatherDay">
                 <li>
                     <svg width="24" name="humidity" class="drop icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                         <path d="M14.673 9.246 10.53 2.648a.65.65 0 0 0-1.06 0l-4.16 6.63c-.578.932-.9 2-.934 3.097a5.625 5.625 0 1 0 11.25 0 6.29 6.29 0 0 0-.952-3.13ZM10 16.75a4.38 4.38 0 0 1-4.375-4.375 4.986 4.986 0 0 1 .761-2.465l.585-.93 6.296 6.296A4.359 4.359 0 0 1 10 16.75Z" fill="currentColor"></path>
