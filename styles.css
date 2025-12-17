@@ -31,6 +31,7 @@
 .allergycontent{
     grid-column: span 12;
     width: 100%;
+}
 * {
   margin: 0;
   padding: 0;
