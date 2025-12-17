@@ -1,7 +1,9 @@
 export function weatherDetails(id, obj,data){ 
     const days = data.forecast.forecastday
     const d = days[id]
-   
+    const sunset = d.astro.sunset.split(' ')[0]
+    const moonrise = d.astro.moonset.split(' ')[0]
+
     const cardsContent = document.createElement('div')
     cardsContent.id = `${id}-card`
     cardsContent.style.display = 'none'
@@ -10,7 +12,7 @@ export function weatherDetails(id, obj,data){
     
     cardsContent.innerHTML = ` 
         <div class="today" id="${id}-cls">
-            <h2 class="cards-date">${id === 0 ? 'Today' : date.toLocaleString('en-US', {weekday: 'short'})+ ' ' + date.getDate()}</h2>
+            <h2 class="cards-date">${id === 0 ? (data.current.is_day === 1 ? 'Today': 'Tonight') : date.toLocaleString('en-US', {weekday: 'short'})+ ' ' + date.getDate()}</h2>
             <svg width="24" name="subtract" class="subtract-img" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                 <path d="M15 9.875H5v1.25h10v-1.25Z" fill="currentColor"></path>
             </svg>
@@ -41,8 +43,7 @@ export function weatherDetails(id, obj,data){
                         </svg>
                         <span class="windSpeed">
                             <span>${data.current.wind_dir} </span>
-                            <span>${d.day.maxwind_kph}</span>
-                            &nbsp;
+                            <span>${Math.round(d.day.maxwind_kph)} </span>
                             <span>km/h</span>
                         </span>
                     </div>
@@ -50,7 +51,7 @@ export function weatherDetails(id, obj,data){
                 </div>
 
             </div>
-            <p class="explanation">${id === 0 ? data.current.condition.text : obj.dayText}. Visibility reduced by smoke. High 25°C. Winds light and variable.</p>
+            <p class="explanation">${id === 0 ? data.current.condition.text : obj.dayText}. ${obj.dayTemp >= 20 ? 'High ' + obj.dayTemp + '°C': 'Low ' + obj.dayTemp + '°C'}. Winds ${data.current.wind_dir} at ${d.day.maxwind_kph} km/h.</p>
         </div>
         <div class="day-section2 measurements day-${id}">
             <ul class="weather">
@@ -78,7 +79,7 @@ export function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Sunrise</span>
-                        <span class="r2">${d.astro.sunrise}</span>
+                        <span class="r2">${d.astro.sunrise.split(' ')[0]}</span>
                     </div>
                 </li>
                 <li>
@@ -87,7 +88,7 @@ export function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Sunset</span>
-                        <span class="r2">${d.astro.sunset}</span>
+                        <span class="r2">${d.astro.sunset.split(' ')[1] === 'PM' ? Number(sunset.split(':')[0]) + 12 + ':' + sunset.split(':')[1] : d.astro.sunset.split(' ')[0] }</span>
                     </div>
                 </li>
             </ul>
@@ -117,9 +118,8 @@ export function weatherDetails(id, obj,data){
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.875h8.125A3.125 3.125 0 1 0 10 6.75h1.25a1.875 1.875 0 1 1 1.875 1.875H5v1.25Zm7.166 7.209a3.125 3.125 0 1 0 2.209-5.334H2.5V13h11.875a1.875 1.875 0 1 1-1.875 1.875h-1.25c0 .829.33 1.623.916 2.209Z" fill="currentColor"></path>
                         </svg>
                         <span class="windSpeed">
-                            <span>${obj.nightDir} </span>
-                            <span>${obj.nightWind}</span>
-                            &nbsp;
+                            <span>${obj.nightDir}</span>
+                            <span>${obj.nightWind} </span>
                             <span>km/h</span>
                         </span>
                     </div>
@@ -128,7 +128,7 @@ export function weatherDetails(id, obj,data){
                 </div>
                 
             </div>
-            <p class="explanation">${obj.nightText}. Hazy. Low 10°C. Winds light and variable.</p>
+            <p class="explanation">${obj.nightText}. ${obj.nightTemp >= 20 ? 'High ' + obj.nightTemp + '°C': 'Low ' + obj.nightTemp + '°C'}. Winds ${obj.nightDir} at ${obj.nightWind} km/h.</p>
         </div>
         <div class="night-section2 measurements">
             <ul class="weather">
@@ -158,7 +158,7 @@ export function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Moonrise</span>
-                        <span class="r2">${d.astro.moonrise}</span>
+                        <span class="r2">${d.astro.moonrise.split(' ')[0]}</span>
                     </div>
                 </li>
                 <li>
@@ -168,7 +168,7 @@ export function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Moonset</span>
-                        <span class="r2">${d.astro.moonset}</span>
+                        <span class="r2">${ d.astro.moonset.split(' ')[1] === 'PM' ? Number(moonrise.split(':')[0]) + 12 + ':' + moonrise.split(':')[1] : d.astro.moonrise.split(' ')[0]}</span>
                     </div>
                 </li>
 
@@ -193,7 +193,6 @@ export function weatherDetails(id, obj,data){
             cardsContent.querySelector('.day-night-parts').style.display = 'block'
         }
     }
-
     cardsContent.classList.add('cards-content')
     const targetItem = document.getElementById(`cls-${id}`)
     targetItem.insertAdjacentElement('afterend',cardsContent)
