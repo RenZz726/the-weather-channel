@@ -20,8 +20,7 @@ body {
   overflow: scroll;
 }
 .aircontainer {
-  font-family: "font1", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
-    sans-serif;
+  font-family: "font1", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,sans-serif;
 }
 .airadvertisement {
   width: 968px;
@@ -41,8 +40,7 @@ body {
 .airtitle h1 {
   display: block;
   white-space: normal;
-  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",
-    Arial, sans-serif;
+  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",   Arial, sans-serif;
   font-weight: bolder;
   font-size: 24px;
   line-height: 25.92px;
@@ -118,8 +116,7 @@ body {
   display: block;
   font-weight: 700;
   font-size: 24px;
-  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",
-    Arial, sans-serif;
+  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",Arial, sans-serif;
 }
 .airleft-text {
   margin: 0;
@@ -131,8 +128,7 @@ body {
   transform-origin: 51px 51px;
   font-size: 14px;
   line-height: 1.25;
-  font-family: "font1", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
-    sans-serif;
+  font-family: "font1", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,sans-serif;
 }
 .airsection1-right {
   border-top: 1px solid #dedede;
@@ -145,8 +141,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   line-height: 18px;
-  font-family: "font600", "Inter Fallback: Arial", "Inter Fallback: Roboto",
-    Arial, Roboto, sans-serif;
+  font-family: "font600", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial, Roboto, sans-serif;
   color: #252422;
 }
 .airright-text {
@@ -189,8 +184,7 @@ body {
   padding-left: 12px;
 }
 .airs2 {
-  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
-    Roboto, sans-serif;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,Roboto, sans-serif;
   font-size: 16px;
   line-height: 22px;
   display: block;
@@ -251,7 +245,6 @@ body {
   }
   .airright-title {
     margin: 0 0 10px 0;
-    white-space: nowrap;
   }
   .airright-text {
     margin: 0;
@@ -276,122 +269,7 @@ body {
     display: none;
   }
 }
-.air_pop_wrap {
-  position: relative;
-  display: inline-block;
-}
-.air_popup {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 40px;
-  z-index: 9999;
-  min-width: 450px;
-  background-color: #ffff;
-  border-radius: 6px;
-  box-shadow: 0 0 3px 2px #0003;
-  color: #2b2b2b;
-}
-.air_popup::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 90px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #ffff;
-}
-.air_popup::after {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: 90px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid rgba(0, 0, 0, 0.15);
-  z-index: -1;
-}
-.air_popup_layout {
-  padding-right: 15px;
-  display: flex;
-  gap: 30px;
-}
-.air_pop1 {
-  padding: 4px 0 16px 16px;
-  margin: 0;
-  min-width: 100px;
-}
-.air_pop1 h4 {
-  padding-bottom: 10px;
-  font-size: 14px;
-  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",
-    Arial, sans-serif;
-  line-height: 1;
-}
-.air_pop1 ul {
-  margin: 0;
-  padding: 0;
-}
-.air_pop1 li {
-  font-size: 12px;
-  list-style: none;
-}
-.air_pop1 li div {
-  padding-right: 5px;
-  vertical-align: middle;
-}
-.air_dot {
-  display: inline-block;
-}
-.air_dot svg {
-  width: 10px;
-  height: 10px;
-  display: block;
-}
-.air_poptext {
-  white-space: nowrap;
-}
-.air_unorder li {
-  display: flex;
-  flex-direction: row;
-}
-.air_pop2 {
-  padding: 4px 16px 16px;
-  max-width: 350px;
-}
-.air_pop2_tit {
-  padding: 0 30px 10px 0;
-  font-size: 14px;
-  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",
-    Arial, sans-serif;
-  line-height: 1;
-}
-.air_pop2_para {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.25;
-}
-.air_close_btn {
-  position: absolute;
-  right: 0;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-}
-.air_info_pop {
-  display: flex;
-  padding: 4px;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-.airsection-2-contents {
-  padding-bottom: 24px;
-}
 .allergyheaderImg{
     padding: 12px 40px;
     display: flex;
