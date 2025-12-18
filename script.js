@@ -314,42 +314,41 @@ const monthlyButton = document.querySelector(".monthly-with-content");
 const radarButton = document.querySelector(".radar-with-content");
 const radarSection = document.querySelector(".radar");
 
-const allergySection = document.querySelector('.allergy-tracker')
-const allergyButton = document.querySelector('.allergy-with-contents')
+const allergySection = document.querySelector(".allergy-tracker");
+const allergyButton = document.querySelector(".allergy-with-contents");
 
-const airQualitySection = document.querySelector('section.air-quality-index')
-const airQualityBtn = document.querySelector('.air-quality-with-contents')
+const airQualitySection = document.querySelector("section.air-quality-index");
+const airQualityBtn = document.querySelector(".air-quality-with-contents");
+
+const pinRound = document.querySelector(".pin-round");
 
 hourlySection.classList.add("hide");
 tenDaySection.classList.add("hide");
 monthlySection.classList.add("hide");
 radarSection.classList.add("hide");
-allergySection.classList.add('hide');
-airQualitySection.classList.add('hide');
-
+allergySection.classList.add("hide");
+airQualitySection.classList.add("hide");
 
 todayButton.addEventListener("click", () => {
   mainBody.classList.remove("hide");
   hourlySection.classList.add("hide");
-  tenDaySection.classList.add('hide');
+  tenDaySection.classList.add("hide");
   monthlySection.classList.add("hide");
   radarSection.classList.add("hide");
-  allergySection.classList.add('hide');
-  airQualitySection.classList.add('hide');
-
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
 });
 
 hourlyButton.addEventListener("click", () => {
   mainBody.classList.add("hide");
   monthlySection.classList.add("hide");
-  tenDaySection.classList.add('hide');
+  tenDaySection.classList.add("hide");
   radarSection.classList.add("hide");
   hourlySection.classList.remove("hide");
   footerSection[1].classList.remove("hide");
-  allergySection.classList.add('hide');
-  airQualitySection.classList.add('hide');
-  airQualitySection.classList.add('hide');
-
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
 });
 
 tenDayButton.addEventListener("click", () => {
@@ -357,65 +356,73 @@ tenDayButton.addEventListener("click", () => {
   hourlySection.classList.add("hide");
   monthlySection.classList.add("hide");
   radarSection.classList.add("hide");
-  tenDaySection.classList.remove('hide');
-  allergySection.classList.add('hide');
-  airQualitySection.classList.add('hide'); 
-  airQualitySection.classList.add('hide');
-
+  tenDaySection.classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
 });
 
 monthlyButton.addEventListener("click", () => {
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
   radarSection.classList.add("hide");
-  tenDaySection.classList.add('hide');
+  tenDaySection.classList.add("hide");
   monthlySection.classList.remove("hide");
-  footerSection[1].classList.remove("hide");  
-  allergySection.classList.add('hide');
-  airQualitySection.classList.add('hide');    
-  airQualitySection.classList.add('hide');
-
+  footerSection[1].classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
 });
 
 radarButton.addEventListener("click", () => {
   adBlock.classList.add("hide");
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
-  tenDaySection.classList.add('hide');
+  tenDaySection.classList.add("hide");
   monthlySection.classList.add("hide");
   footerSection[1].classList.add("hide");
   radarSection.classList.remove("hide");
-  allergySection.classList.add('hide');
-  airQualitySection.classList.add('hide'); 
-  airQualitySection.classList.add('hide');
-
-
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
 });
 
-allergyButton.addEventListener('click', ()=> {
-    adBlock.classList.add("hide");
-    mainBody.classList.add('hide');
-    hourlySection.classList.add("hide");
-    tenDaySection.classList.add('hide');
-    monthlySection.classList.add("hide");
-    radarSection.classList.add('hide');
-    airQualitySection.classList.add('hide');
-    footerSection[1].classList.remove("hide");
-    airQualitySection.classList.add('hide');
-    allergySection.classList.remove('hide');
-})
+pinRound.addEventListener("click", () => {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  footerSection[1].classList.add("hide");
+  radarSection.classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+});
+allergyButton.addEventListener("click", () => {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  footerSection[1].classList.remove("hide");
+  airQualitySection.classList.add("hide");
+  allergySection.classList.remove("hide");
+});
 
-airQualityBtn.addEventListener('click', ()=> {
-    adBlock.classList.add("hide");
-    mainBody.classList.add('hide');
-    hourlySection.classList.add("hide");
-    tenDaySection.classList.add('hide');
-    monthlySection.classList.add("hide");
-    radarSection.classList.add('hide');
-    allergySection.classList.add('hide');
-    footerSection[1].classList.remove("hide");
-    airQualitySection.classList.remove('hide');
-})
+airQualityBtn.addEventListener("click", () => {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  allergySection.classList.add("hide");
+  footerSection[1].classList.remove("hide");
+  airQualitySection.classList.remove("hide");
+});
 
 let calendar_previous = document.querySelector(".calendar-previous");
 let calendar_next = document.querySelector(".calendar-next");
@@ -1364,21 +1371,29 @@ async function getData() {
 getData();
 
 // 10DayPageScript
-function weatherDetails(id, obj,data){ 
-    const days = data.forecast.forecastday
-    const d = days[id]
-    const sunset = d.astro.sunset.split(' ')[0]
-    const moonrise = d.astro.moonset.split(' ')[0]
+function weatherDetails(id, obj, data) {
+  const days = data.forecast.forecastday;
+  const d = days[id];
+  const sunset = d.astro.sunset.split(" ")[0];
+  const moonrise = d.astro.moonset.split(" ")[0];
 
-    const cardsContent = document.createElement('div')
-    cardsContent.id = `${id}-card`
-    cardsContent.style.display = 'none'
-        
-    let date = new Date(d.date)
-    
-    cardsContent.innerHTML = ` 
+  const cardsContent = document.createElement("div");
+  cardsContent.id = `${id}-card`;
+  cardsContent.style.display = "none";
+
+  let date = new Date(d.date);
+
+  cardsContent.innerHTML = ` 
         <div class="todayTen" id="${id}-cls">
-            <h2 class="cards-date">${id === 0 ? (data.current.is_day === 1 ? 'Today': 'Tonight') : date.toLocaleString('en-US', {weekday: 'short'})+ ' ' + date.getDate()}</h2>
+            <h2 class="cards-date">${
+              id === 0
+                ? data.current.is_day === 1
+                  ? "Today"
+                  : "Tonight"
+                : date.toLocaleString("en-US", { weekday: "short" }) +
+                  " " +
+                  date.getDate()
+            }</h2>
             <svg width="24" name="subtract" class="subtract-img" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
                 <path d="M15 9.875H5v1.25h10v-1.25Z" fill="currentColor"></path>
             </svg>
@@ -1392,7 +1407,9 @@ function weatherDetails(id, obj,data){
                 </div>
 
                 <div class="sun">
-                    <img src= 'https:${id === 0 ? data.current.condition.icon : obj.dayIcon}' class="sun-img"/>
+                    <img src= 'https:${
+                      id === 0 ? data.current.condition.icon : obj.dayIcon
+                    }' class="sun-img"/>
                 </div>
 
                 <div class="humidity-wind">
@@ -1417,7 +1434,13 @@ function weatherDetails(id, obj,data){
                 </div>
 
             </div>
-            <p class="explanation">${id === 0 ? data.current.condition.text : obj.dayText}. ${obj.dayTemp >= 20 ? 'High ' + obj.dayTemp + '°C': 'Low ' + obj.dayTemp + '°C'}. Winds ${data.current.wind_dir} at ${d.day.maxwind_kph} km/h.</p>
+            <p class="explanation">${
+              id === 0 ? data.current.condition.text : obj.dayText
+            }. ${
+    obj.dayTemp >= 20
+      ? "High " + obj.dayTemp + "°C"
+      : "Low " + obj.dayTemp + "°C"
+  }. Winds ${data.current.wind_dir} at ${d.day.maxwind_kph} km/h.</p>
         </div>
         <div class="day-section2 measurements day-${id}">
             <ul class="weatherDay">
@@ -1445,7 +1468,7 @@ function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Sunrise</span>
-                        <span class="r2">${d.astro.sunrise.split(' ')[0]}</span>
+                        <span class="r2">${d.astro.sunrise.split(" ")[0]}</span>
                     </div>
                 </li>
                 <li>
@@ -1454,7 +1477,14 @@ function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Sunset</span>
-                        <span class="r2">${d.astro.sunset.split(' ')[1] === 'PM' ? Number(sunset.split(':')[0]) + 12 + ':' + sunset.split(':')[1] : d.astro.sunset.split(' ')[0] }</span>
+                        <span class="r2">${
+                          d.astro.sunset.split(" ")[1] === "PM"
+                            ? Number(sunset.split(":")[0]) +
+                              12 +
+                              ":" +
+                              sunset.split(":")[1]
+                            : d.astro.sunset.split(" ")[0]
+                        }</span>
                     </div>
                 </li>
             </ul>
@@ -1494,7 +1524,11 @@ function weatherDetails(id, obj,data){
                 </div>
                 
             </div>
-            <p class="explanation">${obj.nightText}. ${obj.nightTemp >= 20 ? 'High ' + obj.nightTemp + '°C': 'Low ' + obj.nightTemp + '°C'}. Winds ${obj.nightDir} at ${obj.nightWind} km/h.</p>
+            <p class="explanation">${obj.nightText}. ${
+    obj.nightTemp >= 20
+      ? "High " + obj.nightTemp + "°C"
+      : "Low " + obj.nightTemp + "°C"
+  }. Winds ${obj.nightDir} at ${obj.nightWind} km/h.</p>
         </div>
         <div class="night-section2 measurements">
             <ul class="weatherDay">
@@ -1524,7 +1558,9 @@ function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Moonrise</span>
-                        <span class="r2">${d.astro.moonrise.split(' ')[0]}</span>
+                        <span class="r2">${
+                          d.astro.moonrise.split(" ")[0]
+                        }</span>
                     </div>
                 </li>
                 <li>
@@ -1534,7 +1570,14 @@ function weatherDetails(id, obj,data){
                     </svg>
                     <div class="details-table">
                         <span class="r1">Moonset</span>
-                        <span class="r2">${ d.astro.moonset.split(' ')[1] === 'PM' ? Number(moonrise.split(':')[0]) + 12 + ':' + moonrise.split(':')[1] : d.astro.moonrise.split(' ')[0]}</span>
+                        <span class="r2">${
+                          d.astro.moonset.split(" ")[1] === "PM"
+                            ? Number(moonrise.split(":")[0]) +
+                              12 +
+                              ":" +
+                              moonrise.split(":")[1]
+                            : d.astro.moonrise.split(" ")[0]
+                        }</span>
                     </div>
                 </li>
 
@@ -1546,22 +1589,22 @@ function weatherDetails(id, obj,data){
             </ul>
         </div>  
         </div>
-    `  
-    if(id === 0){
-        cardsContent.style.display = 'block'
-        document.querySelector('#cls-0').style.display = 'none'
-        
-        if(data.current.is_day === 0){
-            const dayEl = cardsContent.querySelectorAll('.day-0')
-            dayEl.forEach( day => {
-                if(day) day.style.display = 'none'
-            })
-            cardsContent.querySelector('.day-night-parts').style.display = 'block'
-        }
+    `;
+  if (id === 0) {
+    cardsContent.style.display = "block";
+    document.querySelector("#cls-0").style.display = "none";
+
+    if (data.current.is_day === 0) {
+      const dayEl = cardsContent.querySelectorAll(".day-0");
+      dayEl.forEach((day) => {
+        if (day) day.style.display = "none";
+      });
+      cardsContent.querySelector(".day-night-parts").style.display = "block";
     }
-    cardsContent.classList.add('cards-content')
-    const targetItem = document.getElementById(`cls-${id}`)
-    targetItem.insertAdjacentElement('afterend',cardsContent)
+  }
+  cardsContent.classList.add("cards-content");
+  const targetItem = document.getElementById(`cls-${id}`);
+  targetItem.insertAdjacentElement("afterend", cardsContent);
 }
 
 const EachDayBar = document.querySelector(".eachDayBar");
