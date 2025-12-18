@@ -750,7 +750,7 @@ body {
   position: relative;
 }
 .radar #map {
-  height: 82vh;
+  height: 79vh;
 }
 .radar .weather-list {
   display: flex;
