@@ -19,7 +19,6 @@
       crossorigin=""
     ></script>
 
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <section class="home-page">
@@ -106,7 +105,7 @@
 <title>Allergy</title>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.9994 3.0498C20.8672 5.69368 20.2005 7.68736 19.2171 9.17578C18.2324 10.6662 16.9672 11.593 15.7289 12.1592C14.4989 12.7214 13.2976 12.9284 12.4134 12.9971C12.2676 13.0084 12.1292 13.0147 12.0003 13.0195V19.0625C14.1015 19.3201 15.9414 20.3776 17.0189 21.9297C17.3336 22.3832 17.2213 23.0063 16.7679 23.3213C16.3143 23.6362 15.6913 23.5238 15.3763 23.0703C14.5471 21.8757 12.9325 21.0001 11.0003 21C9.44701 21 8.08888 21.5684 7.18686 22.4199C6.78534 22.799 6.15196 22.7803 5.7728 22.3789C5.39406 21.9774 5.41248 21.3449 5.81381 20.9658C6.89436 19.9457 8.36515 19.2616 10.0003 19.0615V13.0459C9.98948 13.0457 9.9781 13.0471 9.96713 13.0469C9.29401 13.0294 8.36915 12.9246 7.44174 12.5537C6.50279 12.1781 5.54523 11.5213 4.87143 10.4082C4.20008 9.29891 3.86745 7.8302 4.00327 5.92871L4.06967 5H5.00034C7.82665 5.00009 9.58649 5.8862 10.6371 7.06348C10.9747 6.16846 11.4645 5.34053 12.1527 4.62109C13.7857 2.914 16.3477 2.00002 20.0003 2H21.0521L20.9994 3.0498ZM5.97885 7.04492C6.01809 8.10545 6.26503 8.84876 6.58237 9.37305C6.98659 10.0407 7.56069 10.4469 8.18393 10.6963C8.81142 10.9472 9.47353 11.0297 10.0003 11.0449V11L10.0062 10.6211C10.0028 10.5392 9.99629 10.4426 9.98374 10.335C9.93945 9.95539 9.82663 9.46292 9.56186 8.98145C9.13551 8.20646 8.20694 7.25981 5.97885 7.04492ZM18.9076 4.0332C16.2214 4.19656 14.5874 4.96969 13.598 6.00391C12.5384 7.11171 12.0569 8.68514 12.0052 10.6396C12.0065 10.6949 12.0095 10.7458 12.0091 10.792C12.0085 10.8777 12.0062 10.9481 12.0033 11C12.003 11.0049 12.0016 11.0101 12.0013 11.0146C12.0827 11.0109 12.1693 11.0099 12.2591 11.0029C12.9842 10.9466 13.9398 10.7782 14.8968 10.3408C15.8456 9.90702 16.7998 9.20833 17.5492 8.07422C18.179 7.12083 18.6892 5.81847 18.9076 4.0332Z" fill="#252422"></path>
 </svg>
-<span>Allerrgy Tracker</span>
+<span>Allergy Tracker</span>
       </div>
       <div class="air-quality-with-contents">
         <svg name="breathing" class="SidebarNavigation--urlIcon--06Qkc Icon--icon--ySD-o" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1189,7 +1188,7 @@
 <hr>
 <div class="radar-section">
   <h1>Radar</h1>
-  <img src="./assests/homepage.map.jpg" alt="map image">
+  <img class="to-radar" src="./assests/homepage.map.jpg" alt="map image">
   <div class="pin-round">
     <div class="pin"></div>
   </div>
@@ -1283,7 +1282,7 @@
 <hr class="ho4">
 </div><!-- main-without footer -->
 <section class="hourhourly">
-      <div class="hourHeaderAddress">
+      <!-- <div class="hourHeaderAddress">
       <button class="houraddress">
         <svg class ='locationImg' name="pin" class="CurrentLocationBar--pinIcon--EA3g0 Icon--icon--ySD-o" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
           <path d="M8 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm0-4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" fill="currentColor"></path>
@@ -1291,7 +1290,7 @@
         </svg>
         <span class="hourLoca">Palakkad</span>
       </button>
-      </div>
+      </div> -->
       <div class="hourmainContent">
         <div class="hourlargeScreen">
           <div class="hourcontent">
@@ -1306,7 +1305,6 @@
                 <button class="hourTenDayBtn" >10-Day Weather</button>
               </a>
               </div>
-            </div>
             <div class="hourlyRedarSection">
               <h2>Radar</h2>
               <a href="#"></a>
@@ -1315,15 +1313,70 @@
                     <span>Now</span>
                   </div>
                   <svg class = 'hourMapLogo' fill = '#fff' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180"><title>Mapbox Logo</title><path d="M594.6 49.8c-9.9 0-19.4 4.1-26.3 11.3V23c0-1.2-1-2.2-2.2-2.2h-13.4c-1.2 0-2.2 1-2.2 2.2v103c0 1.2 1 2.2 2.2 2.2h13.4c1.2 0 2.2-1 2.2-2.2v-7.1c6.9 7.2 16.3 11.3 26.3 11.3 20.9 0 37.8-18 37.8-40.2s-16.9-40.2-37.8-40.2zm-3.1 64.3c-12.7 0-23-10.6-23.1-23.8v-.6c.2-13.2 10.4-23.8 23.1-23.8 12.8 0 23.1 10.8 23.1 24.1s-10.4 24.1-23.1 24.1zM681.7 49.8c-22.6 0-40.9 18-40.9 40.2s18.3 40.2 40.9 40.2c22.6 0 40.9-18 40.9-40.2s-18.3-40.2-40.9-40.2zm-.1 64.3c-12.8 0-23.1-10.8-23.1-24.1s10.4-24.1 23.1-24.1 23.1 10.8 23.1 24.1-10.4 24.1-23.1 24.1zM431.6 51.8h-13.4c-1.2 0-2.2 1-2.2 2.2v7.1c-6.9-7.2-16.3-11.3-26.3-11.3-20.9 0-37.8 18-37.8 40.2s16.9 40.2 37.8 40.2c9.9 0 19.4-4.1 26.3-11.3v7.1c0 1.2 1 2.2 2.2 2.2h13.4c1.2 0 2.2-1 2.2-2.2V54c0-1.2-1-2.2-2.2-2.2zm-38.8 62.3c-12.8 0-23.1-10.8-23.1-24.1s10.4-24.1 23.1-24.1c12.7 0 23 10.6 23.1 23.8v.6c-.1 13.2-10.4 23.8-23.1 23.8zM498.5 49.8c-9.9 0-19.4 4.1-26.3 11.3V54c0-1.2-1-2.2-2.2-2.2h-13.4c-1.2 0-2.2 1-2.2 2.2v103c0 1.2 1 2.2 2.2 2.2H470c1.2 0 2.2-1 2.2-2.2v-38.1c6.9 7.2 16.3 11.3 26.3 11.3 20.9 0 37.8-18 37.8-40.2s-16.9-40.2-37.8-40.2zm-3.1 64.3c-12.7 0-23-10.6-23.1-23.8v-.6c.2-13.2 10.4-23.8 23.1-23.8 12.8 0 23.1 10.8 23.1 24.1s-10.3 24.1-23.1 24.1zM311.8 49.8c-10 .1-19.1 5.9-23.4 15-4.9-9.3-14.7-15.1-25.2-15-8.2 0-15.9 4-20.7 10.6V54c0-1.2-1-2.2-2.2-2.2h-13.4c-1.2 0-2.2 1-2.2 2.2v72c0 1.2 1 2.2 2.2 2.2h13.4c1.2 0 2.2-1 2.2-2.2V82.9c.5-9.6 7.2-17.3 15.4-17.3 8.5 0 15.6 7.1 15.6 16.4v44c0 1.2 1 2.2 2.2 2.2h13.5c1.2 0 2.2-1 2.2-2.2l-.1-44.8c1.2-8.8 7.5-15.6 15.2-15.6 8.5 0 15.6 7.1 15.6 16.4v44c0 1.2 1 2.2 2.2 2.2h13.5c1.2 0 2.2-1 2.2-2.2l-.1-49.5c0-14.8-12.6-26.7-28.1-26.7zM794.7 125.1l-23.2-35.3 23-35c.6-.9.3-2.2-.6-2.8-.3-.2-.7-.3-1.1-.3h-15.5c-1.2 0-2.3.6-2.9 1.6L760.9 76l-13.5-22.6c-.6-1-1.7-1.6-2.9-1.6H729c-1.1 0-2 .9-2 2 0 .4.1.8.3 1.1l23 35-23.2 35.3c-.6.9-.3 2.2.6 2.8.3.2.7.3 1.1.3h15.5c1.2 0 2.3-.6 2.9-1.6l13.8-23 13.8 23c.6 1 1.7 1.6 2.9 1.6H793c1.1 0 2-.9 2-2 0-.4-.1-.8-.3-1.2z"></path><g><path d="M93.9 1.1C44.8 1.1 5 40.9 5 90s39.8 88.9 88.9 88.9 88.9-39.8 88.9-88.9c0-49.1-39.8-88.9-88.9-88.9zm42.2 110.7c-30.4 30.4-84.7 20.7-84.7 20.7s-9.8-54.2 20.7-84.7C89 30.9 117 31.6 134.7 49.2s18.3 45.7 1.4 62.6z"></path><path d="M104.1 53.2l-8.7 17.9-17.9 8.7 17.9 8.7 8.7 17.9 8.7-17.9 17.9-8.7-17.9-8.7z"></path></g></svg>
-                  <img class = 'hourmapImg' src="https://api.weather.com/v2/maps/dynamic?geocode=28.60,77.20&h=320&w=568&lod=9&product=twcRadarHcMosaic&map=light&format=jpg&language=en-IN&apiKey=71f92ea9dd2f4790b92ea9dd2f779061&a=0&region=in" alt="map">
+                  <img class = 'hourmapImg to-radar' src="https://api.weather.com/v2/maps/dynamic?geocode=28.60,77.20&h=320&w=568&lod=9&product=twcRadarHcMosaic&map=light&format=jpg&language=en-IN&apiKey=71f92ea9dd2f4790b92ea9dd2f779061&a=0&region=in" alt="map">
                   <div class="hourDotWrapper">
                     <span class="hourDot"></span>
                   </div>
                 </div>
              </div>
+            </div>
         </div>
+        <div class="ad-container"></div>
       </div>
     </section> 
+
+  <section class="ten-day">
+      
+      <div class="location-ten">
+          <button class="location-btn">
+              <svg width="16" name="pin" class="location-img" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                  <path d="M8 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Zm0-4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z" fill="currentColor"></path>
+                  <path d="m8 15-4.218-4.974a17.852 17.852 0 0 1-.174-.226A5.444 5.444 0 0 1 2.5 6.5a5.5 5.5 0 1 1 11 0 5.442 5.442 0 0 1-1.107 3.299h-.001s-.15.198-.172.225L8 15ZM4.406 9.197s.117.155.144.188L8 13.454l3.455-4.075.14-.183A4.45 4.45 0 0 0 12.5 6.5a4.5 4.5 0 1 0-9 0 4.453 4.453 0 0 0 .906 2.697Z" fill="currentColor"></path>
+              </svg>
+              <span class="location-js"></span>
+          </button>
+      </div>
+      <div class="marginBar">
+        <div class="mainBar">
+            <div class="content-ten">
+                <div class="title-ten">
+                    <h1>
+                        <strong>10-Day Weather </strong>
+                        <span class="place-ten">- 
+                            <span class="place-js"></span>
+                        </span>  
+                    </h1>
+                    <div class="timeDay">As of <span class="time-js"></span></div>
+                </div>
+
+                <ul class="eachDayBar"></ul> 
+            </div>
+        </div>
+
+        <div class="radar-container">
+          <div class="radar-header">
+            <h2>Radar</h2>
+          </div>
+
+          <div class="TenDayRadar">
+            <div class="Radar-img to-radar">
+              <div class="location-point">
+                <span class="location-dot"></span>
+              </div>
+            </div>
+
+            <button class="now-btn">
+              <span class="now-txt">Now</span>
+            </button>
+
+            <div class="map-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 180"><title>Mapbox Logo</title><path d="M594.6 49.8c-9.9 0-19.4 4.1-26.3 11.3V23c0-1.2-1-2.2-2.2-2.2h-13.4c-1.2 0-2.2 1-2.2 2.2v103c0 1.2 1 2.2 2.2 2.2h13.4c1.2 0 2.2-1 2.2-2.2v-7.1c6.9 7.2 16.3 11.3 26.3 11.3 20.9 0 37.8-18 37.8-40.2s-16.9-40.2-37.8-40.2zm-3.1 64.3c-12.7 0-23-10.6-23.1-23.8v-.6c.2-13.2 10.4-23.8 23.1-23.8 12.8 0 23.1 10.8 23.1 24.1s-10.4 24.1-23.1 24.1zM681.7 49.8c-22.6 0-40.9 18-40.9 40.2s18.3 40.2 40.9 40.2c22.6 0 40.9-18 40.9-40.2s-18.3-40.2-40.9-40.2zm-.1 64.3c-12.8 0-23.1-10.8-23.1-24.1s10.4-24.1 23.1-24.1 23.1 10.8 23.1 24.1-10.4 24.1-23.1 24.1zM431.6 51.8h-13.4c-1.2 0-2.2 1-2.2 2.2v7.1c-6.9-7.2-16.3-11.3-26.3-11.3-20.9 0-37.8 18-37.8 40.2s16.9 40.2 37.8 40.2c9.9 0 19.4-4.1 26.3-11.3v7.1c0 1.2 1 2.2 2.2 2.2h13.4c1.2 0 2.2-1 2.2-2.2V54c0-1.2-1-2.2-2.2-2.2zm-38.8 62.3c-12.8 0-23.1-10.8-23.1-24.1s10.4-24.1 23.1-24.1c12.7 0 23 10.6 23.1 23.8v.6c-.1 13.2-10.4 23.8-23.1 23.8zM498.5 49.8c-9.9 0-19.4 4.1-26.3 11.3V54c0-1.2-1-2.2-2.2-2.2h-13.4c-1.2 0-2.2 1-2.2 2.2v103c0 1.2 1 2.2 2.2 2.2H470c1.2 0 2.2-1 2.2-2.2v-38.1c6.9 7.2 16.3 11.3 26.3 11.3 20.9 0 37.8-18 37.8-40.2s-16.9-40.2-37.8-40.2zm-3.1 64.3c-12.7 0-23-10.6-23.1-23.8v-.6c.2-13.2 10.4-23.8 23.1-23.8 12.8 0 23.1 10.8 23.1 24.1s-10.3 24.1-23.1 24.1zM311.8 49.8c-10 .1-19.1 5.9-23.4 15-4.9-9.3-14.7-15.1-25.2-15-8.2 0-15.9 4-20.7 10.6V54c0-1.2-1-2.2-2.2-2.2h-13.4c-1.2 0-2.2 1-2.2 2.2v72c0 1.2 1 2.2 2.2 2.2h13.4c1.2 0 2.2-1 2.2-2.2V82.9c.5-9.6 7.2-17.3 15.4-17.3 8.5 0 15.6 7.1 15.6 16.4v44c0 1.2 1 2.2 2.2 2.2h13.5c1.2 0 2.2-1 2.2-2.2l-.1-44.8c1.2-8.8 7.5-15.6 15.2-15.6 8.5 0 15.6 7.1 15.6 16.4v44c0 1.2 1 2.2 2.2 2.2h13.5c1.2 0 2.2-1 2.2-2.2l-.1-49.5c0-14.8-12.6-26.7-28.1-26.7zM794.7 125.1l-23.2-35.3 23-35c.6-.9.3-2.2-.6-2.8-.3-.2-.7-.3-1.1-.3h-15.5c-1.2 0-2.3.6-2.9 1.6L760.9 76l-13.5-22.6c-.6-1-1.7-1.6-2.9-1.6H729c-1.1 0-2 .9-2 2 0 .4.1.8.3 1.1l23 35-23.2 35.3c-.6.9-.3 2.2.6 2.8.3.2.7.3 1.1.3h15.5c1.2 0 2.3-.6 2.9-1.6l13.8-23 13.8 23c.6 1 1.7 1.6 2.9 1.6H793c1.1 0 2-.9 2-2 0-.4-.1-.8-.3-1.2z"></path><g><path d="M93.9 1.1C44.8 1.1 5 40.9 5 90s39.8 88.9 88.9 88.9 88.9-39.8 88.9-88.9c0-49.1-39.8-88.9-88.9-88.9zm42.2 110.7c-30.4 30.4-84.7 20.7-84.7 20.7s-9.8-54.2 20.7-84.7C89 30.9 117 31.6 134.7 49.2s18.3 45.7 1.4 62.6z"></path><path d="M104.1 53.2l-8.7 17.9-17.9 8.7 17.9 8.7 8.7 17.9 8.7-17.9 17.9-8.7-17.9-8.7z"></path></g></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
 
 <section class="monthly">
       <div class="monthly-con">
@@ -2667,10 +2720,10 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="show-menu">
-            <img src="assests/radar/showMenu.svg" alt="show" width="18px;" />
-            <button class="show-menuBtn">Show menu</button>
+            <div class="show-menu">
+              <img src="assests/radar/showMenu.svg" alt="show" width="18px;" />
+              <button class="show-menuBtn">Show menu</button>
+            </div>
           </div>
           <div class="radar-footer footer" style="width: 350px; overflow-y: auto;">
             <div class="part1">
@@ -2823,6 +2876,593 @@
         </div>
       </div>
     </section>
+
+        <section class="allergy-tracker">
+    <div class="allergyheaderImg">
+      <img src="assests/gameImg.png" alt="gameImg" class="allergyadImg" />
+    </div>
+    <main class="allergygridMake">
+      <div class="allergymain">
+        <div class="allergycontent">
+          <header class="allergyheadClass">
+            <h2 class="allergyheading">Pollen Breakdown</h2>
+            <div class="allergyexceptHead">
+              <p class="allergyparaClass">
+                Do you know which kinds of pollen aggravate your symptoms? Here is the 3 day outlook for the worst offenders.
+              </p>
+              <div class="allergyflexThree">
+
+                <div class="allergyslipped">
+                  <div class="allergysingleItem">
+                    <h3 class="allergyfirstHead">Tree Pollen</h3>
+                    <div class="allergyimgClass">
+                      <img class="allergytreeImg" src="tree_particles.58f09c.png" alt="" />
+                    </div>
+                    <div class="allergythreeText">
+                      <ul class="allergyulCls">
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Today: <strong id="tree-today">None</strong>
+                          </div>
+                        </li>
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Tomorrow: <strong id="tree-tomorrow">None</strong>
+                          </div>
+                        </li>
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Saturday: <strong id="tree-saturday">None</strong>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="allergyslipped">
+                  <div class="allergysingleItem">
+                    <h3 class="allergyfirstHead">Grass Pollen</h3>
+                    <div class="allergyimgClass">
+                      <img class="allergytreeImg" src="grass_particles.732135.png" alt="" />
+                    </div>
+                    <div class="allergythreeText">
+                      <ul class="allergyulCls">
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Today: <strong id="grass-today">None</strong>
+                          </div>
+                        </li>
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Tomorrow: <strong id="grass-tomorrow">None</strong>
+                          </div>
+                        </li>
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Saturday: <strong id="grass-saturday">None</strong>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="allergyslipped">
+                  <div class="allergysingleItem2">
+                    <h3 class="allergyfirstHead">Ragweed Pollen</h3>
+                    <div class="allergyimgClass">
+                      <img class="allergytreeImg" src="ragweed_particles.783a76.png" alt="" />
+                    </div>
+                    <div class="allergythreeText">
+                      <ul class="allergyulCls">
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Today: <strong id="ragweed-today">None</strong>
+                          </div>
+                        </li>
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Tomorrrow: <strong id="ragweed-tomorrow">None</strong>
+                          </div>
+                        </li>
+                        <li class="allergyliCls">
+                          <div class="allergydotImg">
+                            <svg viewBox="0 0 10 10"><circle cx="50%" cy="50%" r="50%" fill="#cecece"></circle></svg>
+                            Saturday: <strong id="ragweed-saturday">None</strong>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </header>
+            <footer class="allergydiscWrite">
+            <button class="allergybtnDis">
+              <span class="allergyimgSpan">
+                <svg
+                  name="info"
+                  style="width: 15px"
+                  class="allergyIcon--icon--ySD-o"
+                  viewBox="0 0 16 16"
+                >
+                  <title>Info</title>
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M7.881 1.201a6.8 6.8 0 10.238 13.598A6.8 6.8 0 007.88 1.201zm.259 14.798A8 8 0 117.86 0a8 8 0 01.28 16zM7.915 5.42a1.05 1.05 0 10-.037-2.1 1.05 1.05 0 00.037 2.1z"
+                      fill="currentColor"
+                    ></path>
+                    <path
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      d="M8 7v6"
+                    ></path>
+                  </g>
+                </svg>
+              </span>
+              <span class="allergyspanWrite">About the Pollen Breakdown</span>
+            </button>
+          </footer>
+           <div class="allergycontent"></div>
+          <div class="allergybeforeHead">
+            <h2 class="allergyHeaad2">Tips to Help Manage Your Allergies</h2>
+          </div>
+
+          <div class="allergysecCont">
+            <div class="allergyeachOne">
+              <img class="allergysmImg" src="assests/tip1.87f8af.png" alt="" />
+              <div class="allergyWriting">
+                <span class="allergyspan1">Shower after being outdoors — </span>
+                <span class="allergyspan2">
+                  To remove pollen you pick up outside, take a shower and change
+                  your clothes.
+                </span>
+              </div>
+            </div>
+
+            <div class="allergyeachOne">
+              <img class="allergysmImg" src="assests/tip2.b7f0b3.png" alt="" />
+              <div class="allergyWriting">
+                <span class="allergyspan1">Minimise indoor pollen — </span>
+                <span class="allergyspan2">
+                  Keep your windows shut and use your AC or a HEPA purifier to
+                  filter allergens.
+                </span>
+              </div>
+            </div>
+
+            <div class="allergyeachOne">
+              <img class="allergysmImg" src="assests/tip3.bed52a.png" alt="" />
+              <div class="allergyWriting">
+                <span class="allergyspan1">Check the Weather — </span>
+                <span class="allergyspan2">
+                  Learn when conditions such as the wind increase pollen levels,
+                  so you can prepare.
+                </span>
+              </div>
+            </div>
+
+            <div class="allergyeachOne">
+              <img class="allergysmImg" src="assests/tip4.159080.png" alt="" />
+              <div class="allergyWriting">
+                <span class="allergyspan1">Know your allergy relief options — </span>
+                <span class="allergyspan2">
+                  From medications to nasal sprays, talk to your doctor about
+                  your options.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <aside class="allergysideAd">
+        <img class="allergysidead" src="assests/ad.jpeg" alt="">
+    </aside>
+<aside class="todayPollenCard">
+  <h2 class="todayPollenHeading">Today's Pollen Count</h2>
+  <p class="todayPollenText">
+    The pollen count is a measure of the pollen density in the air.
+  </p>
+  <div class="todayPollenValue">
+    <span id="today-pollen-number">--</span>
+    <span class="todayPollenUnit">grains</span>
+  </div>
+
+  <p class="todayPollenFooter">per cubic metre of air</p>
+</aside>
+    </main>
+    </section>
+
+    <section class="air-quality-index">
+      <div class="aircontainer">
+        <!-- <div class="airadvertisement">
+          <img src="https://staticassets-creator-design.criteo.net/design/dt/112102/1750242907/2ec62e115a9943df858536b97cdf3971_970x250.png" class="airadImg1">
+        </div> -->
+        <div class="aircontents">
+          <div>
+            <div class="airtitle">
+              <h1>
+                <strong>Today's Air Quality</strong>
+                <span class="airsubtit" id="city_name"></span>
+              </h1>
+            </div>
+            <div class="airsection1">
+              <div class="airflex">
+                <div class="airsection1-left">
+                  <div class="airvalue">
+                    <svg class="aircirclesvg" viewBox="0 0 102 102">
+                      <circle class="aircir1" cx="51" cy="51" r="48.5"></circle>
+                      <circle
+                        class="aircir2"
+                        id="aqi_don"
+                        cx="51"
+                        cy="51"
+                        r="48.5"
+                      ></circle>
+                      <text
+                        class="aircir-value airlgcir"
+                        x="50%"
+                        y="55%"
+                        text-anchor="middle"
+                        id="aqi"
+                      >
+                        
+                      </text>
+                    </svg>
+                  </div>
+                  <div class="airleft-contents">
+                    <span class="airleft-title" id="aqi_air"></span>
+                    <p class="airleft-text" id="air_para"></p>
+                  </div>
+                </div>
+                <div class="airsection1-right">
+                  <div class="airright-contents">
+                    <span class="airright-title" id="Primary_name"></span>
+                    <span class="airright-text" id="primary_desc"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="airinfo air_pop_wrap">
+                <div class="air_info_pop">
+                <svg class="air-Infoicon" name="info" class="AirQuality--popoverIcon--VmmOJ Icon--icon--ySD-o" viewBox="0 0 16 16"><title>Info</title><g fill="none" fill-rule="evenodd"><path d="M7.881 1.201a6.8 6.8 0 10.238 13.598A6.8 6.8 0 007.88 1.201zm.259 14.798A8 8 0 117.86 0a8 8 0 01.28 16zM7.915 5.42a1.05 1.05 0 10-.037-2.1 1.05 1.05 0 00.037 2.1z" fill="currentColor"></path><path stroke="currentColor" stroke-width="1.5" d="M8 7v6"></path></g></svg>
+                <span>Air Quality Index</span>
+                </div>
+                <div class="air_popup">
+                  <svg class="air_close_btn" name="close" class="Icon--icon--ySD-o Icon--darkTheme--RWEd0" viewBox="0 0 24 24" fill="#6f7585";><title>Close</title><path d="M19.707 19.293l-1.414 1.414L12 14.414l-6.293 6.293-1.414-1.414L10.586 13 4.293 6.707l1.414-1.414L12 11.586l6.293-6.293 1.414 1.414L13.414 13z"></path></svg>
+                  <div class="air_popup_layout">
+                    <div class="air_pop1">
+                      <h4>Levels</h4>
+                      <ul class="air_unorder">
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#01c966"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Good</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#6AE261"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Satisfactory</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#FBFF26"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Moderately Polluted</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#FF9F00"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Poor</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#FF0000"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Very Poor</span>
+                        </li>
+                        <li>
+                          <div class="air_dot">
+                            <svg viewBox="0 0 10 10">
+                              <circle
+                                cx="50%"
+                                cy="50%"
+                                r="50%"
+                                fill="#F70004"
+                              ></circle>
+                            </svg>
+                          </div>
+                          <span class="air_poptext">Severe</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="air_pop2">
+                      <h4 class="air_pop2_tit">Source</h4>
+                      <p class="air_pop2_para">
+                        Contains Copernicus Atmosphere Monitoring Service
+                        information 2025 and/or modified Copernicus Atmosphere
+                        Monitoring Service information 2025
+                      </p>
+                      <p class="air_pop2_para" style="margin-top: 16px">
+                        Neither the European Commission nor ECMWF is responsible
+                        for any use of this information
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="airsection-2">
+              <h2>All Pollutants</h2>
+              <div class="airsection-2-contents">
+                <div class="airs2-container">
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="co_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="co"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2">CO (Carbon Monoxide)</span>
+                        <span class="airs2 airtext1" id="co_status"></span>
+                        <span class="airs2 airtext2" id="co_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="no_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="no2"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2">NO2 (Nitrogen Dioxide)</span>
+                        <span class="airs2 airtext1" id="no_status"></span>
+                        <span class="airs2 airtext2" id="no2_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="o3_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="o3"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2">O3 (Ozone)</span>
+                        <span class="airs2 airtext1" id="o3_status"></span>
+                        <span class="airs2 airtext2" id="o3_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="pm10_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle "
+                            id="pm10"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2"
+                          >PM10 (Particulate matter less than 10 microns)</span
+                        >
+                        <span class="airs2 airtext1" id="pm10_status"></span>
+                        <span class="airs2 airtext2" id="pm10_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="pm25_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="pm25"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2"
+                          >PM2.5 (Particulate matter less than 2.5
+                          microns)</span
+                        >
+                        <span class="airs2 airtext1" id="pm25_status"></span>
+                        <span class="airs2 airtext2" id="pm25_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="airsection-2-list">
+                    <div class="airsection-2-flx">
+                      <div>
+                        <svg class="aircirclesvg airs2" viewBox="0 0 102 102">
+                          <circle
+                            class="aircir1 aircirsmall"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <circle
+                            class="aircir2 aircirsmall"
+                            id="so2_don"
+                            cx="27"
+                            cy="27"
+                            r="24.5"
+                          ></circle>
+                          <text
+                            class="aircir-value"
+                            x="50%"
+                            y="55%"
+                            text-anchor="middle"
+                            id="so2"
+                          ></text>
+                        </svg>
+                      </div>
+                      <div class="airsection-2-text">
+                        <span class="airs2">SO2 (Sulphur Dioxide)</span>
+                        <span class="airs2 airtext1" id="so_status"></span>
+                        <span class="airs2 airtext2" id="so2_mg"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="airinfo">
+                 <svg class="air-Infoicon" name="info" class="AirQuality--popoverIcon--VmmOJ Icon--icon--ySD-o" viewBox="0 0 16 16"><title>Info</title><g fill="none" fill-rule="evenodd"><path d="M7.881 1.201a6.8 6.8 0 10.238 13.598A6.8 6.8 0 007.88 1.201zm.259 14.798A8 8 0 117.86 0a8 8 0 01.28 16zM7.915 5.42a1.05 1.05 0 10-.037-2.1 1.05 1.05 0 00.037 2.1z" fill="currentColor"></path><path stroke="currentColor" stroke-width="1.5" d="M8 7v6"></path></g></svg>
+                 <span>Air Quality Index</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="airside-ad">
+          <img
+            src="https://tpc.googlesyndication.com/simgad/13262849628625774337?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qklV5eNK18tnIQ7p3K_IBx-NE7pXg"
+          />
+        </div>
+      </div>
+    </section>
+
 <section class="footer">
       <div class="part1">
         <div class="social">
@@ -2994,10 +3634,9 @@
     <!-- renson -->
     
     <!-- vidhya -->
-    <section class="hourallergy-tracker"></section>
 
     <!-- athulya -->
-    <section class="hourair-quality-index"></section>
+    
+    <script src="script.js" type="module"></script>
   </body>
-  <script src="script.js"></script>
 </html>

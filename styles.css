@@ -1,3 +1,440 @@
+/* air-quality-index */
+@font-face {
+  font-family: "font1";
+  src: url("fonts/inter-v19-latin-regular.woff2");
+}
+@font-face {
+  font-family: "font700";
+  src: url("fonts/inter-v19-latin-700.woff2");
+}
+@font-face {
+  font-family: "font600";
+  src: url("fonts/inter-v19-latin-600.woff2");
+}
+html {
+  line-height: 1.5;
+  color: #252422;
+}
+body {
+  margin: 0;
+  overflow: scroll;
+}
+.aircontainer {
+  font-family: "font1", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    sans-serif;
+}
+.airadvertisement {
+  width: 968px;
+  height: 248px;
+  overflow: hidden;
+}
+.airadImg1 {
+  border: none;
+  max-width: 970px;
+  max-height: 250px;
+}
+.aircontents {
+  padding-left: 14px;
+  padding-right: 16px;
+  margin: 0;
+}
+.airtitle h1 {
+  display: block;
+  white-space: normal;
+  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",
+    Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  line-height: 25.92px;
+  padding-bottom: 16px;
+  margin: 0;
+  margin-left: -2px;
+}
+.airsubtit {
+  font-family: "font1";
+}
+.airtitle span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.airsection1 {
+  padding-bottom: 26px;
+  border-bottom: 1px solid #676767;
+  margin-bottom: 30px;
+}
+.airsection1-left {
+  display: flex;
+  align-items: flex-start;
+  padding-left: 3px;
+}
+.airvalue {
+  padding: 2px 0 0 20px;
+}
+.aircirclesvg {
+  border-radius: 50%;
+  display: block;
+  overflow: visible;
+  width: 102px;
+  height: 102px;
+  transform: rotate(90deg);
+}
+.aircir1 {
+  fill: #0000;
+  stroke: #e7ecf1;
+  r: 48.5;
+  cx: 51;
+  cy: 51;
+  fill-opacity: 0;
+  stroke-width: 5px;
+}
+.aircir2 {
+  fill: #0000;
+  stroke-dasharray: 305;
+  stroke-dashoffset: 305;
+  transition: stroke-dashoffset 0.3s ease;
+  r: 48.5;
+  cx: 51;
+  cy: 51;
+  stroke: rgb(255, 0, 0);
+  stroke-width: 5px;
+  fill-opacity: 0;
+  stroke-linecap: round;
+}
+.aircir-value {
+  font-size: 26px;
+  font-weight: 600;
+  fill: #2b2b2b;
+  transform: rotate(-90deg);
+  text-anchor: middle;
+  alignment-baseline: middle;
+  transform-origin: 51px 51px;
+  letter-spacing: -0.5px;
+  font-family: "font600";
+}
+.airleft-contents {
+  padding: 12px 16px 0 26px;
+}
+.airleft-title {
+  display: block;
+  font-weight: 700;
+  font-size: 24px;
+  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",
+    Arial, sans-serif;
+}
+.airleft-text {
+  margin: 0;
+  padding: 0 0 15px;
+  color: #6f7585;
+  font-weight: 400;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  transform-origin: 51px 51px;
+  font-size: 14px;
+  line-height: 1.25;
+  font-family: "font1", "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    sans-serif;
+}
+.airsection1-right {
+  border-top: 1px solid #dedede;
+  margin: 16px 0 0;
+  padding: 16px 0;
+}
+.airright-title {
+  display: block;
+  margin: 0 24px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  font-family: "font600", "Inter Fallback: Arial", "Inter Fallback: Roboto",
+    Arial, Roboto, sans-serif;
+  color: #252422;
+}
+.airright-text {
+  margin: 0 24px;
+  display: block;
+  font-size: 16px;
+  line-height: 22px;
+}
+.airinfo {
+  font-family: "font1";
+  padding: 0 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.airinfo span {
+  margin-left: 5px;
+}
+.airsection-2-list {
+  padding: 0 0 16px 12px;
+  border-bottom: 1px solid #dedded;
+  margin-bottom: 16px;
+}
+.airsection-2-flx {
+  display: flex;
+  max-width: 298px;
+}
+.airsection-2 h2 {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 16px;
+  font-family: "font600";
+}
+.aircirclesvg.airs2 {
+  height: 54px;
+  width: 54px;
+}
+.airsection-2-text {
+  padding-right: 16px;
+  padding-left: 12px;
+}
+.airs2 {
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  display: block;
+  font-weight: 400;
+  color: #252422;
+}
+.airtext1 {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  color: #6f7585;
+}
+.airtext2 {
+  font-size: 13px;
+  color: #6f7585;
+}
+.airs2-container :last-child {
+  border-bottom: none;
+}
+.airsection-2 {
+  border-bottom: 1px solid #676767;
+}
+.aircontainer {
+  margin: 12px auto;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  grid-column-gap: 12px;
+  max-width: 1162px;
+}
+.aircirsmall {
+  stroke-width: 9px;
+}
+.airlgcir {
+  font-size: 44px;
+}
+
+@media (min-width: 1038px) {
+  .airs2-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .airflex {
+    display: flex;
+    padding-bottom: 26px;
+  }
+  .airsection1-right {
+    border-left: 1px solid #dedede;
+    border-top: none;
+    padding: 26px;
+    margin: 0 26px;
+  }
+
+  .airsection1-left {
+    padding-bottom: 26px;
+  }
+  .airvalue {
+    padding: 16px 0 0 20px;
+  }
+  .airright-title {
+    margin: 0 0 10px 0;
+  }
+  .airright-text {
+    margin: 0;
+  }
+  .airsection-2-list {
+    padding: 0 26px 18px;
+    margin-right: 6px;
+  }
+  .airsection-2-list:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+  .airsection-2 {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 675px) {
+  .aircontainer {
+    display: block;
+  }
+  .airside-ad {
+    display: none;
+  }
+}
+
+.air_pop_wrap {
+  position: relative;
+  display: inline-block;
+}
+.air_popup {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 40px;
+  z-index: 9999;
+  min-width: 450px;
+  background-color: #ffff;
+  border-radius: 6px;
+  box-shadow: 0 0 3px 2px #0003;
+  color: #2b2b2b;
+}
+.air_popup::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 90px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ffff;
+}
+.air_popup::after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 90px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+.air_popup_layout {
+  padding-right: 15px;
+  display: flex;
+  gap: 30px;
+}
+.air_pop1 {
+  padding: 4px 0 16px 16px;
+  margin: 0;
+  min-width: 100px;
+}
+.air_pop1 h4 {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",
+    Arial, sans-serif;
+  line-height: 1;
+}
+.air_pop1 ul {
+  margin: 0;
+  padding: 0;
+}
+.air_pop1 li {
+  font-size: 12px;
+  list-style: none;
+}
+.air_pop1 li div {
+  padding-right: 5px;
+  vertical-align: middle;
+}
+.air_dot {
+  display: inline-block;
+}
+.air_dot svg {
+  width: 10px;
+  height: 10px;
+  display: block;
+}
+.air_poptext {
+  white-space: nowrap;
+}
+.air_unorder li {
+  display: flex;
+  flex-direction: row;
+}
+.air_pop2 {
+  padding: 4px 16px 16px;
+  max-width: 350px;
+}
+.air_pop2_tit {
+  padding: 0 30px 10px 0;
+  font-size: 14px;
+  font-family: "font700", "Inter Fallback: Arial", "Inter Fallback: Roboto",
+    Arial, sans-serif;
+  line-height: 1;
+}
+.air_pop2_para {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.25;
+}
+.air_close_btn {
+  position: absolute;
+  right: 0;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+}
+.air-Infoicon {
+  width: 15px;
+  height: 15px;
+}
+.air_info_pop {
+  display: flex;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.airsection-2-contents {
+  padding-bottom: 24px;
+}
+
+/* allergyTracker style */
+
+.allergyheaderImg {
+  padding: 12px 40px;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+.allergyadImg {
+  display: block;
+  width: 100%;
+  max-width: 970px;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.allergygridMake {
+  margin: 12px auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 350px;
+  grid-column-gap: 12px;
+  max-width: 1162px;
+}
+.allergymain {
+  margin-left: 12px;
+  display: grid;
+  grid-column-end: 2;
+  grid-column-start: 1;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 12px;
+  grid-auto-rows: max-content;
+}
+.allergycontent {
+  grid-column: span 12;
+  width: 100%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -363,24 +800,24 @@
   background-clip: padding-box;
 }
 .leaflet-touch .leaflet-bar a:first-child {
-  border-radius: 25px 25px 0 0;
+  border-radius: 50% 50% 0 0 !important;
 }
 .leaflet-touch .leaflet-bar a:last-child {
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 50% 50% !important;
 }
 .leaflet-control-zoom-in {
   position: absolute;
   background: white;
   border: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  width: 40px;
-  height: 40px;
+  width: 42px !important;
+  height: 42px !important;
   font-size: 20px;
   line-height: 40px;
   text-align: center;
   color: #444;
   cursor: pointer;
-  top: 87px;
+  top: 88px;
   left: 12px;
 }
 .leaflet-control-zoom-out {
@@ -388,14 +825,14 @@
   background: white;
   border: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  width: 40px;
-  height: 40px;
+  width: 42px !important;
+  height: 42px !important;
   font-size: 20px;
   line-height: 40px;
   text-align: center;
   color: #444;
   cursor: pointer;
-  top: 140px;
+  top: 130px;
   left: 12px;
 }
 .leaflet-touch .leaflet-bar a {
@@ -567,12 +1004,13 @@
 .radar .show-menu {
   position: absolute;
   bottom: 108px;
-  right: 485px;
+  width: 128px;
+  right: 115px;
   z-index: 998;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 14px;
+  padding: 10px 8px;
   border: 2px solid blue;
   background-color: #fff;
   border-radius: 30px;
@@ -758,7 +1196,7 @@
   /* height: 60px; */
 }
 .radar-footer {
-  max-height: 500px;
+  max-height: 686px;
 }
 .radar .footer {
   width: 100%;
@@ -2632,35 +3070,9 @@ html {
   height: 100%;
   overflow-x: hidden;
 }
-
-.hourHeaderAddress {
-  /* padding-left: 16px;
-    padding-right: 16px; */
-  width: 100%;
-}
-.houraddress {
-  display: flex;
-  text-align: left;
-  border-radius: 8px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-  margin: 12px 0;
-  padding: 12px;
-}
-.hourLoca {
-  color: #252422;
-  font-family: light;
-  font-weight: 500;
-  font-size: 18px;
-}
-.locationImg {
-  width: 16px;
-  margin-right: 8px;
-}
 .hourmainContent {
-  display: block;
   position: relative;
+  display: flex;
   margin-left: 4px;
 }
 .hourlargeScreen {
@@ -2671,6 +3083,9 @@ html {
     grid-template-columns: minmax(0, 1fr) 350px;
     grid-column-gap: 12px; */
   max-width: 1162px;
+}
+.ad-container {
+  width: 400px;
 }
 .hourcontent {
   border-bottom: 1px solid #676767;
@@ -2720,6 +3135,9 @@ html {
   gap: 6px;
   flex: 1 1 160px;
 }
+.hoursunny {
+  width: 44px;
+}
 .hourperc {
   padding-right: 15px;
   flex: 0 0 54px;
@@ -2760,7 +3178,6 @@ html {
   width: 100%;
   color: rgb(37, 36, 34);
   font-size: 16px;
-  height: 30px;
 }
 .hoursummaryContent .times {
   flex: 0 0 80px;
@@ -2777,13 +3194,12 @@ html {
 }
 .hoursubtract,
 .houradd {
+  width: 18px;
+  height: 18px;
   margin-left: 6px;
 }
 .hoursubtract {
   display: none;
-}
-.hoursummaryContents .houradd {
-  display: block;
 }
 .hourdayPartDetails {
   margin-top: 10px;
@@ -2865,7 +3281,7 @@ html {
   z-index: 1;
 }
 .active {
-  border: 2px solid;
+  border: 2px solid #eb8532;
   font-weight: 700;
 }
 .hidden {
@@ -2900,7 +3316,7 @@ html {
   color: #fff;
   font-size: 13px;
   width: 50px;
-  height: 13px;
+  height: 30px;
   border-radius: 6px;
   padding: 8px 12px;
   text-align: center;
@@ -2984,10 +3400,10 @@ html {
     padding: 16px;
     box-sizing: border-box;
   }
-  .hourlargeScreen {
-    grid-template-columns: minmax(0, 17fr) minmax(0, 8fr);
-  }
   .hourweather {
+    display: none;
+  }
+  .ad-container {
     display: none;
   }
 }
@@ -3002,5 +3418,909 @@ html {
   }
   .hourlargeScreen {
     display: block;
+  }
+}
+/* 10DayPageStyles */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.outer {
+  display: flex;
+}
+.sideBar {
+  flex: 0 0 261px;
+  border-right: 1px solid #2524221a;
+}
+.mainAd {
+  height: 268px;
+  padding-bottom: 12px;
+  background-color: #f2f2f2;
+}
+.location-ten {
+  display: none;
+}
+/* .adv1, .path-blank{
+    display: none;
+} 
+.location-ten{
+    display: block;
+    padding: 0 16px;
+}
+.location-btn{
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.location-img{
+    margin-right: 8px;
+}*/
+.marginBar {
+  max-width: 1162px;
+  width: 100%;
+  margin: 0 auto;
+}
+.radar-container {
+  width: auto;
+}
+.content-ten {
+  border-bottom: 1px solid #676767;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.title-ten h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1.08em;
+  font-weight: 400;
+}
+.title-ten h1 strong {
+  font-weight: 700 !important;
+}
+.place-ten {
+  font-size: 16px;
+  padding-left: 4px;
+}
+.timeDay {
+  padding: 0 0 16px;
+  font-size: 14px;
+  color: #252422;
+  opacity: 0.65;
+}
+.cards-content {
+  display: none;
+}
+.todayTen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+.todayTen h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+.subtract-img {
+  margin-left: 6px;
+  width: 18px;
+}
+.part-title {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #252422;
+}
+.brief {
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  padding-bottom: 5px;
+}
+.temp-bar span {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.sun-img,
+.moon-img {
+  width: 44px;
+  padding-left: 10px;
+}
+.humidity-wind {
+  margin-left: auto;
+}
+.humidity,
+.wind {
+  display: flex;
+  font-size: 13px;
+  line-height: 19.5px;
+  overflow-wrap: break-word;
+  padding-top: 5px;
+}
+.rain-drop-img,
+.wind-img {
+  height: 18px;
+  width: 18px;
+}
+.rain,
+.windSpeed {
+  padding-left: 6px;
+  font-size: 14px;
+}
+.explanation {
+  padding-right: 34px;
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.15;
+  min-height: 32px;
+}
+.measurements {
+  margin-bottom: 16px;
+  background: #e8e8e8;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 24px;
+}
+.day-section2 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.night-section2 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.weatherDay {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+  height: unset !important;
+}
+.weatherDay li {
+  display: flex;
+  flex-grow: 1;
+  list-style: none;
+  align-items: flex-start;
+  width: 50%;
+}
+.weatherDay li:not(:nth-child(-n + 2)) {
+  border-top: 1px solid #dedede;
+  padding: 15px 0 0;
+  margin: 15px 0 0;
+}
+.icons {
+  margin-right: 10px;
+  width: 24px;
+  color: #252422;
+}
+.details-table {
+  line-height: 1.2;
+  width: calc(100% - 34px);
+}
+.r1 {
+  display: block;
+  font-size: 16px;
+  overflow-wrap: break-word;
+}
+.r2 {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+}
+.waxing {
+  display: flex;
+  align-items: center;
+  width: 19.2px !important;
+}
+.eachDayBar {
+  padding: 4px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.eachDayBar li {
+  padding: 4px 0;
+  list-style: none;
+}
+.eachDay {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+}
+.date {
+  flex: 0 0 80px;
+  padding-right: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+.eachDay-img {
+  display: flex;
+  align-items: center;
+  flex: 1 1 160px;
+  padding-right: 6px;
+  margin: 0;
+  justify-content: flex-start;
+  order: 3;
+}
+.eachDay-txt {
+  padding-left: 13px;
+  word-break: break-word;
+}
+.degrees {
+  display: flex;
+  align-items: center;
+  order: 2;
+  flex: 0 0.5 94px;
+  padding: 0 0 0 6px;
+  font-size: 18px;
+  font-weight: 700 !important;
+}
+.night-deg {
+  margin-left: 2px;
+  font-weight: 500;
+}
+.humid {
+  display: flex;
+  align-items: center;
+  order: 4;
+  padding-right: 6px;
+  flex: 0 0 54px;
+}
+.eachDay-rain-drop {
+  margin-right: 3px;
+}
+.percent {
+  font-size: 16px;
+  font-weight: 500 !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.humidity,
+.wind {
+  display: flex;
+  font-size: 13px;
+  line-height: 19.5px;
+  overflow-wrap: break-word;
+  padding-top: 5px;
+}
+.rain-drop-img,
+.wind-img {
+  height: 18px;
+  width: 18px;
+}
+.rain,
+.windSpeed {
+  padding-left: 6px;
+  font-size: 14px;
+}
+.plus-img {
+  margin-left: 6px;
+}
+.radar-container {
+  padding: 0 16px 24px;
+}
+.radar-header {
+  position: relative;
+  padding: 0 0 16px;
+  display: flex;
+  align-items: center;
+}
+.radar-header h2 {
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+}
+.TenDayRadar {
+  position: relative;
+  border-bottom: 1px solid #676767;
+  margin-bottom: 24px;
+  max-width: 788px;
+}
+.Radar-img {
+  background-image: url("https://api.weather.com/v2/maps/dynamic?geocode=28.60,77.20&h=320&w=568&lod=9&product=twcRadarHcMosaic&map=light&format=jpg&language=en-IN&apiKey=71f92ea9dd2f4790b92ea9dd2f779061&a=0&region=in");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 1;
+  height: 275px;
+  position: relative;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.location-point {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: #0000004d;
+  left: calc(50% - 15px);
+  top: calc(50% - 30px);
+  border-radius: 30px;
+}
+.location-dot {
+  background: #1b4de4;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+}
+.now-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  left: 3%;
+  top: 5%;
+  background: #252422;
+  border-radius: 6px;
+  padding: 8px 12px !important;
+  color: white;
+  min-width: 50px;
+  width: 74px;
+  height: 29px;
+}
+.map-icon {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  right: 3%;
+  top: 5%;
+  z-index: 2;
+  width: 75px;
+  height: auto;
+  filter: drop-shadow(0 0 2px black);
+  opacity: 0.75px;
+  fill: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  .mainAd {
+    display: none;
+  }
+  .marginBar {
+    margin: 12px auto 0 auto;
+  }
+  .mainBar {
+    display: block;
+  }
+  .title-ten h1 {
+    font-size: 20px;
+    line-height: 1;
+    padding: 16px 0 8px;
+  }
+  .place-ten {
+    font-size: 14px;
+  }
+  .todayTen {
+    height: 30px;
+  }
+  .day-night-parts {
+    display: block;
+  }
+  .rain,
+  .windSpeed {
+    line-height: 1.3;
+  }
+  .weatherDay li:not(:nth-child(-n + 2)) {
+    padding: 8px 0 0;
+    margin: 8px 0 0;
+  }
+  .icons {
+    width: 16px;
+  }
+  .r1 {
+    font-size: 12px;
+  }
+  .r2 {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .eachDay {
+    font-size: 14px;
+  }
+  .date {
+    flex: 0 0 65px;
+  }
+  .eachDay-img {
+    justify-content: center;
+    flex: 1 1 auto;
+    margin: 0 6px 0 8px;
+  }
+  .sun-img,
+  .moon-img {
+    margin: auto;
+    padding: 0;
+  }
+  .eachDay-txt {
+    display: none;
+  }
+  .degrees {
+    flex: 0 0.5 60px;
+    padding: 0 0 0 8px;
+    font-size: 16px;
+  }
+  .night-deg {
+    font-size: 14px;
+  }
+  .humid {
+    padding: 0 8px;
+  }
+  .eachDay-rain-drop {
+    margin-right: 1px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .marginBar {
+    margin: 12px auto 0 auto;
+  }
+}
+@media screen and (min-width: 1025px) {
+  /* .adv1, .path-blank{
+        display: block;
+    } 
+    .location-ten{
+        display: none;
+    }*/
+  .marginBar {
+    margin: 12px auto 0 auto;
+  }
+  .mainBar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 350px;
+    grid-column-gap: 12px;
+    padding: 0 16px;
+  }
+  .day-night-parts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 22px;
+  }
+}
+@media screen and (min-width: 1241px) {
+  .Radar-img {
+    height: 400px;
+  }
+}
+/* AllergyTracker styles */
+
+.allergyheadClass {
+  padding-bottom: 0px;
+}
+.allergyheading {
+  margin: 0;
+  line-height: 1.2;
+  align-items: center;
+  color: #252422;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.allergyparaClass {
+  margin: 0;
+  padding: 10px 16px 0;
+  color: #2b2b2b;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.allergyflexThree {
+  display: flex;
+}
+.allergyslipped {
+  padding: 36px 0 36px 36px;
+  width: 100%;
+}
+.allergysingleItem {
+  border-right: 1px solid #dedede;
+  padding-right: 36px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.allergysingleItem2 {
+  padding-right: 36px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.allergyfirstHead {
+  padding-top: 20px;
+  order: 1;
+  margin: 0;
+  font-size: 1.125rem;
+  width: 100%;
+  line-height: 1.5;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.allergyimgClass {
+  order: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  line-height: 1.5;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.allergytreeImg {
+  border-style: none;
+  max-height: 80px;
+  max-width: 80px;
+}
+.allergythreeText {
+  padding-top: 17px;
+  order: 2;
+  width: 100%;
+}
+.allergyulCls {
+  margin: 0;
+  padding: 0;
+}
+.allergyliCls {
+  list-style: none;
+  line-height: 1.5;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.allergydotImg {
+  display: inline-flex;
+  align-items: center;
+  padding-right: 7px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+.allergydotImg svg {
+  width: 0.6875rem;
+  height: 0.6875rem;
+  flex-shrink: 0;
+}
+.allergydiscWrite {
+  padding: 0 16px;
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex-direction: row-reverse;
+}
+
+.allergybtnDis {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  min-width: 100px;
+}
+.allergyimgSpan {
+  display: contents;
+}
+
+.allergyspanWrite {
+  margin-left: 5px;
+  text-align: left;
+  color: #2b2b2b;
+}
+
+.allergybeforeHead {
+  padding: 16px 0 0 16px;
+  align-items: center;
+  display: inline-flex;
+}
+
+.allergyHeaad2 {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: #252422;
+}
+
+.allergysecCont {
+  margin-top: 28px;
+  margin-left: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.allergyeachOne {
+  padding: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  align-items: flex-start;
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.allergysmImg {
+  margin-right: 25px;
+  height: 56px;
+  width: 56px;
+}
+
+.allergyWriting {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+}
+
+.allergyspan1 {
+  font-weight: 700;
+  font-size: 0.875rem;
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  color: #252422;
+}
+
+.allergyspan2 {
+  font-family: Inter, "Inter Fallback: Arial", "Inter Fallback: Roboto", Arial,
+    Roboto, sans-serif;
+  font-size: 0.875rem;
+  color: #252422;
+}
+.allergysideAd {
+  padding: 0 0 24px 0;
+  height: 620px;
+  background: #f2f2f2;
+  /* border-bottom: 1px solid #676767; */
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  position: relative;
+}
+.allergysidead {
+  height: 600px;
+  width: 300px;
+  margin-left: 26px;
+  margin-top: 16px;
+}
+.allergysideAd2 {
+  display: none;
+}
+.todayPollenCard {
+  display: none;
+  padding: 16px;
+  /* border-top: 1px solid #676767; */
+  margin-top: 24px;
+  font-family: Inter, Arial, sans-serif;
+}
+.todayPollenHeading {
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #252422;
+}
+.todayPollenText,
+.todayPollenFooter {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #2b2b2b;
+}
+.todayPollenValue {
+  margin: 16px 0 4px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #252422;
+}
+.todayPollenUnit {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 991px) {
+  .allergyflexThree {
+    flex-wrap: wrap;
+  }
+  .allergysingleItem {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 20px;
+    border-right: none;
+  }
+  .allergyfirstHead {
+    order: 0;
+    padding: 0;
+  }
+  .allergyslipped {
+    width: 50%;
+    padding: 20px 0 20px 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .allergyflexThree {
+    flex-wrap: wrap;
+  }
+  .allergysingleItem {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 20px;
+    border-right: none;
+  }
+  .allergyfirstHead {
+    order: 0;
+    padding: 0;
+  }
+  .allergyeachOne {
+    width: 100%;
+  }
+  .allergyslipped {
+    width: 50%;
+    padding: 20px 0 20px 20px;
+  }
+  .allergysideAd2 {
+    display: block;
+  }
+}
+@media screen and (max-width: 425px) {
+  .allergyflexThree {
+    flex-direction: column;
+  }
+  .allergyslipped {
+    width: 100%;
+    padding: 12px 16px;
+  }
+  .allergysingleItem,
+  .allergysingleItem2 {
+    border-right: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .allergytreeImg {
+    max-width: 70px;
+    max-height: 70px;
+  }
+  .allergyfirstHead {
+    order: -1;
+    width: 100%;
+    padding-top: 0;
+    margin-top: 8px;
+  }
+  .allergyimgClass {
+    order: 0;
+    width: 90px;
+    flex: 0 0 90px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .allergythreeText {
+    order: 1;
+    width: 100px;
+    padding-top: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+  .allergyliCls {
+    margin: 6px 0;
+  }
+
+  .allergydotImg {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .allergygridMake {
+    /* grid-template-columns: none; */
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .allergyparaClass {
+    width: 400px;
+  }
+  .allergysideAd2 {
+    display: block;
+  }
+}
+@media screen and (max-width: 990px) {
+  .allergysideAd {
+    display: none;
+  }
+  .allergygridMake {
+    grid-template-columns: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: -21px;
+    padding-bottom: 21px;
+    max-width: 80%;
+    margin: auto;
+  }
+  .allergyflexThree {
+    flex-direction: column;
+  }
+  .allergyslipped {
+    width: 100%;
+    padding: 12px 16px;
+  }
+  .allergysingleItem,
+  .allergysingleItem2 {
+    border-right: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20%;
+  }
+  .allergytreeImg {
+    max-width: 70px;
+    max-height: 70px;
+    margin: 0;
+    margin-left: 60%;
+  }
+  .allergyfirstHead {
+    order: -1;
+    width: 100%;
+    padding-top: 0;
+    margin-top: 8px;
+  }
+  .allergyimgClass {
+    order: 0;
+    width: 90px;
+    flex: 0 0 90px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .allergythreeText {
+    order: 1;
+    width: 100px;
+    padding-top: 0;
+    padding-left: 0;
+    box-sizing: border-box;
+  }
+  .allergyliCls {
+    margin: 6px 0;
+  }
+
+  .allergydotImg {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .allergyparaClass {
+    width: 90%;
   }
 }

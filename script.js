@@ -1,52 +1,430 @@
+const city = "kollam";
+const token = "bd01206366680e2361b32e378d5408128ab4be90";
+fetch(`https://api.waqi.info/feed/${city}/?token=${token}`)
+  .then((response) => response.json())
+  .then((data) => {
+    const result = data.data;
+    document.getElementById("city_name").textContent = `- ${result.city.name}`;
+    document.getElementById("no2").textContent = result.iaqi.no2?.v ?? "--";
+    document.getElementById("co").textContent = result.iaqi.co?.v ?? "--";
+    document.getElementById("pm25").textContent = result.iaqi.pm25?.v ?? "--";
+    document.getElementById("pm10").textContent = result.iaqi.pm10?.v ?? "--";
+    document.getElementById("so2").textContent = result.iaqi.so2?.v ?? "--";
+    document.getElementById("o3").textContent = result.iaqi.o3?.v ?? "--";
+    document.getElementById("co_status").textContent = getstatus(
+      "co",
+      result.iaqi.co?.v ?? "--"
+    );
+    document.getElementById("no_status").textContent = getstatus(
+      "no2",
+      result.iaqi.no2?.v ?? "--"
+    );
+    document.getElementById("so_status").textContent = getstatus(
+      "so2",
+      result.iaqi.so2?.v ?? "--"
+    );
+    document.getElementById("pm25_status").textContent = getstatus(
+      "pm25",
+      result.iaqi.pm25?.v ?? "--"
+    );
+    document.getElementById("o3_status").textContent = getstatus(
+      "o3",
+      result.iaqi.o3?.v ?? "--"
+    );
+    document.getElementById("pm10_status").textContent = getstatus(
+      "pm10",
+      result.iaqi.pm10?.v ?? "--"
+    );
+    document.getElementById("pm25_mg").textContent =
+      pm25Convert(result.iaqi.pm25?.v ?? "--") + " µg/m3";
+    document.getElementById("pm10_mg").textContent =
+      pm10Convert(result.iaqi.pm10?.v ?? "--") + " µg/m3";
+    document.getElementById("no2_mg").textContent =
+      no2Convert(result.iaqi.no2?.v ?? "--") + " µg/m3";
+    document.getElementById("so2_mg").textContent =
+      so2Convert(result.iaqi.so2?.v ?? "--") + " µg/m3";
+    document.getElementById("o3_mg").textContent =
+      o3Convert(result.iaqi.o3?.v ?? "--") + " µg/m3";
+    document.getElementById("co_mg").textContent =
+      coConvert(result.iaqi.co?.v ?? "--") + " mg/m³";
+    strockFill(
+      "pm25_don",
+      result.iaqi.pm25?.v ?? 0,
+      getstatus("pm25", result.iaqi.pm25?.v)
+    );
+    strockFill(
+      "pm10_don",
+      result.iaqi.pm10?.v ?? 0,
+      getstatus("pm10", result.iaqi.pm10?.v)
+    );
+    strockFill(
+      "co_don",
+      result.iaqi.co?.v ?? 0,
+      getstatus("co", result.iaqi.co?.v)
+    );
+    strockFill(
+      "o3_don",
+      result.iaqi.o3?.v ?? 0,
+      getstatus("o3", result.iaqi.o3?.v)
+    );
+    strockFill(
+      "so2_don",
+      result.iaqi.so2?.v ?? 0,
+      getstatus("so2", result.iaqi.so2?.v)
+    );
+    strockFill(
+      "no_don",
+      result.iaqi.no2?.v ?? 0,
+      getstatus("no2", result.iaqi.no2?.v)
+    );
+    const primaryKey = toPrimaryPollutant(result.iaqi);
+    const primaryValue = primaryName(primaryKey);
+    document.getElementById("Primary_name").textContent = primaryValue;
+    document.getElementById("primary_desc").textContent = primaryKey;
+    const maxaqi = result.iaqi[primaryKey]?.v || 0;
+    const maxStatus = getstatus(primaryKey, maxaqi);
+    document.getElementById("aqi").textContent = maxaqi;
+    document.getElementById("aqi_air").textContent = getstatus(
+      primaryKey,
+      maxaqi
+    );
+    document.getElementById("air_para").textContent = getstatus("para", maxaqi);
+    strockFill("aqi_don", maxaqi, maxStatus);
+  });
+function getstatus(type, value) {
+  if (value === "--" || value === 0) return "--";
+  switch (type) {
+    case "pm25":
+      if (value <= 30) return "Good";
+      if (value <= 60) return "Satisfactory";
+      if (value <= 90) return "Moderate";
+      if (value <= 120) return "Poor";
+      return "Very poor";
+    case "pm10":
+      if (value <= 50) return "Good";
+      if (value <= 100) return "Satisfactory";
+      if (value <= 250) return "Moderate";
+      if (value <= 350) return "Poor";
+      return "Very poor";
+    case "co":
+      if (value <= 1.0) return "Good";
+      if (value <= 2.0) return "Satisfactory";
+      if (value <= 10) return "Moderate";
+      if (value <= 17) return "Poor";
+      return "Very poor";
+    case "o3":
+      if (value <= 50) return "Good";
+      if (value <= 100) return "Satisfactory";
+      if (value <= 168) return "Moderate";
+      if (value <= 208) return "Poor";
+      return "Very poor";
+    case "so2":
+      if (value <= 40) return "Good";
+      if (value <= 80) return "Satisfactory";
+      if (value <= 380) return "Moderate";
+      if (value <= 800) return "Poor";
+      return "Very poor";
+    case "no2":
+      if (value <= 40) return "Good";
+      if (value <= 80) return "Satisfactory";
+      if (value <= 180) return "Moderate";
+      if (value <= 280) return "Poor";
+      return "Very poor";
+    case "aqi":
+      if (value <= 50) return "Good";
+      if (value <= 100) return "Satisfactory";
+      if (value <= 200) return "Moderate";
+      if (value <= 300) return "Poor";
+      if (value <= 400) return "Very Poor";
+      if (value <= 500) return "Severe";
+    case "para":
+      if (value <= 50)
+        return "Air quality is considered satisfactory,and air pollution poses little or no risk.People can enjoy outsoor activities without any heath concerns.";
+      if (value <= 100)
+        return "May cause minor breathing discomfort to sensitive people.Most individuals can carry on with their daily outdoor activities without issues";
+      if (value <= 200)
+        return "May cause breathing discomfort to people with lung disease such as asthma,and discomfort to people with heart disease,children,and older adults";
+      if (value <= 300)
+        return "May cause respiratory illness for people with prolonged exposure.People with heart or lung diseases,the elderly,and children should avoid prolonged outdoor exposure.";
+      if (value <= 400)
+        return "May cause respiratory illness for people with prolonged exposure.Effect may be more pronounces in people with lung or heart diseases.";
+      if (value <= 500)
+        return "May cause serious respiratory effect even on healthy people.Everyone should avaoid all physical outdoor activites.Perople with existing health conditions should remain indoors.";
+    default:
+      return "--";
+  }
+}
+function pm25Convert(aqi) {
+  if (aqi === "--") return "--";
+  const r = [
+    [0, 50, 0, 12],
+    [51, 100, 12.1, 35.4],
+    [101, 150, 35.5, 55.4],
+    [151, 200, 55.5, 150.4],
+    [201, 300, 150.5, 250.4],
+    [301, 400, 250.5, 350.4],
+    [401, 500, 350.5, 500.4],
+  ];
+  return convert(aqi, r);
+}
+function pm10Convert(aqi) {
+  if (aqi === "--") return "--";
+  const r = [
+    [0, 50, 0, 54],
+    [51, 100, 55, 154],
+    [101, 150, 155, 254],
+    [151, 200, 255, 354],
+    [201, 300, 355, 424],
+    [301, 400, 425, 504],
+    [401, 500, 505, 604],
+  ];
+  return convert(aqi, r);
+}
+function no2Convert(aqi) {
+  if (aqi === "--") return "--";
+  const r = [
+    [0, 50, 0, 40],
+    [51, 100, 41, 80],
+    [101, 150, 81, 180],
+    [151, 200, 181, 280],
+    [201, 300, 281, 400],
+    [301, 400, 401, 600],
+    [401, 500, 601, 1000],
+  ];
+  return convert(aqi, r);
+}
+function so2Convert(aqi) {
+  if (aqi === "--") return "--";
+  const r = [
+    [0, 50, 0, 40],
+    [51, 100, 41, 80],
+    [101, 150, 81, 380],
+    [151, 200, 381, 800],
+    [201, 300, 801, 1600],
+  ];
+  return convert(aqi, r);
+}
+function o3Convert(aqi) {
+  if (aqi === "--") return "--";
+  const r = [
+    [0, 50, 0, 50],
+    [51, 100, 51, 100],
+    [101, 150, 101, 168],
+    [151, 200, 169, 208],
+    [201, 300, 209, 748],
+  ];
+  return convert(aqi, r);
+}
+function coConvert(aqi) {
+  if (aqi === "--") return "--";
+  const r = [
+    [0, 50, 0, 1.0],
+    [51, 100, 1.1, 2.0],
+    [101, 150, 2.1, 10],
+    [151, 200, 10.1, 17],
+    [201, 300, 17.1, 34],
+  ];
+  return convert(aqi, r);
+}
+function convert(aqi, range) {
+  for (let [al, ah, cl, ch] of range) {
+    if (aqi >= al && aqi <= ah) {
+      const val = ((aqi - al) / (ah - al)) * (ch - cl) + cl;
+      return val.toFixed(2);
+    }
+  }
+  return "--";
+}
+function strockFill(cirId, aqi, status, max = 500) {
+  const circle = document.getElementById(cirId);
+  if (!circle || aqi === "--") return;
+  const total = 305;
+  const percent = Math.min(aqi / max, 1);
+  const offset = total * (1 - percent);
+  circle.style.strokeDashoffset = offset;
+  if (status === "Good") circle.style.stroke = "#01C966";
+  else if (status === "Satisfactory") circle.style.stroke = "#6AE261";
+  else if (status === "Moderate") circle.style.stroke = "#FBFF26";
+  else if (status === "Poor") circle.style.stroke = "#FF0000";
+  else circle.style.stroke = "#F70004";
+}
+// primary pollutant
+function toPrimaryPollutant(iaqi) {
+  const pollutant = ["pm25", "pm10", "no2", "so2", "co", "o3"];
+  let primary = "";
+  let maxVal = -1;
+  for (let key of pollutant) {
+    const val = iaqi[key]?.v;
+    if (val !== undefined && val > maxVal) {
+      maxVal = val;
+      primary = key;
+    }
+  }
+  return primary;
+}
+function primaryName(name) {
+  const names = {
+    pm25: "PM2.5 (Fine Particulate Matter)",
+    pm10: "PM10 (Coarse Particulate Matter)",
+    no2: "NO₂ (Nitrogen Dioxide)",
+    so2: "SO₂ (Sulphur Dioxide)",
+    co: "CO (Carbon Monoxide)",
+    o3: "O₃ (Ozone)",
+  };
+  return names[name] || "Unknown";
+}
+let infoBtn = document.querySelectorAll(".air_info_pop");
+let popupContainer = document.querySelectorAll(".air_popup");
+let air_info = document.querySelectorAll(".air_info_pop");
+let closeBtn = document.querySelectorAll(".air_close_btn");
+infoBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    popupContainer[index].style.display = "block";
+    infoBtn[index].style.border = "2px solid #1B4DE4";
+  });
+});
+closeBtn.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    popupContainer[index].style.display = "none";
+    infoBtn[index].style.border = "none";
+  });
+});
+window.addEventListener("scroll", () => {
+  popupContainer.forEach((cont, index) => {
+    cont.style.display = "none";
+    infoBtn[index].style.border = "none";
+  });
+});
+
+// primary poluttant
 const mainBody = document.querySelector(".main-without-footer");
 const adBlock = document.querySelector(".adv1");
 const footerSection = document.querySelectorAll(".footer");
 
-const todayButton = document.querySelector('.today-with-content')
+const todayButton = document.querySelector(".today-with-content");
 const hourlySection = document.querySelector(".hourhourly");
 const hourlyButton = document.querySelector(".hourly-with-content");
+
+const tenDayButton = document.querySelector(".day-with-content");
+const tenDaySection = document.querySelector(".ten-day");
 
 const monthlySection = document.querySelector(".monthly");
 const monthlyButton = document.querySelector(".monthly-with-content");
 
 const radarButton = document.querySelector(".radar-with-content");
 const radarSection = document.querySelector(".radar");
-const radarFooterSection = document.querySelector(".radar-footer");
+
+const allergySection = document.querySelector(".allergy-tracker");
+const allergyButton = document.querySelector(".allergy-with-contents");
+
+const airQualitySection = document.querySelector("section.air-quality-index");
+const airQualityBtn = document.querySelector(".air-quality-with-contents");
+
+const toRadar = document.querySelectorAll(".to-radar");
 
 hourlySection.classList.add("hide");
+tenDaySection.classList.add("hide");
 monthlySection.classList.add("hide");
 radarSection.classList.add("hide");
+allergySection.classList.add("hide");
+airQualitySection.classList.add("hide");
 
-todayButton.addEventListener('click',()=>{
-mainBody.classList.remove('hide')
-hourlySection.classList.add("hide");
-monthlySection.classList.add("hide");
-radarSection.classList.add("hide");
-})
+todayButton.addEventListener("click", () => {
+  mainBody.classList.remove("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+});
 
 hourlyButton.addEventListener("click", () => {
   mainBody.classList.add("hide");
   monthlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
   radarSection.classList.add("hide");
   hourlySection.classList.remove("hide");
   footerSection[1].classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+});
+
+tenDayButton.addEventListener("click", () => {
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  tenDaySection.classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
 });
 
 monthlyButton.addEventListener("click", () => {
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
   radarSection.classList.add("hide");
+  tenDaySection.classList.add("hide");
   monthlySection.classList.remove("hide");
   footerSection[1].classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
 });
-
-radarButton.addEventListener("click", () => {
+function toRadarSection() {
   adBlock.classList.add("hide");
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
   monthlySection.classList.add("hide");
   footerSection[1].classList.add("hide");
   radarSection.classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+}
+
+radarButton.addEventListener("click", () => {
+  toRadarSection();
+});
+
+toRadar[0].addEventListener("click", () => {
+  toRadarSection();
+});
+
+toRadar[1].addEventListener("click", () => {
+  toRadarSection();
+});
+
+toRadar[2].addEventListener("click", () => {
+  toRadarSection();
+});
+
+allergyButton.addEventListener("click", () => {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  footerSection[1].classList.remove("hide");
+  airQualitySection.classList.add("hide");
+  allergySection.classList.remove("hide");
+});
+
+airQualityBtn.addEventListener("click", () => {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  allergySection.classList.add("hide");
+  footerSection[1].classList.remove("hide");
+  airQualitySection.classList.remove("hide");
 });
 
 // side-pop-section
@@ -117,7 +495,6 @@ let monthArray = [
 let i;
 calendar_next.addEventListener("click", () => {
   if (Number(year_name.value) > 0) {
-    console.log(Number(year_name.value));
     for (i = 0; i < monthArray.length; i++) {
       if (monthArray[i] === month_name.value) {
         break;
@@ -173,7 +550,6 @@ calendar_previous.addEventListener("click", () => {
 });
 
 month_name.addEventListener("input", () => {
-  console.log(month_name.value);
   //   console.log(calendar_next.textContent);
 
   for (let i = 0; i < monthArray.length; i++) {
@@ -232,7 +608,7 @@ function success(pos) {
   circle = L.circle([lat, lng], { radius: accuracy }).addTo(map);
 
   if (!zoomed) {
-    Zoomed = map.fitBounds(circle.getBounds());
+    zoomed = map.fitBounds(circle.getBounds());
     map.setZoom(map.getZoom() - 6);
   }
   map.setView([lat, lng]);
@@ -560,7 +936,9 @@ fetch(url)
                       </svg>
                       <div class="hourfield">
                         <span class="hourfeelsLike">Wind</span>
-                        <p class="hourtempValue">${hrs.wind_dir} ${Math.round(hrs.wind_kph)}</p>
+                        <p class="hourtempValue">${hrs.wind_dir} ${Math.round(
+          hrs.wind_kph
+        )}</p>
                       </div>
                     </li>
                     <li class="hourlists none">
@@ -828,7 +1206,6 @@ const main = document.querySelector(".main-body");
 main.addEventListener(
   "click",
   (event) => {
-    console.log(event.target);
     if (event.target !== airbtn) {
       airbtn.style.border = "none";
     }
@@ -1051,3 +1428,407 @@ cbtn.addEventListener("click",()=>{
   spop.classList.add("hide");
   sso.classList.add("hide");
 })
+// 10DayPageScript
+function weatherDetails(id, obj, data) {
+  const days = data.forecast.forecastday;
+  const d = days[id];
+  const sunset = d.astro.sunset.split(" ")[0];
+  const moonrise = d.astro.moonset.split(" ")[0];
+
+  const cardsContent = document.createElement("div");
+  cardsContent.id = `${id}-card`;
+  cardsContent.style.display = "none";
+
+  let date = new Date(d.date);
+
+  cardsContent.innerHTML = ` 
+        <div class="todayTen" id="${id}-cls">
+            <h2 class="cards-date">${
+              id === 0
+                ? data.current.is_day === 1
+                  ? "Today"
+                  : "Tonight"
+                : date.toLocaleString("en-US", { weekday: "short" }) +
+                  " " +
+                  date.getDate()
+            }</h2>
+            <svg width="24" name="subtract" class="subtract-img" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                <path d="M15 9.875H5v1.25h10v-1.25Z" fill="currentColor"></path>
+            </svg>
+        </div>
+        <div class="day-night-parts">
+        <div class="day-section1 day-${id}">
+            <h2 class="part-title">Day</h2>
+            <div class="brief">
+                <div class="temp-bar">
+                    <span class="temp">${obj.dayTemp}°</span>
+                </div>
+
+                <div class="sun">
+                    <img src= 'https:${
+                      id === 0 ? data.current.condition.icon : obj.dayIcon
+                    }' class="sun-img"/>
+                </div>
+
+                <div class="humidity-wind">
+                    <div class="humidity">
+                        <svg name="precip-rain" class="rain-drop-img" aria-label="Chance of Rain" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.025 16.35A5.633 5.633 0 0 0 10 18a5.633 5.633 0 0 0 5.625-5.625 6.29 6.29 0 0 0-.952-3.13L10.53 2.649a.65.65 0 0 0-1.06 0L5.31 9.278c-.578.932-.9 2-.934 3.097a5.632 5.632 0 0 0 1.65 3.976Zm.361-6.44L10 4.155l3.595 5.723c.475.75.744 1.61.78 2.497a4.375 4.375 0 1 1-8.75 0 4.986 4.986 0 0 1 .761-2.465ZM10 14.25v1.25a3.29 3.29 0 0 0 3.125-3.125h-1.25A2.06 2.06 0 0 1 10 14.25Z" fill="currentColor"></path>
+                        </svg>
+                        <span class="rain">${d.day.daily_chance_of_rain}%</span>
+                    </div>
+
+                    <div class="wind">
+                        <svg width="42" name="wind" class="wind-img" aria-label="Wind" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.875h8.125A3.125 3.125 0 1 0 10 6.75h1.25a1.875 1.875 0 1 1 1.875 1.875H5v1.25Zm7.166 7.209a3.125 3.125 0 1 0 2.209-5.334H2.5V13h11.875a1.875 1.875 0 1 1-1.875 1.875h-1.25c0 .829.33 1.623.916 2.209Z" fill="currentColor"></path>
+                        </svg>
+                        <span class="windSpeed">
+                            <span>${data.current.wind_dir} </span>
+                            <span>${Math.round(d.day.maxwind_kph)} </span>
+                            <span>km/h</span>
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+            <p class="explanation">${
+              id === 0 ? data.current.condition.text : obj.dayText
+            }. ${
+    obj.dayTemp >= 20
+      ? "High " + obj.dayTemp + "°C"
+      : "Low " + obj.dayTemp + "°C"
+  }. Winds ${data.current.wind_dir} at ${d.day.maxwind_kph} km/h.</p>
+        </div>
+        <div class="day-section2 measurements day-${id}">
+            <ul class="weatherDay">
+                <li>
+                    <svg width="24" name="humidity" class="drop icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <path d="M14.673 9.246 10.53 2.648a.65.65 0 0 0-1.06 0l-4.16 6.63c-.578.932-.9 2-.934 3.097a5.625 5.625 0 1 0 11.25 0 6.29 6.29 0 0 0-.952-3.13ZM10 16.75a4.38 4.38 0 0 1-4.375-4.375 4.986 4.986 0 0 1 .761-2.465l.585-.93 6.296 6.296A4.359 4.359 0 0 1 10 16.75Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="details-table">
+                        <span class="r1">Humidity</span>
+                        <span class="r2">${d.day.avghumidity}%</span>
+                    </div>
+                </li>
+                <li>
+                    <svg width="24" name="uv" class="uv icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <path d="m10 4.195 1.09 1.833.49.822.92-.257 1.95-.544L13.908 8l-.257.92.822.49 1.833 1.09-1.833 1.09-.822.489.257.921.544 1.95-1.95-.543-.922-.257-.489.822L10 16.805l-1.09-1.833-.49-.822-.92.257-1.95.544L6.093 13l.257-.921-.822-.489-1.833-1.09 1.833-1.09.822-.49L6.093 8l-.544-1.95 1.951.543.921.257.49-.822L10 4.195Zm0-2.445L7.835 5.389 3.75 4.25l1.139 4.085L1.25 10.5l3.639 2.164L3.75 16.75l4.085-1.139L10 19.25l2.165-3.639 4.085 1.139-1.139-4.086L18.75 10.5l-3.639-2.165L16.25 4.25l-4.085 1.139L10 1.75Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="details-table">
+                        <span class="r1">UV Index</span>
+                        <span class="r2">${d.day.uv} of 11</span>
+                    </div>
+                </li>
+                <li>
+                    <svg width="24" name="sunrise" class="rise icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.875 6.125 10 3l3.125 3.125-.881.881-1.619-1.612v4.481h-1.25V5.394L7.756 7.006l-.881-.881Zm8.87 2.746-2.191 2.191.884.884 2.19-2.191-.883-.884ZM10 13a2.503 2.503 0 0 1 2.5 2.5h1.25a3.75 3.75 0 0 0-7.5 0H7.5A2.503 2.503 0 0 1 10 13Zm8.75 4.375H1.25v1.25h17.5v-1.25Zm-3.125-3.125h3.125v1.25h-3.125v-1.25ZM4.255 8.871l-.884.884 2.191 2.191.884-.884-2.191-2.19ZM1.25 14.25h3.125v1.25H1.25v-1.25Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="details-table">
+                        <span class="r1">Sunrise</span>
+                        <span class="r2">${d.astro.sunrise.split(" ")[0]}</span>
+                    </div>
+                </li>
+                <li>
+                    <svg width="24" name="sunset" class="set icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="m10.625 8.11 1.619-1.613.881.88L10 10.504 6.875 7.378l.881-.881 1.619 1.612V3.003h1.25v5.106Zm5.12.764-2.191 2.191.884.884 2.19-2.191-.883-.884ZM10 13.003a2.503 2.503 0 0 1 2.5 2.5h1.25a3.75 3.75 0 0 0-7.5 0H7.5a2.503 2.503 0 0 1 2.5-2.5Zm8.75 4.375H1.25v1.25h17.5v-1.25Zm-3.125-3.125h3.125v1.25h-3.125v-1.25ZM4.255 8.874l-.884.884 2.191 2.19.884-.883-2.191-2.191ZM1.25 14.253h3.125v1.25H1.25v-1.25Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="details-table">
+                        <span class="r1">Sunset</span>
+                        <span class="r2">${
+                          d.astro.sunset.split(" ")[1] === "PM"
+                            ? Number(sunset.split(":")[0]) +
+                              12 +
+                              ":" +
+                              sunset.split(":")[1]
+                            : d.astro.sunset.split(" ")[0]
+                        }</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            
+        <div class="night-section1">
+            <h2 class="part-title">Night</h2>
+            <div class="brief">
+                <div class="temp-bar">
+                    <span class="temp">${obj.nightTemp}<span>°</span></span>
+                </div>
+
+                <div class="moon">
+                    <img src = 'https:${obj.nightIcon}' class='moon-img'/>
+                </div>
+
+                <div class="humidity-wind">
+                    <div class="humidity">
+                        <svg name="precip-rain" class="rain-drop-img" aria-label="Chance of Rain" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.025 16.35A5.633 5.633 0 0 0 10 18a5.633 5.633 0 0 0 5.625-5.625 6.29 6.29 0 0 0-.952-3.13L10.53 2.649a.65.65 0 0 0-1.06 0L5.31 9.278c-.578.932-.9 2-.934 3.097a5.632 5.632 0 0 0 1.65 3.976Zm.361-6.44L10 4.155l3.595 5.723c.475.75.744 1.61.78 2.497a4.375 4.375 0 1 1-8.75 0 4.986 4.986 0 0 1 .761-2.465ZM10 14.25v1.25a3.29 3.29 0 0 0 3.125-3.125h-1.25A2.06 2.06 0 0 1 10 14.25Z" fill="currentColor"></path>
+                        </svg>
+                        <span class="rain">${obj.nightRain}%</span>
+                    </div>
+
+                    <div class="wind">
+                        <svg width="42" name="wind" class="wind-img" aria-label="Wind" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5 9.875h8.125A3.125 3.125 0 1 0 10 6.75h1.25a1.875 1.875 0 1 1 1.875 1.875H5v1.25Zm7.166 7.209a3.125 3.125 0 1 0 2.209-5.334H2.5V13h11.875a1.875 1.875 0 1 1-1.875 1.875h-1.25c0 .829.33 1.623.916 2.209Z" fill="currentColor"></path>
+                        </svg>
+                        <span class="windSpeed">
+                            <span>${obj.nightDir}</span>
+                            <span>${obj.nightWind} </span>
+                            <span>km/h</span>
+                        </span>
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+            <p class="explanation">${obj.nightText}. ${
+    obj.nightTemp >= 20
+      ? "High " + obj.nightTemp + "°C"
+      : "Low " + obj.nightTemp + "°C"
+  }. Winds ${obj.nightDir} at ${obj.nightWind} km/h.</p>
+        </div>
+        <div class="night-section2 measurements">
+            <ul class="weatherDay">
+                <li>
+                    <svg width="24" name="humidity" class="drop icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <path d="M14.673 9.246 10.53 2.648a.65.65 0 0 0-1.06 0l-4.16 6.63c-.578.932-.9 2-.934 3.097a5.625 5.625 0 1 0 11.25 0 6.29 6.29 0 0 0-.952-3.13ZM10 16.75a4.38 4.38 0 0 1-4.375-4.375 4.986 4.986 0 0 1 .761-2.465l.585-.93 6.296 6.296A4.359 4.359 0 0 1 10 16.75Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="details-table">
+                        <span class="r1">Humidity</span>
+                        <span class="r2">${obj.nightHumidity}%</span>
+                    </div>
+                </li>
+                <li>
+                    <svg width="24" name="uv" class="uv icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <title>UV index</title>
+                        <path d="m10 4.195 1.09 1.833.49.822.92-.257 1.95-.544L13.908 8l-.257.92.822.49 1.833 1.09-1.833 1.09-.822.489.257.921.544 1.95-1.95-.543-.922-.257-.489.822L10 16.805l-1.09-1.833-.49-.822-.92.257-1.95.544L6.093 13l.257-.921-.822-.489-1.833-1.09 1.833-1.09.822-.49L6.093 8l-.544-1.95 1.951.543.921.257.49-.822L10 4.195Zm0-2.445L7.835 5.389 3.75 4.25l1.139 4.085L1.25 10.5l3.639 2.164L3.75 16.75l4.085-1.139L10 19.25l2.165-3.639 4.085 1.139-1.139-4.086L18.75 10.5l-3.639-2.165L16.25 4.25l-4.085 1.139L10 1.75Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="details-table">
+                        <span class="r1">UV Index</span>
+                        <span class="r2">${obj.nightUv} of 11</span>
+                    </div>
+                </li>
+                <li>
+                    <svg width="24" name="moonrise" class="rise icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <title>Moonrise</title>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.875 4.875 10 1.75l3.125 3.125-.881.881-1.619-1.612V9.25h-1.25V4.144L7.756 5.756l-.881-.881Zm3.873 9.24A4.973 4.973 0 0 0 10 16.75H8.75a6.204 6.204 0 0 1 2.346-4.877A5.006 5.006 0 0 0 5 16.75H3.75A6.257 6.257 0 0 1 10 10.5c.965 0 1.916.224 2.779.657a.625.625 0 0 1 0 1.119 4.974 4.974 0 0 0-2.03 1.839ZM15 16.75h1.25a6.24 6.24 0 0 0-1.592-4.167l-.931.834A4.992 4.992 0 0 1 15 16.75ZM18.75 18v1.25H1.25V18h17.5Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="details-table">
+                        <span class="r1">Moonrise</span>
+                        <span class="r2">${
+                          d.astro.moonrise.split(" ")[0]
+                        }</span>
+                    </div>
+                </li>
+                <li>
+                    <svg width="24" name="moonset" class="set icons" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <title>Moonset</title>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.875 6.125 10 9.25l3.125-3.125-.881-.881-1.619 1.612V1.75h-1.25v5.106L7.756 5.244l-.881.881Zm3.873 7.99A4.973 4.973 0 0 0 10 16.75H8.75a6.204 6.204 0 0 1 2.346-4.877A5.006 5.006 0 0 0 5 16.75H3.75A6.257 6.257 0 0 1 10 10.5c.965 0 1.916.224 2.779.657a.625.625 0 0 1 0 1.119 4.974 4.974 0 0 0-2.03 1.839ZM15 16.75h1.25a6.24 6.24 0 0 0-1.592-4.167l-.931.834A4.992 4.992 0 0 1 15 16.75ZM18.75 18v1.25H1.25V18h17.5Z" fill="currentColor"></path>
+                    </svg>
+                    <div class="details-table">
+                        <span class="r1">Moonset</span>
+                        <span class="r2">${
+                          d.astro.moonset.split(" ")[1] === "PM"
+                            ? Number(moonrise.split(":")[0]) +
+                              12 +
+                              ":" +
+                              moonrise.split(":")[1]
+                            : d.astro.moonrise.split(" ")[0]
+                        }</span>
+                    </div>
+                </li>
+
+                <li>
+                    <span><svg height="22" width="19.2" name="phase-11" class="waxing icons" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024"><title>Moon Phase - Day 11</title><path d="M515.73 57.54q-132.662 0-226.697 135.326t-94.036 325.528 94.036 325.528T515.73 979.248q190.202 0 325.794-135.326t135.592-325.528-135.592-325.528T515.73 57.54zm1.065 956.87q-205.12 0-350.835-145.715T20.245 518.393 165.96 167.825 516.795 21.844q204.587 0 350.302 145.981t145.715 350.568-145.715 350.302-350.302 145.715z"></path></svg></span>
+                    <span class="r1">${d.astro.moon_phase}</span>
+                </li>
+
+            </ul>
+        </div>  
+        </div>
+    `;
+  if (id === 0) {
+    cardsContent.style.display = "block";
+    document.querySelector("#cls-0").style.display = "none";
+
+    if (data.current.is_day === 0) {
+      const dayEl = cardsContent.querySelectorAll(".day-0");
+      dayEl.forEach((day) => {
+        if (day) day.style.display = "none";
+      });
+      cardsContent.querySelector(".day-night-parts").style.display = "block";
+    }
+  }
+  cardsContent.classList.add("cards-content");
+  const targetItem = document.getElementById(`cls-${id}`);
+  targetItem.insertAdjacentElement("afterend", cardsContent);
+}
+
+const EachDayBar = document.querySelector(".eachDayBar");
+const placeEl = document.querySelector(".place-js");
+
+async function fetchUrl() {
+  try {
+    const key = "f79a86fd3d6142df94534541250512";
+    const location = "Kozhikode";
+
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${key}&q=${location}&days=14`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    const days = data.forecast.forecastday;
+
+    placeEl.textContent = `${data.location.name}, ${data.location.region}`;
+    document.querySelector(".location-js").textContent = data.location.name;
+    document.querySelector(".time-js").textContent = `${
+      data.current.last_updated.split(" ")[1]
+    } IST`;
+
+    days.forEach((d, index) => {
+      let date = new Date(d.date);
+      const hours = d.hour;
+
+      const dayIcon = hours[15].condition.icon;
+      const dayText = hours[15].condition.text;
+
+      const nightIcon = hours[21].condition.icon;
+      const nightText = hours[21].condition.text;
+
+      let nightTempArr = [],
+        nightHumidArr = [],
+        nightRain = [],
+        nightWind = [],
+        nightUv = [],
+        freq = {},
+        nightDir;
+      hours.forEach((h) => {
+        if (!h.is_day) {
+          nightTempArr.push(h.temp_c);
+          nightHumidArr.push(h.humidity);
+          nightRain.push(h.chance_of_rain);
+          nightWind.push(h.wind_kph);
+          nightUv.push(h.uv);
+
+          if (!freq[h.wind_dir]) freq[h.wind_dir] = 1;
+          else freq[h.wind_dir]++;
+        }
+      });
+      Object.keys(freq).reduce(
+        (a, b) => (freq[a] > freq[b] ? (nightDir = a) : (nightDir = b)),
+        ""
+      );
+      const avg = (arr) =>
+        Math.round(arr.reduce((a, b) => a + b, 0) / arr.length);
+
+      const obj = {
+        dayTemp: Math.round(d.day.avgtemp_c),
+        nightTemp: avg(nightTempArr),
+        nightHumidity: avg(nightHumidArr),
+        nightRain: avg(nightRain),
+        nightWind: avg(nightWind),
+        nightUv: avg(nightUv),
+        nightDir: nightDir,
+        dayIcon: dayIcon,
+        dayText: dayText,
+        nightIcon: nightIcon,
+        nightText: nightText,
+      };
+
+      const li = document.createElement("li");
+
+      li.classList.add("eachDay");
+      li.id = `cls-${index}`;
+      li.dataset.id = index;
+
+      li.innerHTML = `
+            
+                <div class="eachDay">
+                    <h2 class="date">${
+                      li.id === "cls-0"
+                        ? data.current.is_day === 1
+                          ? "Today"
+                          : "Tonight"
+                        : date.toLocaleString("en-US", { weekday: "short" }) +
+                          " " +
+                          date.getDate()
+                    }</h2>
+                    <div class="eachDay-img">   
+                        <img src ='https:${
+                          li.id === "cls-0"
+                            ? data.current.condition.icon
+                            : dayIcon
+                        }' class="sun-img each-sun"/>
+                        <span class="eachDay-txt">${
+                          li.id === "cls-0"
+                            ? data.current.condition.text
+                            : dayText
+                        }</span>
+                    </div>
+
+                    <div class="degrees">
+                        <span class="day-deg">${
+                          li.id === "cls-0"
+                            ? data.current.is_day
+                              ? obj.dayTemp + "°"
+                              : "--"
+                            : obj.dayTemp + "°"
+                        }</span>
+                        <span>/<span class="night-deg">${
+                          obj.nightTemp
+                        }<span>°</span></span></span>
+                    </div>
+
+                    <div class="humid">
+                        <span>
+                            <svg width="18" name="rain-drop" class="eachDay-rain-drop" aria-label="Chance of Rain" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.025 16.35A5.633 5.633 0 0 0 10 18a5.633 5.633 0 0 0 5.625-5.625 6.29 6.29 0 0 0-.952-3.13L10.53 2.649a.65.65 0 0 0-1.06 0L5.31 9.278c-.578.932-.9 2-.934 3.097a5.632 5.632 0 0 0 1.65 3.976Zm.361-6.44L10 4.155l3.595 5.723c.475.75.744 1.61.78 2.497a4.375 4.375 0 1 1-8.75 0 4.986 4.986 0 0 1 .761-2.465ZM10 14.25v1.25a3.29 3.29 0 0 0 3.125-3.125h-1.25A2.06 2.06 0 0 1 10 14.25Z" fill="currentColor"></path>
+                            </svg>
+                        </span>
+                        <span class="percent percent-js">${
+                          d.day.daily_chance_of_rain
+                        }%</span>
+                    </div>
+                </div>
+                <span class="plus">
+                    <svg width="18" name="add" class="plus-img" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 21">
+                        <path d="M10.625 9.875V5.5h-1.25v4.375H5v1.25h4.375V15.5h1.25v-4.375H15v-1.25h-4.375Z" fill="currentColor"></path>
+                    </svg>
+                </span>
+            `;
+
+      EachDayBar.appendChild(li);
+      weatherDetails(index, obj, data);
+    });
+
+    document.querySelectorAll('[id^="cls-"]').forEach((eachItem) => {
+      eachItem.addEventListener("click", (e) => {
+        const idNum = e.currentTarget.id.split("-")[1];
+
+        const todayItem = document.getElementById(`${idNum}-cls`);
+        const card = document.getElementById(`${idNum}-card`);
+
+        eachItem.style.display = "none";
+        todayItem.style.display = "flex";
+        card.style.display = "block";
+      });
+    });
+    document.addEventListener("click", (e) => {
+      const todayItem = e.target.closest('[id$="-cls"]');
+      if (!todayItem) return;
+
+      const idNum = todayItem.id.split("-")[0];
+      const eachItem = document.getElementById(`cls-${idNum}`);
+
+      todayItem.style.display = "none";
+      eachItem.style.display = "flex";
+
+      const card = document.getElementById(`${idNum}-card`);
+      card.style.display = "none";
+    });
+  } catch {
+    placeEl.textContent = "Location not Found";
+    console.error("Error in Fetching data");
+  }
+}
+fetchUrl();
