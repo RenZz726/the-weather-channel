@@ -317,11 +317,16 @@ const radarSection = document.querySelector(".radar");
 const allergySection = document.querySelector('.allergy-tracker')
 const allergyButton = document.querySelector('.allergy-with-contents')
 
+const airQualitySection = document.querySelector('section.air-quality-index')
+const airQualityBtn = document.querySelector('.air-quality-with-contents')
+
 hourlySection.classList.add("hide");
 tenDaySection.classList.add("hide");
 monthlySection.classList.add("hide");
 radarSection.classList.add("hide");
 allergySection.classList.add('hide');
+airQualitySection.classList.add('hide');
+
 
 todayButton.addEventListener("click", () => {
   mainBody.classList.remove("hide");
@@ -330,6 +335,7 @@ todayButton.addEventListener("click", () => {
   monthlySection.classList.add("hide");
   radarSection.classList.add("hide");
   allergySection.classList.add('hide');
+  airQualitySection.classList.add('hide');
 
 });
 
@@ -341,6 +347,8 @@ hourlyButton.addEventListener("click", () => {
   hourlySection.classList.remove("hide");
   footerSection[1].classList.remove("hide");
   allergySection.classList.add('hide');
+  airQualitySection.classList.add('hide');
+  airQualitySection.classList.add('hide');
 
 });
 
@@ -351,6 +359,8 @@ tenDayButton.addEventListener("click", () => {
   radarSection.classList.add("hide");
   tenDaySection.classList.remove('hide');
   allergySection.classList.add('hide');
+  airQualitySection.classList.add('hide'); 
+  airQualitySection.classList.add('hide');
 
 });
 
@@ -362,6 +372,8 @@ monthlyButton.addEventListener("click", () => {
   monthlySection.classList.remove("hide");
   footerSection[1].classList.remove("hide");  
   allergySection.classList.add('hide');
+  airQualitySection.classList.add('hide');    
+  airQualitySection.classList.add('hide');
 
 });
 
@@ -373,7 +385,10 @@ radarButton.addEventListener("click", () => {
   monthlySection.classList.add("hide");
   footerSection[1].classList.add("hide");
   radarSection.classList.remove("hide");
-    allergySection.classList.add('hide');
+  allergySection.classList.add('hide');
+  airQualitySection.classList.add('hide'); 
+  airQualitySection.classList.add('hide');
+
 
 });
 
@@ -384,8 +399,22 @@ allergyButton.addEventListener('click', ()=> {
     tenDaySection.classList.add('hide');
     monthlySection.classList.add("hide");
     radarSection.classList.add('hide');
+    airQualitySection.classList.add('hide');
     footerSection[1].classList.remove("hide");
+    airQualitySection.classList.add('hide');
     allergySection.classList.remove('hide');
+})
+
+airQualityBtn.addEventListener('click', ()=> {
+    adBlock.classList.add("hide");
+    mainBody.classList.add('hide');
+    hourlySection.classList.add("hide");
+    tenDaySection.classList.add('hide');
+    monthlySection.classList.add("hide");
+    radarSection.classList.add('hide');
+    allergySection.classList.add('hide');
+    footerSection[1].classList.remove("hide");
+    airQualitySection.classList.remove('hide');
 })
 
 let calendar_previous = document.querySelector(".calendar-previous");
@@ -413,7 +442,6 @@ let monthArray = [
 let i;
 calendar_next.addEventListener("click", () => {
   if (Number(year_name.value) > 0) {
-    console.log(Number(year_name.value));
     for (i = 0; i < monthArray.length; i++) {
       if (monthArray[i] === month_name.value) {
         break;
@@ -469,7 +497,6 @@ calendar_previous.addEventListener("click", () => {
 });
 
 month_name.addEventListener("input", () => {
-  console.log(month_name.value);
   //   console.log(calendar_next.textContent);
 
   for (let i = 0; i < monthArray.length; i++) {
@@ -1126,7 +1153,6 @@ const main = document.querySelector(".main-body");
 main.addEventListener(
   "click",
   (event) => {
-    console.log(event.target);
     if (event.target !== airbtn) {
       airbtn.style.border = "none";
     }
