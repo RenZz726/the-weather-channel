@@ -337,6 +337,8 @@ todayButton.addEventListener("click", () => {
   radarSection.classList.add("hide");
   allergySection.classList.add("hide");
   airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+  adBlock.classList.remove("hide");
 });
 
 hourlyButton.addEventListener("click", () => {
@@ -349,6 +351,8 @@ hourlyButton.addEventListener("click", () => {
   allergySection.classList.add("hide");
   airQualitySection.classList.add("hide");
   airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+  adBlock.classList.add("hide");
 });
 
 tenDayButton.addEventListener("click", () => {
@@ -360,6 +364,8 @@ tenDayButton.addEventListener("click", () => {
   allergySection.classList.add("hide");
   airQualitySection.classList.add("hide");
   airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+  adBlock.classList.add("hide");
 });
 
 monthlyButton.addEventListener("click", () => {
@@ -372,6 +378,8 @@ monthlyButton.addEventListener("click", () => {
   allergySection.classList.add("hide");
   airQualitySection.classList.add("hide");
   airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+  adBlock.classList.add("hide");
 });
 function toRadarSection() {
   adBlock.classList.add("hide");
@@ -384,6 +392,7 @@ function toRadarSection() {
   allergySection.classList.add("hide");
   airQualitySection.classList.add("hide");
   airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
 }
 
 radarButton.addEventListener("click", () => {
@@ -413,6 +422,7 @@ allergyButton.addEventListener("click", () => {
   footerSection[1].classList.remove("hide");
   airQualitySection.classList.add("hide");
   allergySection.classList.remove("hide");
+  signinsection.classList.add("hide");
 });
 
 airQualityBtn.addEventListener("click", () => {
@@ -425,24 +435,24 @@ airQualityBtn.addEventListener("click", () => {
   allergySection.classList.add("hide");
   footerSection[1].classList.remove("hide");
   airQualitySection.classList.remove("hide");
+  signinsection.classList.add("hide");
 });
 
 // side-pop-section
-const ti=document.querySelector(".ticon");
-const hi=document.querySelector(".hicon");
-const di=document.querySelector(".dicon");
-const mi=document.querySelector(".micon");
-const ri=document.querySelector(".ricon");
-const ai=document.querySelector(".all");
-const aqi=document.querySelector(".aq");
+const ti = document.querySelector(".ticon");
+const hi = document.querySelector(".hicon");
+const di = document.querySelector(".dicon");
+const mi = document.querySelector(".micon");
+const ri = document.querySelector(".ricon");
+const ai = document.querySelector(".all");
+const aqi = document.querySelector(".aq");
 
-ti.addEventListener('click',()=>{
-mainBody.classList.remove('hide')
-hourlySection.classList.add("hide");
-monthlySection.classList.add("hide");
-radarSection.classList.add("hide");
-})
-
+ti.addEventListener("click", () => {
+  mainBody.classList.remove("hide");
+  hourlySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+});
 
 hi.addEventListener("click", () => {
   mainBody.classList.add("hide");
@@ -468,7 +478,6 @@ ri.addEventListener("click", () => {
   footerSection[1].classList.add("hide");
   radarSection.classList.remove("hide");
 });
-
 
 let calendar_previous = document.querySelector(".calendar-previous");
 let calendar_next = document.querySelector(".calendar-next");
@@ -1416,18 +1425,18 @@ async function getData() {
 }
 getData();
 
-const menubtn=document.querySelector(".menu");
-const cbtn=document.querySelector(".clsbtn");
-const spop=document.querySelector(".side-pop");
-const sso=document.querySelector(".side-side-opaque");
-menubtn.addEventListener("click",()=>{
+const menubtn = document.querySelector(".menu");
+const cbtn = document.querySelector(".clsbtn");
+const spop = document.querySelector(".side-pop");
+const sso = document.querySelector(".side-side-opaque");
+menubtn.addEventListener("click", () => {
   spop.classList.remove("hide");
   sso.classList.remove("hide");
-})
-cbtn.addEventListener("click",()=>{
+});
+cbtn.addEventListener("click", () => {
   spop.classList.add("hide");
   sso.classList.add("hide");
-})
+});
 // 10DayPageScript
 function weatherDetails(id, obj, data) {
   const days = data.forecast.forecastday;
@@ -1832,3 +1841,25 @@ async function fetchUrl() {
   }
 }
 fetchUrl();
+
+//add signin section
+const signinsection = document.querySelector(".sign-in");
+const signinbutton = document.querySelector(".signin");
+
+function toSignInSection() {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  footerSection[1].classList.remove("hide");
+  radarSection.classList.add("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  signinsection.classList.remove("hide");
+}
+
+signinbutton.addEventListener("click", () => {
+  toSignInSection();
+});
