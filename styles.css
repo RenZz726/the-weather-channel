@@ -3675,6 +3675,81 @@ body{
     fill: #fff;
 }
 
+@media screen and (max-width : 1024px){
+    .mainAd{
+        display: none;
+    }
+    .marginBar{
+        margin: 12px  auto 0 auto;
+    }
+    .mainBar{
+        display: block;
+    }
+    .title-ten h1{
+        font-size: 20px;
+        line-height: 1;
+        padding: 16px 0 8px;
+    }
+    .place-ten{
+        font-size: 14px;
+    }
+    .todayTen{
+        height: 30px;
+    }
+    .day-night-parts{
+        display: block;
+    }
+    .rain, .windSpeed{
+        line-height: 1.3;
+    }
+    .weatherDay li:not(:nth-child(-n+2)){
+        padding: 8px 0 0;
+        margin: 8px 0 0;
+    }
+    .icons{
+        width: 16px;
+    }
+    .r1{
+        font-size: 12px;
+    }
+    .r2{
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .eachDay{
+        font-size: 14px;
+    }
+    .date{
+        flex: 0 0 65px;
+    }
+    .eachDay-img{
+        justify-content: center;
+        flex: 1 1 auto;
+        margin: 0 6px 0 8px;
+    }
+    .sun-img, .moon-img{
+        margin: auto;
+        padding: 0;
+    }
+    .eachDay-txt{
+        display: none;
+    }
+    .degrees{
+        flex: 0 .5 60px;
+        padding: 0 0 0 8px;
+        font-size: 16px;
+    }
+    .night-deg{
+        font-size: 14px;
+    }
+    .humid{
+        padding: 0 8px;
+    }
+    .eachDay-rain-drop{
+        margin-right: 1px;
+    }
+}
+
 @media screen and (min-width: 481px){
     .marginBar{
         margin: 12px auto 0 auto; 
