@@ -2978,7 +2978,7 @@ tr {
     padding-bottom: 30px;
     border-bottom: 1px solid gray;
   }
-  .footer {
+  section.footer {
     margin-top: 200px;
   }
   .logo svg {
