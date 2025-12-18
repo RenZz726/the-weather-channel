@@ -320,7 +320,7 @@ const allergyButton = document.querySelector(".allergy-with-contents");
 const airQualitySection = document.querySelector("section.air-quality-index");
 const airQualityBtn = document.querySelector(".air-quality-with-contents");
 
-const pinRound = document.querySelector(".pin-round");
+const toRadar = document.querySelectorAll(".to-radar");
 
 hourlySection.classList.add("hide");
 tenDaySection.classList.add("hide");
@@ -373,32 +373,35 @@ monthlyButton.addEventListener("click", () => {
   airQualitySection.classList.add("hide");
   airQualitySection.classList.add("hide");
 });
+function toRadarSection() {
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  footerSection[1].classList.add("hide");
+  radarSection.classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+}
 
 radarButton.addEventListener("click", () => {
-  adBlock.classList.add("hide");
-  mainBody.classList.add("hide");
-  hourlySection.classList.add("hide");
-  tenDaySection.classList.add("hide");
-  monthlySection.classList.add("hide");
-  footerSection[1].classList.add("hide");
-  radarSection.classList.remove("hide");
-  allergySection.classList.add("hide");
-  airQualitySection.classList.add("hide");
-  airQualitySection.classList.add("hide");
+  toRadarSection();
 });
 
-pinRound.addEventListener("click", () => {
-  adBlock.classList.add("hide");
-  mainBody.classList.add("hide");
-  hourlySection.classList.add("hide");
-  tenDaySection.classList.add("hide");
-  monthlySection.classList.add("hide");
-  footerSection[1].classList.add("hide");
-  radarSection.classList.remove("hide");
-  allergySection.classList.add("hide");
-  airQualitySection.classList.add("hide");
-  airQualitySection.classList.add("hide");
+toRadar[0].addEventListener("click", () => {
+  toRadarSection();
 });
+
+toRadar[1].addEventListener("click", () => {
+  toRadarSection();
+});
+
+toRadar[2].addEventListener("click", () => {
+  toRadarSection();
+});
+
 allergyButton.addEventListener("click", () => {
   adBlock.classList.add("hide");
   mainBody.classList.add("hide");
