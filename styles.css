@@ -3314,9 +3314,12 @@ body{
     padding-bottom: 12px;
     background-color: #f2f2f2;
 }
-.adv1, .path-blank{
-    display: none;
+.location-ten{
+  display: none;
 }
+/* .adv1, .path-blank{
+    display: none;
+} 
 .location-ten{
     display: block;
     padding: 0 16px;
@@ -3336,7 +3339,7 @@ body{
 }
 .location-img{
     margin-right: 8px;
-}
+}*/
 .marginBar{
     max-width: 1162px;
     width: 100%;
@@ -3679,12 +3682,12 @@ body{
 
 }
 @media screen and (min-width: 1025px){
-    .adv1, .path-blank{
+    /* .adv1, .path-blank{
         display: block;
-    }
+    } 
     .location-ten{
         display: none;
-    }
+    }*/
     .marginBar{
         margin: 12px auto 0 auto; 
     }

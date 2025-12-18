@@ -321,7 +321,7 @@ hourlySection.classList.add("hide");
 tenDaySection.classList.add("hide");
 monthlySection.classList.add("hide");
 radarSection.classList.add("hide");
-allergySection.classList.add('hide')
+allergySection.classList.add('hide');
 
 todayButton.addEventListener("click", () => {
   mainBody.classList.remove("hide");
