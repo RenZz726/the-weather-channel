@@ -2418,6 +2418,9 @@ tr {
   flex-direction: row;
   gap: 10px;
 }
+/* .hiding-contents-of-side-bar{
+  display:none;
+} */
 @media screen and (min-width: 425px) {
   .sides-contents span {
     font-size: 8.5px;
