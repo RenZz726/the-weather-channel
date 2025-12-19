@@ -328,20 +328,36 @@ monthlySection.classList.add("hide");
 radarSection.classList.add("hide");
 allergySection.classList.add("hide");
 airQualitySection.classList.add("hide");
+let bgclr="rgba(243, 239, 239, 1)"
 
 todayButton.addEventListener("click", () => {
+  todayButton.style.backgroundColor=bgclr;
+  console.log(todayButton)
+  hourlyButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
   mainBody.classList.remove("hide");
   hourlySection.classList.add("hide");
   tenDaySection.classList.add("hide");
   monthlySection.classList.add("hide");
   radarSection.classList.add("hide");
-  allergySection.classList.add("hide");
-  airQualitySection.classList.add("hide");
+  // allergySection.classList.add("hide");
+  // airQualitySection.classList.add("hide");
   signinsection.classList.add("hide");
   adBlock.classList.remove("hide");
 });
 
 hourlyButton.addEventListener("click", () => {
+  hourlyButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
   mainBody.classList.add("hide");
   monthlySection.classList.add("hide");
   tenDaySection.classList.add("hide");
@@ -356,6 +372,13 @@ hourlyButton.addEventListener("click", () => {
 });
 
 tenDayButton.addEventListener("click", () => {
+  tenDayButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  hourlyButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
   monthlySection.classList.add("hide");
@@ -369,6 +392,13 @@ tenDayButton.addEventListener("click", () => {
 });
 
 monthlyButton.addEventListener("click", () => {
+  monthlyButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  hourlyButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
   radarSection.classList.add("hide");
@@ -396,6 +426,13 @@ function toRadarSection() {
 }
 
 radarButton.addEventListener("click", () => {
+  radarButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  hourlyButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
   toRadarSection();
 });
 
@@ -412,12 +449,18 @@ toRadar[2].addEventListener("click", () => {
 });
 
 allergyButton.addEventListener("click", () => {
+  allergyButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  hourlyButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
   adBlock.classList.add("hide");
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
   tenDaySection.classList.add("hide");
   monthlySection.classList.add("hide");
-  radarSection.classList.add("hide");
   airQualitySection.classList.add("hide");
   footerSection[1].classList.remove("hide");
   airQualitySection.classList.add("hide");
@@ -426,6 +469,13 @@ allergyButton.addEventListener("click", () => {
 });
 
 airQualityBtn.addEventListener("click", () => {
+  airQualityBtn.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  hourlyButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
   adBlock.classList.add("hide");
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
@@ -448,6 +498,13 @@ const ai = document.querySelector(".all");
 const aqi = document.querySelector(".aq");
 
 ti.addEventListener("click", () => {
+  ti.style.backgroundColor=bgclr;
+  hi.style.backgroundColor="transparent";
+  di.style.backgroundColor="transparent";
+  mi.style.backgroundColor="transparent";
+  ri.style.backgroundColor="transparent";
+  ai.style.backgroundColor="transparent";
+  aqi.style.backgroundColor="transparent";
   mainBody.classList.remove("hide");
   hourlySection.classList.add("hide");
   monthlySection.classList.add("hide");
@@ -455,6 +512,13 @@ ti.addEventListener("click", () => {
 });
 
 hi.addEventListener("click", () => {
+  hi.style.backgroundColor=bgclr;
+  ti.style.backgroundColor="transparent";
+  di.style.backgroundColor="transparent";
+  mi.style.backgroundColor="transparent";
+  ri.style.backgroundColor="transparent";
+  ai.style.backgroundColor="transparent";
+  aqi.style.backgroundColor="transparent";
   mainBody.classList.add("hide");
   monthlySection.classList.add("hide");
   radarSection.classList.add("hide");
@@ -462,7 +526,34 @@ hi.addEventListener("click", () => {
   footerSection[1].classList.remove("hide");
 });
 
+di.addEventListener("click", () => {
+  di.style.backgroundColor=bgclr;
+  ti.style.backgroundColor="transparent";
+  hi.style.backgroundColor="transparent";
+  mi.style.backgroundColor="transparent";
+  ri.style.backgroundColor="transparent";
+  ai.style.backgroundColor="transparent";
+  aqi.style.backgroundColor="transparent";
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  tenDaySection.classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+  adBlock.classList.add("hide");
+});
+
 mi.addEventListener("click", () => {
+  mi.style.backgroundColor=bgclr;
+  ti.style.backgroundColor="transparent";
+  hi.style.backgroundColor="transparent";
+  di.style.backgroundColor="transparent";
+  ri.style.backgroundColor="transparent";
+  ai.style.backgroundColor="transparent";
+  aqi.style.backgroundColor="transparent";
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
   radarSection.classList.add("hide");
@@ -471,12 +562,58 @@ mi.addEventListener("click", () => {
 });
 
 ri.addEventListener("click", () => {
+  ri.style.backgroundColor=bgclr;
+  ti.style.backgroundColor="transparent";
+  hi.style.backgroundColor="transparent";
+  di.style.backgroundColor="transparent";
+  mi.style.backgroundColor="transparent";
+  ai.style.backgroundColor="transparent";
+  aqi.style.backgroundColor="transparent";
   adBlock.classList.add("hide");
   mainBody.classList.add("hide");
   hourlySection.classList.add("hide");
   monthlySection.classList.add("hide");
   footerSection[1].classList.add("hide");
   radarSection.classList.remove("hide");
+});
+
+ai.addEventListener("click", () => {
+  ai.style.backgroundColor=bgclr;
+  ti.style.backgroundColor="transparent";
+  hi.style.backgroundColor="transparent";
+  di.style.backgroundColor="transparent";
+  mi.style.backgroundColor="transparent";
+  ri.style.backgroundColor="transparent";
+  aqi.style.backgroundColor="transparent";
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  footerSection[1].classList.remove("hide");
+  airQualitySection.classList.add("hide");
+  allergySection.classList.remove("hide");
+});
+
+aqi.addEventListener("click", () => {
+  aqi.style.backgroundColor=bgclr;
+  ti.style.backgroundColor="transparent";
+  hi.style.backgroundColor="transparent";
+  di.style.backgroundColor="transparent";
+  mi.style.backgroundColor="transparent";
+  ri.style.backgroundColor="transparent";
+  ai.style.backgroundColor="transparent";
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  allergySection.classList.add("hide");
+  footerSection[1].classList.remove("hide");
+  airQualitySection.classList.remove("hide");
 });
 
 let calendar_previous = document.querySelector(".calendar-previous");
