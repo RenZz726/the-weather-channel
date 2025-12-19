@@ -344,8 +344,8 @@ todayButton.addEventListener("click", () => {
   tenDaySection.classList.add("hide");
   monthlySection.classList.add("hide");
   radarSection.classList.add("hide");
-  // allergySection.classList.add("hide");
-  // airQualitySection.classList.add("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
   signinsection.classList.add("hide");
   adBlock.classList.remove("hide");
 });
@@ -461,11 +461,13 @@ allergyButton.addEventListener("click", () => {
   hourlySection.classList.add("hide");
   tenDaySection.classList.add("hide");
   monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
   airQualitySection.classList.add("hide");
   footerSection[1].classList.remove("hide");
   airQualitySection.classList.add("hide");
   allergySection.classList.remove("hide");
   signinsection.classList.add("hide");
+  
 });
 
 airQualityBtn.addEventListener("click", () => {
@@ -615,6 +617,97 @@ aqi.addEventListener("click", () => {
   footerSection[1].classList.remove("hide");
   airQualitySection.classList.remove("hide");
 });
+
+const n48h1=document.querySelector(".next-48-hours1");
+const n48h2=document.querySelector(".next-48-hours2");
+const tdays=document.querySelector(".next-10-days");
+const detailbtn=document.querySelector(".details");
+
+n48h1.addEventListener("click", () => {
+  hourlyButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
+  mainBody.classList.add("hide");
+  monthlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  hourlySection.classList.remove("hide");
+  footerSection[1].classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+  adBlock.classList.add("hide");
+});
+
+n48h2.addEventListener("click", () => {
+  hourlyButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
+  mainBody.classList.add("hide");
+  monthlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  hourlySection.classList.remove("hide");
+  footerSection[1].classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+  adBlock.classList.add("hide");
+});
+
+tdays.addEventListener("click", () => {
+  tenDayButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  hourlyButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  airQualityBtn.style.backgroundColor="transparent";
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  tenDaySection.classList.remove("hide");
+  allergySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+  adBlock.classList.add("hide");
+});
+
+detailbtn.addEventListener("click",()=>{
+  airQualityBtn.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  hourlyButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  allergyButton.style.backgroundColor="transparent";
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  allergySection.classList.add("hide");
+  footerSection[1].classList.remove("hide");
+  airQualitySection.classList.remove("hide");
+  signinsection.classList.add("hide");
+})
+
+
+
+
 
 let calendar_previous = document.querySelector(".calendar-previous");
 let calendar_next = document.querySelector(".calendar-next");
@@ -1175,8 +1268,11 @@ const tttext = document.querySelector(".tooltiptext");
 const headdrop = document.querySelector(".head-drop");
 const tabs = document.querySelector(".tabs");
 const blankp = document.querySelector(".path-blank");
-headdrop.addEventListener("click", () => {
+headdrop.addEventListener("click", (e) => {
+  e.stopPropagation();
+  headdrop.style.border="2px solid blue";
   tabs.classList.toggle("hide");
+  spop.classList.add("hide");
   americas.style.border = "none";
   americas.style.borderBottom = "1px solid rgb(218, 218, 218)";
   me.style.border = "none";
@@ -1188,6 +1284,15 @@ headdrop.addEventListener("click", () => {
   eur.style.border = "none";
   eur.style.borderBottom = "1px solid rgb(218, 218, 218)";
 });
+
+window.addEventListener("click",(event)=>{
+  if(!headdrop.contains(event.target) && !tabs.contains(event.target)){
+    headdrop.style.border="none";
+    tabs.classList.add("hide");
+  }
+})
+
+
 const countries1 = document.querySelector(".countries1");
 const countries2 = document.querySelector(".countries2");
 const countries3 = document.querySelector(".countries3");
@@ -1567,10 +1672,13 @@ const cbtn = document.querySelector(".clsbtn");
 const spop = document.querySelector(".side-pop");
 const sso = document.querySelector(".side-side-opaque");
 menubtn.addEventListener("click", () => {
+  menubtn.style.backgroundColor=bgclr;
   spop.classList.remove("hide");
+  tabs.classList.add("hide");
   sso.classList.remove("hide");
 });
 cbtn.addEventListener("click", () => {
+  cbtn.style.backgroundColor=bgclr;
   spop.classList.add("hide");
   sso.classList.add("hide");
 });
@@ -2000,3 +2108,4 @@ function toSignInSection() {
 signinbutton.addEventListener("click", () => {
   toSignInSection();
 });
+

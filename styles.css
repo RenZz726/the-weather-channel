@@ -704,7 +704,7 @@ body {
   position: absolute;
   left: 0px;
   top: 0;
-  z-index: 600;
+  z-index: 1300;
   padding-left: 10px;
   height: 260px;
 }
@@ -898,7 +898,7 @@ body {
 .radar .weather-condition-pop-up {
   position: absolute;
   z-index: 999;
-  bottom: 5px;
+  bottom: 85px;
   right: 22px;
   width: 341px;
   transition: 0.2s ease-in;
@@ -906,8 +906,8 @@ body {
 .radar .weather-condition-pop-up .notification {
   background-color: #fefefe;
   position: absolute;
-  padding: 16px;
-  margin: 0px 0px 16px;
+  padding: 20px;
+  margin: 0px 0px 38px;
   border-radius: 12px;
   bottom: 300px;
   transition: 0.3s ease-in;
@@ -1271,7 +1271,7 @@ body {
   background-color: rgb(255, 255, 255);
   position: fixed;
   padding: 0px 4.5px;
-  z-index: 500;
+  z-index: 1200;
 }
 .today-icon,
 .hourly-icon,
@@ -1288,6 +1288,10 @@ body {
   font-size: 4px;
   line-height: 13px;
 }
+.today-with-content{
+  background-color: rgba(243, 239, 239, 1);
+}
+
 .today-with-content,
 .hourly-with-content,
 .day-with-content,
@@ -1302,6 +1306,7 @@ body {
 .menu {
   padding: 6px;
   padding-bottom: 5px;
+  border-radius:5px;
 }
 /* sidebar end */
 .main-head {
@@ -1395,7 +1400,7 @@ body {
   background-color: rgb(255, 255, 255);
   padding-top: 10px;
   margin-top: 0px;
-  z-index:100;
+  z-index:1100;
 }
 .tabs .part1 {
   width: 100%;
@@ -2447,6 +2452,15 @@ tr {
 }
 
 @media screen and (min-width: 768px) {
+  .content-ten{
+    margin-left:40px;
+  }
+  .radar{
+    margin-left:36px;
+  }
+  .radar-container{
+    margin-left:25px;
+  }
   .air-with-health {
     display: flex;
     flex-direction: column;
@@ -2839,6 +2853,10 @@ tr {
     height: 22px;
     width: 22px;
   }
+  .clsbtn{
+    border-radius:5px;
+    padding:2px;
+  }
   .close-with-logo {
     gap: 25px;
     padding-top: 10px;
@@ -2869,6 +2887,9 @@ tr {
 }
 
 @media screen and (min-width: 1024px) {
+  .hourcontent{
+    margin-left:40px;
+  }
   .temp-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2997,14 +3018,18 @@ tr {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    padding:5px;
+    padding-right:75px;
+    border-radius:5px;
   }
   .hiding-contents-of-side-bar {
+    border-top:2px solid rgb(214, 210, 210);
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding-top: 20px;
-    margin-left: -75px;
   }
+ 
   .radar-section img {
     height: 400px;
     padding-bottom: 30px;
@@ -4367,7 +4392,7 @@ input {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
-  padding-top: 20px;
+  padding-top: 3px;
 }
 .signin-main {
   margin: 12px auto;
