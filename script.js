@@ -718,6 +718,28 @@ detailbtn.addEventListener("click",()=>{
   signinsection.classList.add("hide");
 })
 
+const homeAllergy = document.querySelector('.health-with-text-arrow')
+
+homeAllergy.addEventListener('click',()=>{
+  allergyButton.style.backgroundColor=bgclr;
+  todayButton.style.backgroundColor="transparent";
+  hourlyButton.style.backgroundColor="transparent";
+  tenDayButton.style.backgroundColor="transparent";
+  monthlyButton.style.backgroundColor="transparent";
+  radarButton.style.backgroundColor="transparent";
+  todayButton.style.backgroundColor="transparent";
+  adBlock.classList.add("hide");
+  mainBody.classList.add("hide");
+  hourlySection.classList.add("hide");
+  tenDaySection.classList.add("hide");
+  monthlySection.classList.add("hide");
+  radarSection.classList.add("hide");
+  allergySection.classList.remove("hide");
+  footerSection[1].classList.remove("hide");
+  airQualitySection.classList.add("hide");
+  signinsection.classList.add("hide");
+})
+
 //hourly-10day
 
 const hourlyTenDay = document.querySelector('.hourTenDayBtn')
