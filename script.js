@@ -286,6 +286,7 @@ infoBtn.forEach((btn, index) => {
     infoBtn[index].style.border = "2px solid #1B4DE4";
   });
 });
+
 allergyBtn.addEventListener('click',()=>{
       allergyPopup.style.display = 'block'
       allergyBtn.style.border = "2px solid #1B4DE4";
