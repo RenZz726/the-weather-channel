@@ -309,6 +309,42 @@ body {
   box-shadow: 0 0 3px 2px #0003;
   color: #2b2b2b;
 }
+.allergy_popup{
+    position: absolute;
+    bottom: 60px;     
+    right: -50px;          
+    max-width: 413px;
+    width: calc(100vw - 32px); 
+    display: none;
+    z-index: 9999;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    padding-top: 10px;
+}
+.allergy_popup::before{
+  top: 145px;
+  left: 207px;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid  rgba(0, 0, 0, 0.15);
+}
+.allergy_popup::after{
+  top: 144px;
+  left: 207px;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ffff;
+  z-index: 1;
+}
 .air_popup::before {
   content: "";
   position: absolute;
@@ -392,7 +428,7 @@ body {
   font-size: 12px;
   line-height: 1.25;
 }
-.air_close_btn {
+.air_close_btn , .allergy_close_btn{
   position: absolute;
   right: 0;
   border: none;
@@ -3355,6 +3391,7 @@ html {
   width: 100%;
 }
 .hourlyRedarSection h2 {
+  margin: 20px;
   font-family: medium;
   display: flex;
   color: #252422;
@@ -3419,6 +3456,7 @@ html {
 .hourTenDay {
   display: flex;
   justify-content: flex-end;
+  border-bottom: 1px solid #676767;
 }
 .hourTenDayBtn {
   margin: 0 16px 16px;
@@ -4081,6 +4119,10 @@ body {
   display: flex;
   flex-flow: row nowrap;
   flex-direction: row-reverse;
+  border-bottom: 1px solid #676767;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  position: relative;
 }
 
 .allergybtnDis {
@@ -4122,6 +4164,8 @@ body {
   margin-left: 16px;
   display: flex;
   flex-wrap: wrap;
+  border-bottom: 1px solid #676767;
+  padding-bottom: 20px;
 }
 
 .allergyeachOne {
@@ -4163,9 +4207,9 @@ body {
 }
 .allergysideAd {
   padding: 0 0 24px 0;
-  height: 620px;
+  height: 656px;
   background: #f2f2f2;
-  /* border-bottom: 1px solid #676767; */
+  border-bottom: 1px solid #676767;
   margin-bottom: 24px;
   padding-bottom: 24px;
   position: relative;
