@@ -277,12 +277,25 @@ let infoBtn = document.querySelectorAll(".air_info_pop");
 let popupContainer = document.querySelectorAll(".air_popup");
 let air_info = document.querySelectorAll(".air_info_pop");
 let closeBtn = document.querySelectorAll(".air_close_btn");
+let allergyPopup = document.querySelector('.allergy_popup')
+let allergyBtn = document.querySelector('.allergybtnDis')
+let allergyCloseBtn = document.querySelector('.allergy_close_btn')
 infoBtn.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     popupContainer[index].style.display = "block";
     infoBtn[index].style.border = "2px solid #1B4DE4";
   });
 });
+
+allergyBtn.addEventListener('click',()=>{
+      allergyPopup.style.display = 'block'
+      allergyBtn.style.border = "2px solid #1B4DE4";
+})
+allergyCloseBtn.addEventListener('click',()=>{
+  allergyPopup.style.display = 'none'
+  allergyBtn.style.border = "none";
+
+})
 closeBtn.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     popupContainer[index].style.display = "none";
@@ -705,7 +718,16 @@ detailbtn.addEventListener("click",()=>{
   signinsection.classList.add("hide");
 })
 
+//hourly-10day
 
+const hourlyTenDay = document.querySelector('.hourTenDayBtn')
+
+hourlyTenDay.addEventListener('click',()=>{
+   tenDayButton.style.backgroundColor=bgclr;
+   hourlyButton.style.backgroundColor='transparent'
+   hourlySection.classList.add('hide')
+   tenDaySection.classList.remove('hide')
+})
 
 
 
